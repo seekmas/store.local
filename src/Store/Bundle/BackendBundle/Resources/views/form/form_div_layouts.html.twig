@@ -1,0 +1,76 @@
+{% block submit_widget -%}
+    {% set type = type|default('submit') %}
+    {{- block('button_widget') -}}
+{%- endblock submit_widget %}
+
+{% block button_widget -%}
+    {% if label is empty -%}
+        {% set label = name|humanize %}
+    {%- endif -%}
+    <button {{ block('button_attributes') }} class="btn btn-primary" type="{{ type|default('button') }}">{{ label|trans({}, translation_domain) }}</button>
+{%- endblock button_widget %}
+
+{% block form_widget_simple -%}
+
+    {% set type = type|default('text') -%}
+    <input {{ block('widget_attributes') }} class="form-control" type="{{ type }}" {% if value is not empty %}value="{{ value }}" {% endif %}/>
+
+{%- endblock form_widget_simple %}
+
+{% block textarea_widget -%}
+    <textarea  class="form-control" {{ block('widget_attributes') }}>{{ value }}</textarea>
+{%- endblock textarea_widget %}
+
+{% block form_row -%}
+    <div class="form-group">
+        {{- form_errors(form) -}}
+        <label for="">{{- form_label(form) -}}</label>
+        {{- form_widget(form) -}}
+    </div>
+{%- endblock form_row %}
+
+{% block file_widget %}
+    {% spaceless %}
+        {% set type = type|default('file') %}
+
+        <div class="fileupload fileupload-new" data-provides="fileupload">
+            <div class="input-append">
+                <div class="uneditable-input">
+                    <i class="glyphicon glyphicon-file fileupload-exists"></i>
+                    <span class="fileupload-preview"></span>
+                </div>
+                    <span class="btn btn-default btn-file">
+                      <span class="fileupload-new">选择文件</span>
+                      <span class="fileupload-exists">Change</span>
+
+                      <input type="{{ type }}" {{ block('widget_attributes') }} />
+                    </span>
+                <a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Remove</a>
+            </div>
+        </div>
+
+    {% endspaceless %}
+{% endblock file_widget %}
+
+{% block choice_widget_collapsed -%}
+
+    {% if required and empty_value is none and not empty_value_in_choices and not multiple -%}
+        {% set required = false %}
+    {%- endif -%}
+
+
+    <select class="form-control chosen-select" data-placeholder="Choose a Country..." {{ block('widget_attributes') }}{% if multiple %} multiple="multiple"{% endif %}>
+        {% if empty_value is not none -%}
+            <option value=""{% if required and value is empty %} selected="selected"{% endif %}>{{ empty_value|trans({}, translation_domain) }}</option>
+        {%- endif %}
+        {%- if preferred_choices|length > 0 -%}
+            {% set options = preferred_choices %}
+            {{- block('choice_widget_options') -}}
+            {% if choices|length > 0 and separator is not none -%}
+                <option disabled="disabled">{{ separator }}</option>
+            {%- endif %}
+        {%- endif -%}
+        {% set options = choices -%}
+        {{- block('choice_widget_options') -}}
+    </select>
+{%- endblock choice_widget_collapsed %}

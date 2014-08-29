@@ -1,0 +1,24 @@
+{% extends "StoreBackendBundle::layouts.html.twig" %}
+
+
+{% block body %}
+<div class="row">
+
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                {% if product.photo %}
+
+                    <img src="{{ asset( product.photo ) | imagine_filter('normal') }}" />
+
+                {% endif %}
+
+                {{ form ( form ) }}
+
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

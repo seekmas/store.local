@@ -1,0 +1,47 @@
+{% extends "StoreFrontendBundle::layouts.html.twig" %}
+
+{% block title %}StoreFrontendBundle:Home:index{% endblock %}
+
+{% block body %}
+
+    <div class="cont span_2_of_3">
+
+    <h2 class="head">选择我所在地区的店铺</h2>
+        <hr/>
+    {% for c in city %}
+    <h2 class="head"> {{ c.name }} </h2>
+
+    <div class="top-box">
+
+        {% for store in c.store if store.id > 0 %}
+        <div class="col_1_of_3 span_1_of_3">
+            <a href="#">
+                <div class="inner_content clearfix">
+                    <div class="product_image">
+                        <img src="{{ store.logo }}" alt="">
+                    </div>
+                    <div class="sale-box"><span class="on_sale title_shop">热门店铺</span></div>
+                    <div class="price">
+                        <div class="cart-left">
+                            <p class="title">{{ store.name }}</p>
+                            <div class="price1">
+                                <span class="actual"></span>
+                            </div>
+                        </div>
+                        <div class="cart-right"> </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+
+
+        <div class="clear"></div>
+    </div>
+    {% endfor %}
+
+
+
+    </div>
+{% endblock %}

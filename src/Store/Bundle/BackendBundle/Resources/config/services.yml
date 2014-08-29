@@ -1,0 +1,24 @@
+parameters:
+#    store_backend.example.class: Store\Bundle\BackendBundle\Example
+
+services:
+    file.save:
+        class: Store\Bundle\BackendBundle\FileHandle\SaveFileHandler
+        arguments: [@service_container]
+
+    product.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\Product ]
+
+    store.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\Store ]
+    city.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\City ]

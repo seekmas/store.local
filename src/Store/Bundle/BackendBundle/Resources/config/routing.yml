@@ -1,0 +1,11 @@
+store:
+    path: /
+    defaults: { _controller: StoreBackendBundle:Home:home }
+
+product_manage:
+    path:     /product
+    defaults: { _controller: StoreBackendBundle:Product:index }
+
+product_edit:
+    path: /{id}/product
+    defaults: { _controller: StoreBackendBundle:Product:edit }

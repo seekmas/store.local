@@ -1,0 +1,57 @@
+{% extends "StoreBackendBundle::layouts.html.twig" %}
+
+
+{% block body %}
+<div class="row">
+
+    <div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table mb30">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Product Name</th>
+                        <th>Product Alias</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for product_basket in user.productBasket if product_basket.removedAt == NULL %}
+
+                        <tr>
+                            <td>{{ product_basket.product.id }}</td>
+                            <td>{{ product_basket.product.productName }}</td>
+                            <td>{{ product_basket.product.productAlias }}</td>
+                            <td>{{ product_basket.product.productPrice }}</td>
+                            <td class="table-action">
+                                <a href="{{ url('product_edit' , {'id' : product_basket.product.id } ) }}"><i class="fa fa-pencil"></i></a>
+                                <a href="#" class="delete-row"><i class="fa fa-trash-o"></i></a>
+                            </td>
+                        </tr>
+
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            {{ form( form) }}
+        </div>
+    </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

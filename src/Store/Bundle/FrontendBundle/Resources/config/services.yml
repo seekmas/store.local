@@ -1,0 +1,7 @@
+parameters:
+#    store_frontend.example.class: Store\Bundle\FrontendBundle\Example
+
+services:
+#    store_frontend.example:
+#        class: %store_frontend.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
