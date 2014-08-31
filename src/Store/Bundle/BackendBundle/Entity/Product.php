@@ -55,6 +55,12 @@ class Product
     private $photo;
 
     /**
+     *
+     * @ORM\OneToOne(targetEntity="ProductBasket" , mappedBy="product")
+     */
+    private $productBasket;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="is_available", type="boolean" , nullable=true )
@@ -225,19 +231,6 @@ class Product
     }
 
     /**
-     * Set updatedAt
-     *
-     * @param \DateTime $updatedAt
-     * @return Product
-     */
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->updatedAt = $updatedAt;
-
-        return $this;
-    }
-
-    /**
      * @param mixed $photo
      */
     public function setPhoto($photo)
@@ -253,7 +246,35 @@ class Product
         return $this->photo;
     }
 
+    /**
+     * @param mixed $productBasket
+     */
+    public function setProductBasket($productBasket)
+    {
+        $this->productBasket = $productBasket;
+    }
 
+    /**
+     * @return mixed
+     */
+    public function getProductBasket()
+    {
+        return $this->productBasket;
+    }
+
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     * @return Product
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
 
     /**
      * Get updatedAt

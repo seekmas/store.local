@@ -3,6 +3,29 @@
 
     <div class="col-md-6">
 
+        {% if store is null %}
+
+                    <div class="panel panel-primary panel-stat">
+                        <div class="panel-heading">
+
+                            <div class="stat">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="{{ asset('backend/images/is-document.png') }}" alt="">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <small class="stat-label">你好 请先在右边添加你的商店信息</small>
+                                        <h2>初始化商店</h2>
+                                    </div>
+                                </div><!-- row -->
+
+                                <div class="mb15"></div>
+                            </div><!-- stat -->
+                        </div><!-- panel-heading -->
+                    </div>
+
+        {% else %}
+
         <div class="panel panel-default widget-photoday">
             <div class="panel-body">
                 <a href="#" class="photoday"><img src="{{ asset( store.logo ) }}" height="230px"></a>
@@ -18,6 +41,8 @@
                 </ul>
             </div><!-- panel-body -->
         </div>
+
+        {% endif %}
 
     </div>
 

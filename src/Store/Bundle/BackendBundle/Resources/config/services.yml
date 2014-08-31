@@ -2,21 +2,37 @@ parameters:
 #    store_backend.example.class: Store\Bundle\BackendBundle\Example
 
 services:
+#Event Listener
+    store.response_listener:
+        class: Store\Bundle\BackendBundle\EventListener\KernelRequestListener
+        arguments: [@service_container]
+        tags:
+            - { name: kernel.event_listener , event: kernel.request , method: onKernelRequest }
+
+#Helper
     file.save:
         class: Store\Bundle\BackendBundle\FileHandle\SaveFileHandler
         arguments: [@service_container]
 
+#RepositoryFactory
     product.repo:
         class: Doctrine\Common\Persistence\ObjectRepository
         factory_service: doctrine
         factory_method: getRepository
         arguments: [ Store\Bundle\BackendBundle\Entity\Product ]
 
+    basket.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\ProductBasket ]
+
     store.repo:
         class: Doctrine\Common\Persistence\ObjectRepository
         factory_service: doctrine
         factory_method: getRepository
         arguments: [ Store\Bundle\BackendBundle\Entity\Store ]
+
     city.repo:
         class: Doctrine\Common\Persistence\ObjectRepository
         factory_service: doctrine

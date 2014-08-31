@@ -1,0 +1,62 @@
+{% extends "StoreBackendBundle::layouts.html.twig" %}
+
+{% block blockName %}回收站 商品{% endblock %}
+
+{% block body %}
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table mb30">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Product Name</th>
+                                <th>Product Alias</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            {% for productBasket in productBaskets if productBasket.removedAt != NULL %}
+
+                                <tr>
+                                    <td>{{ productBasket.product.id }}</td>
+                                    <td>{{ productBasket.product.productName }}</td>
+                                    <td>{{ productBasket.product.productAlias }}</td>
+                                    <td>{{ productBasket.product.productPrice }}</td>
+                                    <td class="table-action">
+                                        <a href="{{ url('product_edit' , {'id' : productBasket.product.id } ) }}">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+                                        <a href="{{ url('product_resume' , {'id' : productBasket.product.id } ) }}">
+                                            <i class="fa fa-check"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}

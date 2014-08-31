@@ -2,6 +2,7 @@
 
 namespace Store\Bundle\BackendBundle\DependencyInjection;
 
+use Sensio\Bundle\FrameworkExtraBundle\DependencyInjection\Configuration;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
@@ -24,5 +25,20 @@ class StoreBackendExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+
+//        $processedConfig = $this->processConfiguration(
+//            new Configuration() ,
+//            $config
+//        );
+//
+//        $container->setParameter(
+//            'store_backend.enable_comment' ,
+//            $processedConfig['enabled']
+//        );
+    }
+
+    public function getAlias()
+    {
+        return 'store_backend';
     }
 }

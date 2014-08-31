@@ -6,6 +6,18 @@ product_manage:
     path:     /product
     defaults: { _controller: StoreBackendBundle:Product:index }
 
+product_trash_manage:
+    path:     /product_trash
+    defaults: { _controller: StoreBackendBundle:Product:trash }
+
 product_edit:
     path: /{id}/product
     defaults: { _controller: StoreBackendBundle:Product:edit }
+
+product_remove:
+    path: /{id}/product/remove
+    defaults: { _controller: StoreBackendBundle:Product:remove }
+
+product_resume:
+    path: /{id}/product/resume
+    defaults: { _controller: StoreBackendBundle:Product:resume }

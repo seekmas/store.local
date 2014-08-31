@@ -111,7 +111,7 @@ class MainMenuBuilder extends ContainerAware
                             'icon' => 'fa fa-caret-right' ,
                         ] ,
                     'label' => '回收站' ,
-                    'route' => 'product_manage' ,
+                    'route' => 'product_trash_manage' ,
                 ]
         );
 

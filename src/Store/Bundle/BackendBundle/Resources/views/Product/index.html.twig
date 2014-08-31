@@ -1,5 +1,6 @@
 {% extends "StoreBackendBundle::layouts.html.twig" %}
 
+{% block blockName %}添加/更新 产品{% endblock %}
 
 {% block body %}
 <div class="row">
@@ -29,7 +30,7 @@
                             <td>{{ product_basket.product.productPrice }}</td>
                             <td class="table-action">
                                 <a href="{{ url('product_edit' , {'id' : product_basket.product.id } ) }}"><i class="fa fa-pencil"></i></a>
-                                <a href="#" class="delete-row"><i class="fa fa-trash-o"></i></a>
+                                <a href="{{ url('product_remove' , {'id' : product_basket.product.id } ) }}" class="delete-row"><i class="fa fa-trash-o"></i></a>
                             </td>
                         </tr>
 

@@ -270,19 +270,18 @@
 
 
 <div class="pageheader">
-    <h2><i class="fa fa-home"></i> Dashboard</h2>
-    <div class="breadcrumb-wrapper">
-        <span class="label">You are here:</span>
-        <ol class="breadcrumb">
-            <li><a href="index.html">Bracket</a></li>
-            <li class="active">Dashboard</li>
-        </ol>
-    </div>
+    <h2><i class="fa fa-home"></i> {% block blockName %}{% endblock %}</h2>
 </div>
 
 <div class="contentpanel">
 
-
+    {% for type, messages in app.session.flashbag.all() %}
+        {% for message in messages %}
+            <div class="alert alert-{{ type }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
 
     {% block body %}
 
