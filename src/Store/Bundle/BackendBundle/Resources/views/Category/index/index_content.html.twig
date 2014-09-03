@@ -1,0 +1,73 @@
+
+
+<div class="row">
+
+    <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-btns">
+                    <a href="#" class="panel-close">×</a>
+                    <a href="#" class="minimize">−</a>
+                </div>
+                <h4 class="panel-title">所有的产品分类</h4>
+                <p>这里是我所有的产品分类</p>
+            </div>
+            <div class="panel-body">
+
+                <table class="table mb30">
+                    <thead>
+                    <tr>
+                        <th>#ID</th>
+                        <th>分类名</th>
+                        <th>是否启用</th>
+                        <th>关键字</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for category in categories %}
+
+                            <tr>
+                                <td>#{{ category.id }}</td>
+                                <td>{{ category.name }}</td>
+                                <td>{{ category.isEnabled ? "是" : "否" }}</td>
+                                <td>{{ category.keywords }}</td>
+                                <td class="table-action">
+                                    <a href="#"><i class="fa fa-pencil"></i></a>
+                                    <a href="#" class="delete-row"><i class="fa fa-trash-o"></i></a>
+                                </td>
+                            </tr>
+
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div><!-- panel-body -->
+        </div><!-- panel-default -->
+    </div>
+
+
+    <div class="col-md-4">
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-btns">
+                        <a href="#" class="panel-close">×</a>
+                        <a href="#" class="minimize">−</a>
+                    </div>
+                    <h4 class="panel-title">添加一个新的产品分类</h4>
+                    <p>创建一个产品的分类 方便顾客筛选</p>
+                </div>
+                <div class="panel-body">
+
+                    {{ form(form) }}
+
+                </div><!-- panel-body -->
+
+            </div><!-- panel-default -->
+
+
+    </div>
+
+
+</div>

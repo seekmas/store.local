@@ -1,0 +1,19 @@
+.mainpanel_single {
+    background: #e4e7ea;
+    min-height: 1000px;
+}
+
+.pageheader {
+    padding: 0px;
+    border-bottom: 1px solid #D3D7DB;
+    border-top: 1px solid #EEE;
+    background: none repeat scroll 0% 0% #F7F7F7;
+}
+
+.pageheader label{
+    padding-left: 40px;
+    font-size: 32px;
+    color: #636E7B;
+    letter-spacing: -0.5px;
+    margin: 0px;
+}

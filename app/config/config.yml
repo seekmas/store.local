@@ -26,7 +26,7 @@ framework:
 
 parameters:
     pdo.db_options:
-        db_table:    Session
+        db_table:    session
         db_id_col:   session_id
         db_data_col: session_value
         db_time_col: session_time
@@ -98,9 +98,13 @@ liip_imagine:
     resolvers:
        default:
           web_path: ~
-
     filter_sets:
         cache: ~
+
+        tiny:
+            quality: 75
+            filters:
+                thumbnail: { size: [50, 50], mode: outbound }
         small:
             quality: 75
             filters:
@@ -109,11 +113,43 @@ liip_imagine:
             quality: 75
             filters:
                 thumbnail: { size: [300, 275], mode: outbound }
-
-
+        banner:
+            quality: 75
+            filters:
+                thumbnail: { size: [220, 80], mode: outbound }
+        200x160:
+            quality: 75
+            filters:
+                thumbnail: { size: [200, 160], mode: outbound }
 
 knp_menu:
     twig:  # use "twig: false" to disable the Twig extension and the TwigRenderer
         template: knp_menu.html.twig
     templating: false # if true, enables the helper for PHP templates
     default_renderer: twig # The renderer to use, list is also available by default
+
+jms_di_extra:
+#    disable_grep: true
+    locations:
+        all_bundles: false
+        bundles: [StoreBackendBundle , StoreFrontendBundle]
+        directories: ["%kernel.root_dir%/../src"]
+
+#jms_di_extra:
+#    automatic_controller_injections:
+#        properties:
+#            request: "@request"
+#            router: "@router"
+#
+#        method_calls:
+#            setRouter: ["@router"]
+knp_paginator:
+    page_range: 5                      # default page range used in pagination control
+    default_options:
+        page_name: page                # page query parameter name
+        sort_field_name: sort          # sort field query parameter name
+        sort_direction_name: direction # sort direction query parameter name
+        distinct: true                 # ensure distinct results, useful when ORM queries are using GROUP BY statements
+    template:
+        pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig     # sliding pagination controls template
+        sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # sort link template

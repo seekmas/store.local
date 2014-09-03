@@ -4,20 +4,24 @@ store:
 
 product_manage:
     path:     /product
-    defaults: { _controller: StoreBackendBundle:Product:index }
+    defaults: { _controller: StoreBackendBundle:product:index }
 
 product_trash_manage:
     path:     /product_trash
-    defaults: { _controller: StoreBackendBundle:Product:trash }
+    defaults: { _controller: StoreBackendBundle:product:trash }
 
 product_edit:
     path: /{id}/product
-    defaults: { _controller: StoreBackendBundle:Product:edit }
+    defaults: { _controller: StoreBackendBundle:product:edit }
 
 product_remove:
     path: /{id}/product/remove
-    defaults: { _controller: StoreBackendBundle:Product:remove }
+    defaults: { _controller: StoreBackendBundle:product:remove }
 
 product_resume:
     path: /{id}/product/resume
-    defaults: { _controller: StoreBackendBundle:Product:resume }
+    defaults: { _controller: StoreBackendBundle:product:resume }
+
+product_category:
+    path: /product/category
+    defaults: { _controller: StoreBackendBundle:Category:index }

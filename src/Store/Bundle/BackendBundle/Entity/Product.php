@@ -5,7 +5,7 @@ namespace Store\Bundle\BackendBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Product
+ * product
  *
  * @ORM\Table()
  * @ORM\Entity

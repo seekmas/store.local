@@ -2,46 +2,101 @@
 
 {% block title %}StoreFrontendBundle:Home:index{% endblock %}
 
+
+ {% block blockName %}
+        <img src="{{ store.logo | imagine_filter('banner') }}" />
+        <label>{{ store.name }}</label>
+ {% endblock %}
+
 {% block body %}
-
-    <div class="cont span_2_of_3">
-
-    <h2 class="head">选择我所在地区的店铺</h2>
-        <hr/>
-    {% for c in city %}
-    <h2 class="head"> {{ c.name }} </h2>
-
-    <div class="top-box">
-
-        {% for store in c.store if store.id > 0 %}
-        <div class="col_1_of_3 span_1_of_3">
-            <a href="#">
-                <div class="inner_content clearfix">
-                    <div class="product_image">
-                        <img src="{{ store.logo }}" alt="">
-                    </div>
-                    <div class="sale-box"><span class="on_sale title_shop">热门店铺</span></div>
-                    <div class="price">
-                        <div class="cart-left">
-                            <p class="title">{{ store.name }}</p>
-                            <div class="price1">
-                                <span class="actual"></span>
-                            </div>
-                        </div>
-                        <div class="cart-right"> </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        {% endfor %}
+    <div class="contentpanel">
+    <ul class="filemanager-options">
+        <li><label for="selectall">所有热门商品</label></li>
+        <li><label for="selectall">按销量</label></li>
+        <li><label for="selectall">按上架日期</label></li>
+        <li><label for="selectall">按分享次数</label></li>
+        <li><label for="selectall">按点赞次数</label></li>
+        <li class="filter-type">
+            Show:
+            <a href="all.html" class="active">All</a>
+            <a href="document.html">Documents</a>
+            <a href="audio.html">Audio</a>
+            <a href="image.html">Images</a>
+            <a href="video.html">Videos</a>
+        </li>
+    </ul>
 
 
-        <div class="clear"></div>
-    </div>
+    <div class="row">
+    <div class="col-sm-9">
+    <div class="row filemanager">
+
+    {% for productBasket in products %}
+
+    <div class="col-xs-6 col-sm-4 col-md-3 document">
+        <div class="thmb">
+            <div style="display: none;" class="ckbox ckbox-default">
+                <input id="check1" value="1" type="checkbox">
+                <label for="check1"></label>
+            </div>
+            <div style="display: none;" class="btn-group fm-group">
+                <button type="button" class="btn btn-default dropdown-toggle fm-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu fm-menu" role="menu">
+                    <li><a href="#"><i class="fa fa-share"></i> Share</a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o"></i> Email</a></li>
+                    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+                    <li><a href="#"><i class="fa fa-download"></i> Download</a></li>
+                    <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+                </ul>
+            </div><!-- btn-group -->
+            <div class="thmb-prev">
+                <img src="{{ productBasket.product.photo | imagine_filter('200x160') }}" class="img-responsive" alt="">
+            </div>
+            <h5 class="fm-title"><a href="{{ url('find_product_by_id' , {'id' : productBasket.product.id} ) }}">{{ productBasket.product.productName }}</a></h5>
+            <small class="text-muted">{{ productBasket.product.productPrice }}</small>
+        </div><!-- thmb -->
+    </div><!-- col-xs-6 -->
+
+
     {% endfor %}
+    </div><!-- row -->
+    </div><!-- col-sm-9 -->
+    <div class="col-sm-3">
+        <div class="fm-sidebar">
 
+            <button class="btn btn-primary btn-block">我的购物车</button>
 
+            <div class="mb30"></div>
 
+            <h5 class="subtitle">Folders <a href="#" class="pull-right"></a></h5>
+            <ul class="folder-list">
+                {% for category in store.category if category.isEnabled %}
+                <li><a href="#"><i class="fa fa-folder-o"></i> {{ category.name }}</a></li>
+                {% endfor %}
+            </ul>
+
+            <div class="mb30"></div>
+
+            <h5 class="subtitle">Tags</h5>
+            <ul class="tag-list">
+                <li><a href="#">Animation</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Trailer</a></li>
+                <li><a href="#">Short Film</a></li>
+                <li><a href="#">Dubstep</a></li>
+                <li><a href="#">Soundtrack</a></li>
+                <li><a href="#">Photography</a></li>
+                <li><a href="#">Macro</a></li>
+                <li><a href="#">Tuturials</a></li>
+                <li><a href="#">Documentation</a></li>
+            </ul>
+
+        </div>
+    </div><!-- col-sm-3 -->
     </div>
+    </div>
+
+
 {% endblock %}

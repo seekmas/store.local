@@ -35,17 +35,17 @@ class ProductBasket
     private $productId;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User" , inversedBy="productBasket")
-     * @ORM\JoinColumn(name="user_id" , referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Store" , inversedBy="productBasket")
+     * @ORM\JoinColumn(name="store_id" , referencedColumnName="id")
      */
-    private $user;
+    private $store;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="user_id", type="integer")
+     * @ORM\Column(name="store_id", type="integer")
      */
-    private $userId;
+    private $storeId;
 
     /**
      * @var \DateTime
@@ -95,28 +95,6 @@ class ProductBasket
         return $this->productId;
     }
 
-    /**
-     * Set userId
-     *
-     * @param integer $userId
-     * @return ProductBasket
-     */
-    public function setUserId($userId)
-    {
-        $this->userId = $userId;
-
-        return $this;
-    }
-
-    /**
-     * Get userId
-     *
-     * @return integer 
-     */
-    public function getUserId()
-    {
-        return $this->userId;
-    }
 
     /**
      * Set createdAt
@@ -181,18 +159,35 @@ class ProductBasket
     }
 
     /**
-     * @param mixed $user
+     * @param mixed $store
      */
-    public function setUser($user)
+    public function setStore($store)
     {
-        $this->user = $user;
+        $this->store = $store;
     }
 
     /**
      * @return mixed
      */
-    public function getUser()
+    public function getStore()
     {
-        return $this->user;
+        return $this->store;
     }
+
+    /**
+     * @param int $storeId
+     */
+    public function setStoreId($storeId)
+    {
+        $this->storeId = $storeId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getStoreId()
+    {
+        return $this->storeId;
+    }
+
 }

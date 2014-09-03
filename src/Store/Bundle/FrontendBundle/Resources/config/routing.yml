@@ -1,3 +1,7 @@
 index:
-    path:     /
+    path: /
     defaults: { _controller: StoreFrontendBundle:Home:index }
+
+find_product_by_id:
+    path: /{id}/product
+    defaults: { _controller: StoreFrontendBundle:Home:product }

@@ -5,29 +5,39 @@
 {% block body %}
 <div class="row">
 
-    <div class="col-md-6">
+    <div class="col-md-8">
     <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns">
+                <a href="#" class="panel-close">×</a>
+                <a href="#" class="minimize">−</a>
+            </div>
+            <h4 class="panel-title">所有的产品</h4>
+            <p>这里是我所有产品的一个列表</p>
+        </div>
         <div class="panel-body">
             <div class="table-responsive">
                 <table class="table mb30">
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Product Name</th>
-                        <th>Product Alias</th>
-                        <th>Price</th>
+                        <th>封面</th>
+                        <th>产品名</th>
+                        <th>价格</th>
+                        <th>是否启用</th>
                         <th></th>
                     </tr>
                     </thead>
                     <tbody>
 
-                    {% for product_basket in user.productBasket if product_basket.removedAt == NULL %}
+                    {% for product_basket in store.productBasket if product_basket.removedAt == NULL %}
 
                         <tr>
                             <td>{{ product_basket.product.id }}</td>
+                            <td>{% if product_basket.product.photo %}<img src="{{ asset( product_basket.product.photo ) | imagine_filter('tiny') }}">{% endif %}</td>
                             <td>{{ product_basket.product.productName }}</td>
-                            <td>{{ product_basket.product.productAlias }}</td>
                             <td>{{ product_basket.product.productPrice }}</td>
+                            <td>{{ product_basket.product.isAvailable ? "是" : "否" }}</td>
                             <td class="table-action">
                                 <a href="{{ url('product_edit' , {'id' : product_basket.product.id } ) }}"><i class="fa fa-pencil"></i></a>
                                 <a href="{{ url('product_remove' , {'id' : product_basket.product.id } ) }}" class="delete-row"><i class="fa fa-trash-o"></i></a>
@@ -44,8 +54,17 @@
     </div>
 
 
-    <div class="col-md-6">
+    <div class="col-md-4">
     <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns">
+                <a href="#" class="panel-close">×</a>
+                <a href="#" class="minimize">−</a>
+            </div>
+            <h4 class="panel-title">添加新的产品</h4>
+            <p>新产品上架</p>
+        </div>
+
         <div class="panel-body">
             {{ form( form) }}
         </div>

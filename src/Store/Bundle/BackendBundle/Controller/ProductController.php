@@ -23,19 +23,20 @@ class ProductController extends Controller
         $user = $this->get('security.context')->getToken()->getUser();
         $dispatcher = $this->get('event_dispatcher');
 
+        $store = $this->get('store.repo')->findOneBy(['userId' => $user->getId()]);
+
         $product = new Product();
         $em->persist( $product);
         $form = $this->createNewForm( $request , new ProductType() , $product );
 
         if( $form->isValid() )
         {
-
             //check duplicated product
             if( $duplicatedProduct = $this->get('product.repo')->findBy([ 'productName' => $product->getProductName() ]) )
             {
                 foreach( $duplicatedProduct as $p)
                 {
-                    if( $p->getProductBasket()->getUserId() == $user->getId() )
+                    if( $p->getProductBasket()->getStoreId() == $store->getId() )
                     {
                         $request->getSession()->getFlashBag()->add('danger' , '请不要重复添加商品(商品重名)');
                         return $this->redirect(
@@ -54,7 +55,7 @@ class ProductController extends Controller
             $em->persist( $productBasket);
             $productBasket->setCreatedAt( new \DateTime());
             $productBasket->setProduct( $product );
-            $productBasket->setUser( $user);
+            $productBasket->setStore( $store);
 
             $em->flush();
 
@@ -78,10 +79,11 @@ class ProductController extends Controller
             );
         }
 
-        return $this->render('StoreBackendBundle:Product:index.html.twig' ,
+        return $this->render('StoreBackendBundle:product:index.html.twig' ,
             [
                 'form' => $form->createView() ,
                 'user' => $user ,
+                'store' => $store ,
             ]
         );
     }
@@ -90,13 +92,15 @@ class ProductController extends Controller
     {
         $user = $this->get('security.context')->getToken()->getUser();
 
+        $store = $this->get('store.repo')->findOneBy(['userId' => $user->getId()]);
+
         $productBaskets = $this->get('basket.repo')->findBy(
             [
-                'userId' => $user->getId()
+                'store' => $store->getId()
             ]
         );
 
-        return $this->render('StoreBackendBundle:Product:trash.html.twig' ,
+        return $this->render('StoreBackendBundle:product:trash.html.twig' ,
             [
                 'productBaskets' => $productBaskets ,
             ]
@@ -155,7 +159,7 @@ class ProductController extends Controller
         }
 
         $product->setPhoto( $tmp_photo);
-        return $this->render('StoreBackendBundle:Product:edit.html.twig' ,
+        return $this->render('StoreBackendBundle:product:edit.html.twig' ,
             [
                 'product' => $product ,
                 'form' => $form->createView() ,

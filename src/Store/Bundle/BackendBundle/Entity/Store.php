@@ -69,6 +69,11 @@ class Store
     private $userId;
 
     /**
+     * @ORM\OneToMany(targetEntity="Category" , mappedBy="store")
+     */
+    private $category;
+
+    /**
      * @var boolean
      *
      * @ORM\Column(name="is_enabled", type="boolean" , nullable=true )
@@ -81,6 +86,11 @@ class Store
      * @ORM\Column(name="created_at", type="datetime")
      */
     private $createdAt;
+
+    /**
+     * @ORM\OneToMany(targetEntity="ProductBasket" , mappedBy="store")
+     */
+    private $productBasket;
 
 
     /**
@@ -279,4 +289,35 @@ class Store
         return $this->user;
     }
 
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param mixed $productBasket
+     */
+    public function setProductBasket($productBasket)
+    {
+        $this->productBasket = $productBasket;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProductBasket()
+    {
+        return $this->productBasket;
+    }
 }

@@ -7,10 +7,27 @@ use Store\Bundle\BackendBundle\Form\Type\StoreType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+
+use JMS\DiExtraBundle\Annotation as DI;
 
 class HomeController extends Controller
 {
+
+    protected $_session;
+    protected $_em;
+
+    /**
+     * @DI\InjectParams({
+     *     "em" = @DI\Inject("doctrine.orm.entity_manager"),
+     *     "session" = @DI\Inject("session")
+     * })
+     */
+    public function __construct( $em , $session)
+    {
+        $this->_em = $em;
+        $this->_session = $session;
+    }
+
     public function homeAction( Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -52,6 +69,8 @@ class HomeController extends Controller
             $store->setUser( $user );
             $store->setCreatedAt( new \Datetime());
             $em->flush();
+
+            $request->getSession()->getFlashBag()->add('success' , '商城更新成功');
 
             return $this->redirect(
                 $this->generateUrl('store')

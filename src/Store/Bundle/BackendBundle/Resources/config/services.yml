@@ -27,6 +27,12 @@ services:
         factory_method: getRepository
         arguments: [ Store\Bundle\BackendBundle\Entity\ProductBasket ]
 
+    category.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\Category ]
+
     store.repo:
         class: Doctrine\Common\Persistence\ObjectRepository
         factory_service: doctrine

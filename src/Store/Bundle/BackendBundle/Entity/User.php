@@ -18,31 +18,12 @@ class User extends BaseUser
     */
     protected $id;
 
-    /**
-     * @ORM\OneToMany(targetEntity="ProductBasket" , mappedBy="user")
-     */
-    private $productBasket;
 
     public function __construct()
     {
         parent::__construct();
     }
 
-    /**
-     * @param mixed $productBasket
-     */
-    public function setProductBasket($productBasket)
-    {
-        $this->productBasket = $productBasket;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProductBasket()
-    {
-        return $this->productBasket;
-    }
 
 
 }
