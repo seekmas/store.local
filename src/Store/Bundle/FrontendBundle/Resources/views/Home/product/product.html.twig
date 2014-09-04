@@ -2,6 +2,9 @@
 
 {% block title %}StoreFrontendBundle:Home:index{% endblock %}
 
+{% block description %}{{ product.productDesc }}{% endblock %}
+
+{% block keywords %}{% endblock %}
 
  {% block blockName %}
      <img src="{{ product.productBasket.store.logo | imagine_filter('banner') }}" />
@@ -9,11 +12,8 @@
  {% endblock %}
 
 {% block body %}
-
     <section>
-
     <div class="mainpanel_single">
-
     <div class="contentpanel">
     <div class="row">
     <div class="col-sm-3">
@@ -41,8 +41,9 @@
 
     <div class="profile-header">
         <h2 class="profile-name">{{ product.productName }}</h2>
-        <div class="profile-location"><i class="fa fa-map-marker"></i> San Francisco, California, USA</div>
-        <div class="profile-position"><i class="fa fa-briefcase"></i> Software Engineer at <a href="#">SomeCompany, Inc.</a></div>
+        <div class="profile-position"><i class="fa fa-money"></i> 价格 {{ product.productPrice | currency | raw }}</div>
+
+
 
         <div class="mb20"></div>
 

@@ -14,27 +14,16 @@
         <li><label for="selectall">所有热门商品</label></li>
         <li><label for="selectall">按销量</label></li>
         <li><label for="selectall">按上架日期</label></li>
-        <li><label for="selectall">按分享次数</label></li>
-        <li><label for="selectall">按点赞次数</label></li>
-        <li class="filter-type">
-            Show:
-            <a href="all.html" class="active">All</a>
-            <a href="document.html">Documents</a>
-            <a href="audio.html">Audio</a>
-            <a href="image.html">Images</a>
-            <a href="video.html">Videos</a>
-        </li>
     </ul>
-
 
     <div class="row">
     <div class="col-sm-9">
     <div class="row filemanager">
 
-    {% for productBasket in products %}
 
+    {% for productBasket in products if productBasket.product.isAvailable %}
     <div class="col-xs-6 col-sm-4 col-md-3 document">
-        <div class="thmb">
+        <div class="thmb same_height">
             <div style="display: none;" class="ckbox ckbox-default">
                 <input id="check1" value="1" type="checkbox">
                 <label for="check1"></label>
@@ -54,14 +43,22 @@
             <div class="thmb-prev">
                 <img src="{{ productBasket.product.photo | imagine_filter('200x160') }}" class="img-responsive" alt="">
             </div>
-            <h5 class="fm-title"><a href="{{ url('find_product_by_id' , {'id' : productBasket.product.id} ) }}">{{ productBasket.product.productName }}</a></h5>
-            <small class="text-muted">{{ productBasket.product.productPrice }}</small>
+
+            <h5 class="fm-title">
+                <a href="{{ url('find_product_by_id' , {'id' : productBasket.product.id} ) }}">
+                    {{ productBasket.product.productName | truncate(64) }}
+                </a>
+            </h5>
+
+            <small class="text-muted">{{ productBasket.product.productPrice | currency | raw }}</small>
         </div><!-- thmb -->
     </div><!-- col-xs-6 -->
-
-
     {% endfor %}
+
     </div><!-- row -->
+
+        {{ knp_pagination_render(products) }}
+
     </div><!-- col-sm-9 -->
     <div class="col-sm-3">
         <div class="fm-sidebar">
@@ -70,7 +67,7 @@
 
             <div class="mb30"></div>
 
-            <h5 class="subtitle">Folders <a href="#" class="pull-right"></a></h5>
+            <h5 class="subtitle">分类 <a href="#" class="pull-right"></a></h5>
             <ul class="folder-list">
                 {% for category in store.category if category.isEnabled %}
                 <li><a href="#"><i class="fa fa-folder-o"></i> {{ category.name }}</a></li>

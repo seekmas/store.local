@@ -92,6 +92,10 @@ class Store
      */
     private $productBasket;
 
+    /**
+     * @ORM\Column(name="extra_info" , type="text" , nullable=true )
+     */
+    private $extraInfo;
 
     /**
      * Get id
@@ -319,5 +323,21 @@ class Store
     public function getProductBasket()
     {
         return $this->productBasket;
+    }
+
+    /**
+     * @param mixed $extraInfo
+     */
+    public function setExtraInfo($extraInfo)
+    {
+        $this->extraInfo = $extraInfo;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getExtraInfo()
+    {
+        return $this->extraInfo;
     }
 }

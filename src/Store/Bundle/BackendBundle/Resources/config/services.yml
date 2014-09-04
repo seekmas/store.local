@@ -13,8 +13,19 @@ services:
     file.save:
         class: Store\Bundle\BackendBundle\FileHandle\SaveFileHandler
         arguments: [@service_container]
-
+#twig extension:
+    currency.twig.extension:
+        class: Store\Bundle\BackendBundle\Twig\CurrencyExtension
+        tags:
+            - { name: twig.extension }
 #RepositoryFactory
+
+    user.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\User ]
+
     product.repo:
         class: Doctrine\Common\Persistence\ObjectRepository
         factory_service: doctrine
@@ -44,3 +55,16 @@ services:
         factory_service: doctrine
         factory_method: getRepository
         arguments: [ Store\Bundle\BackendBundle\Entity\City ]
+
+#entity paginator
+    user.paginator:
+        class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory
+        arguments: [@request_stack,@knp_paginator,@user.repo]
+
+    productBasket.paginator:
+        class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory
+        arguments: [@request_stack,@knp_paginator,@basket.repo]
+
+    product.paginator:
+        class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory
+        arguments: [@request_stack,@knp_paginator,@product.repo]

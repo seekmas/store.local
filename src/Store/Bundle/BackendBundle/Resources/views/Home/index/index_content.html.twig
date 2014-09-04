@@ -32,7 +32,8 @@
                 <div class="photo-details">
                     <h3 class="photo-title">{{ store.name }}</h3>
                     <h3><small class="text-muted"><i class="fa fa-map-marker"></i> {{ store.address }}</small></h3>
-                    <h3><small>所在城市: <a href="#">{{ store.city.name }}</a></small></h3>
+                    <h3><small>所在城市: {{ store.city.name }}</small></h3>
+                    <h3><small>底部备案: {{ store.extraInfo }}</small></h3>
 
                 </div><!-- photo-details -->
                 <ul class="photo-meta">

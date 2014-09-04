@@ -20,16 +20,9 @@ class HomeController extends Controller
 
         $standardStore = $store[0];
 
-        $query = $this->get('basket.repo')->createQueryBuilder('p')
-                      ->select('p')
-                      ->where('p.storeId = '.$standardStore->getId());
-
-        $paginator  = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-            $query,
-            $this->get('request')->query->get('page', 1)/*page number*/,
-            10/*limit per page*/
-        );
+        $pagination = $this->get('productBasket.paginator')
+                           ->setCondition( ['storeId' => $standardStore->getId()] )
+                           ->createPagination();
 
         return $this->render('StoreFrontendBundle:Home:index.html.twig',
             [
@@ -54,7 +47,6 @@ class HomeController extends Controller
                    'product' => $product
                ]
         );
-
     }
 
     public function shipmentAction()

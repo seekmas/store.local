@@ -79,7 +79,7 @@ class ProductController extends Controller
             );
         }
 
-        return $this->render('StoreBackendBundle:product:index.html.twig' ,
+        return $this->render('StoreBackendBundle:Product:index.html.twig' ,
             [
                 'form' => $form->createView() ,
                 'user' => $user ,
@@ -100,7 +100,7 @@ class ProductController extends Controller
             ]
         );
 
-        return $this->render('StoreBackendBundle:product:trash.html.twig' ,
+        return $this->render('StoreBackendBundle:Product:trash.html.twig' ,
             [
                 'productBaskets' => $productBaskets ,
             ]
@@ -159,7 +159,7 @@ class ProductController extends Controller
         }
 
         $product->setPhoto( $tmp_photo);
-        return $this->render('StoreBackendBundle:product:edit.html.twig' ,
+        return $this->render('StoreBackendBundle:Product:edit.html.twig' ,
             [
                 'product' => $product ,
                 'form' => $form->createView() ,

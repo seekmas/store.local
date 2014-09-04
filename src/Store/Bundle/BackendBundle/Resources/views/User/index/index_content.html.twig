@@ -1,0 +1,39 @@
+<div class="panel">
+<div class="panel-body">
+
+    <div class="count">
+        会员合计: {{ users.getTotalItemCount }}
+    </div>
+    <div class="table-responsive">
+        <table class="table mb30">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>用户名</th>
+                <th>邮箱</th>
+                <th>最后登陆</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.lastLogin | date('Y/m/d H:i:s') }}</td>
+                <td class="table-action">
+                    <a href="#"><i class="fa fa-pencil"></i></a>
+                    <a href="#" class="delete-row"><i class="fa fa-trash-o"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+        {{ knp_pagination_render(users) }}
+    </div>
+
+</div><!-- panel-body -->
+</div><!-- panel -->

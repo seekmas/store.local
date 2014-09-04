@@ -19,6 +19,8 @@
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
 
+        "doctrine/doctrine-fixtures-bundle": "2.2.*",
+
         "liip/imagine-bundle": "1.0.*@dev",
         "friendsofsymfony/user-bundle": "2.0.*@dev",
         "friendsofsymfony/comment-bundle": "2.0.*@dev",
