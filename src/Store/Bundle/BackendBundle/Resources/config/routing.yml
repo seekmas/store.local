@@ -39,6 +39,10 @@ product_category_edit:
     path: /{id}/category/edit
     defaults: { _controller: StoreBackendBundle:Category:edit }
 
+product_to_category:
+    path: /{productId}/addTo/{categoryId}/{dropCategory}
+    defaults: { _controller: StoreBackendBundle:Category:addProductToCategory }
+
 #######
 user_manage:
     path: /user

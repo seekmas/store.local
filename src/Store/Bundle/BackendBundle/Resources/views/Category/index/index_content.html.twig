@@ -1,5 +1,3 @@
-
-
 <div class="row">
 
     <div class="col-md-7">
@@ -31,7 +29,7 @@
                                 <td>#{{ category.id }}</td>
                                 <td>{{ category.name }}</td>
                                 <td>{{ category.isEnabled ? "是" : "否" }}</td>
-                                <td>{{ category.keywords }}</td>
+                                <td>{{ category.keywords | striptags }}</td>
                                 <td class="table-action">
                                     <a href="{{ url('product_category_edit' , {'id':category.id}) }}"><i class="fa fa-pencil"></i></a>
                                     <a href="#" class="delete-row"><i class="fa fa-trash-o"></i></a>

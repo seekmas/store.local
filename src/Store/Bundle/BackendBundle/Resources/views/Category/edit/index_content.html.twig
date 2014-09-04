@@ -1,143 +1,74 @@
 <div class="row">
+
+<div class="col-md-4">
+    {{ form( form) }}
+</div>
+
 <div class="col-sm-4 col-md-4">
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            <div class="mb20"></div>
-            <h4 class="subtitle mb5">Location</h4>
-
-
+            <h4 class="panel-title">未分类的产品</h4>
+            <p>检索出来 {{ unclassified | length }} 个商品</p>
          </div>
+
+        <div class="panel-body">
+
+            {% for p in unclassified %}
+
+                <div class="media">
+                    <a href="#" class="pull-left">
+                        <img alt="" src="images/photos/media1.jpg" class="media-object">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="filename text-primary">
+
+                            <a href="{{ url('product_to_category' , {'productId':p.product.id , 'categoryId':category.id , 'dropCategory' : 0} ) }}">
+                            <img class="img-thumbnail" src="{{ asset(p.product.photo) | imagine_filter('tiny') }}">
+                            #{{ p.product.id }} . {{ p.product.productName }} <i class="fa fa-exchange"></i>
+                            </a>
+
+                        </h4>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+        </div>
     </div>
 <br>
 
 </div><!-- col-sm-4 -->
-<div class="col-sm-8 col-md-8">
+<div class="col-sm-4 col-md-4">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <ul class="pagination nomargin pull-right">
-                <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                <li><a href="#">1</a></li>
-                <li class="active"><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-            </ul>
-            <h4 class="panel-title">当前分类 "{{ category.name }}" 下的产品</h4>
-            <p>检索出来 个商品</p>
+            <h4 class="panel-title"> "{{ category.name }}" 分类中的产品</h4>
+            <p>检索出来 {{ classified | length }} 个商品</p>
         </div><!-- panel-heading -->
         <div class="panel-body">
-
             <div class="results-list">
 
-                <div class="media">
-                    <a href="#" class="pull-left">
-                        <img alt="" src="images/photos/media1.jpg" class="media-object">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="filename text-primary">Pizza.png</h4>
-                        <small class="text-muted">Type: JPG Image</small><br>
-                        <small class="text-muted">Created: January 10, 2014 at 7:30am</small><br>
-                        <small class="text-muted">Modified: January 13, 2014 at 11:30am</small>
-                    </div>
-                </div>
 
-                <div class="media">
-                    <a href="#" class="pull-left">
-                        <img alt="" src="images/photos/media-doc.png" class="media-object">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="filename text-primary">MyDocument.pdf</h4>
-                        <small class="text-muted">Type: PDF Document</small><br>
-                        <small class="text-muted">Created: January 13, 2014 at 7:30am</small><br>
-                        <small class="text-muted">Modified: January 13, 2014 at 11:30am</small>
-                    </div>
-                </div>
+                {% for p in classified %}
 
-                <div class="media">
-                    <a href="#" class="pull-left">
-                        <img alt="" src="images/photos/media2.png" class="media-object">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="filename text-primary">SwimmingPool.png</h4>
-                        <small class="text-muted">Type: PNG Image</small><br>
-                        <small class="text-muted">Created: January 10, 2014 at 7:30am</small><br>
-                        <small class="text-muted">Modified: January 13, 2014 at 11:30am</small>
-                    </div>
-                </div>
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img alt="" src="images/photos/media1.jpg" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="filename text-primary">
 
-                <div class="media">
-                    <a href="#" class="pull-left">
-                        <img alt="" src="images/photos/media-audio.png" class="media-object">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="filename text-primary">WreckingBall.mp3</h4>
-                        <small class="text-muted">Type: MP3 Audio</small><br>
-                        <small class="text-muted">Created: January 13, 2014 at 7:30am</small><br>
-                        <small class="text-muted">Modified: January 13, 2014 at 11:30am</small>
-                    </div>
-                </div>
+                                <a href="{{ url('product_to_category' , {'productId':p.product.id , 'categoryId':category.id , 'dropCategory' : 1} ) }}">
+                                    <img class="img-thumbnail" src="{{ asset(p.product.photo) | imagine_filter('tiny') }}">
+                                    #{{ p.product.id }} . {{ p.product.productName }} <i class="fa fa-exchange"></i>
+                                </a>
 
-                <div class="media">
-                    <a href="#" class="pull-left">
-                        <img alt="" src="images/photos/media3.png" class="media-object">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="filename text-primary">Painting.mp4</h4>
-                        <small class="text-muted">Type: MP4 Video</small><br>
-                        <small class="text-muted">Created: January 13, 2014 at 7:30am</small><br>
-                        <small class="text-muted">Modified: January 13, 2014 at 11:30am</small>
+                            </h4>
+                        </div>
                     </div>
-                </div>
 
-                <div class="media">
-                    <a href="#" class="pull-left">
-                        <img alt="" src="images/photos/media1.jpg" class="media-object">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="filename text-primary">Pizza.png</h4>
-                        <small class="text-muted">Type: JPG Image</small><br>
-                        <small class="text-muted">Created: January 10, 2014 at 7:30am</small><br>
-                        <small class="text-muted">Modified: January 13, 2014 at 11:30am</small>
-                    </div>
-                </div>
+                {% endfor %}
 
-                <div class="media">
-                    <a href="#" class="pull-left">
-                        <img alt="" src="images/photos/media-doc.png" class="media-object">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="filename text-primary">MyDocument.pdf</h4>
-                        <small class="text-muted">Type: PDF Document</small><br>
-                        <small class="text-muted">Created: January 13, 2014 at 7:30am</small><br>
-                        <small class="text-muted">Modified: January 13, 2014 at 11:30am</small>
-                    </div>
-                </div>
-
-                <div class="media">
-                    <a href="#" class="pull-left">
-                        <img alt="" src="images/photos/media2.png" class="media-object">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="filename text-primary">SwimmingPool.png</h4>
-                        <small class="text-muted">Type: PNG Image</small><br>
-                        <small class="text-muted">Created: January 10, 2014 at 7:30am</small><br>
-                        <small class="text-muted">Modified: January 13, 2014 at 11:30am</small>
-                    </div>
-                </div>
-
-                <div class="media">
-                    <a href="#" class="pull-left">
-                        <img alt="" src="images/photos/media-audio.png" class="media-object">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="filename text-primary">WreckingBall.mp3</h4>
-                        <small class="text-muted">Type: MP3 Audio</small><br>
-                        <small class="text-muted">Created: January 13, 2014 at 7:30am</small><br>
-                        <small class="text-muted">Modified: January 13, 2014 at 11:30am</small>
-                    </div>
-                </div>
 
             </div><!-- results-list -->
 
