@@ -42,6 +42,6 @@ class ProductType extends BaseType
      */
     public function getName()
     {
-        return 'store_bundle_backendbundle_product';
+        return 'store_bundle_backend_product';
     }
 }

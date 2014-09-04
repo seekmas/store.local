@@ -57,11 +57,7 @@ class Category
     private $storeId;
 
     /**
-     * @ORM\ManyToMany(targetEntity="ProductBasket")
-     * @ORM\JoinTable(name="ProductBasket_Category" ,
-     *      joinColumns={@ORM\JoinColumn(name="category_id" , referencedColumnName="id")} ,
-     *      inverseJoinColumns={@ORM\JoinColumn(name="basket_id" , referencedColumnName="id")}
-     * )
+     * @ORM\OneToMany(targetEntity="ProductBasket" , mappedBy="category")
      */
     private $productBasket;
 

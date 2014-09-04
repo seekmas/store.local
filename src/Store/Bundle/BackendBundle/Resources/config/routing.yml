@@ -15,6 +15,14 @@ product_edit:
     path: /{id}/product
     defaults: { _controller: StoreBackendBundle:Product:edit }
 
+product_gallery:
+    path: /{id}/gallery
+    defaults: { _controller: StoreBackendBundle:Product:gallery }
+
+product_gallery_action:
+    path: /{id}/gallery/{action}
+    defaults: { _controller: StoreBackendBundle:Product:editGallery }
+
 product_remove:
     path: /{id}/product/remove
     defaults: { _controller: StoreBackendBundle:Product:remove }
@@ -26,6 +34,10 @@ product_resume:
 product_category:
     path: /product/category
     defaults: { _controller: StoreBackendBundle:Category:index }
+
+product_category_edit:
+    path: /{id}/category/edit
+    defaults: { _controller: StoreBackendBundle:Category:edit }
 
 #######
 user_manage:

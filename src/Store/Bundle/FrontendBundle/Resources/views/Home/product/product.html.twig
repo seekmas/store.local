@@ -2,9 +2,19 @@
 
 {% block title %}StoreFrontendBundle:Home:index{% endblock %}
 
-{% block description %}{{ product.productDesc }}{% endblock %}
+{% block description %}{{ product.productDesc | striptags | truncate(218) }}{% endblock %}
 
 {% block keywords %}{% endblock %}
+
+{% block breadcrumb %}
+
+    {{ parent() }}
+
+    {% if product.productBasket.category %}
+    <li><a href="{{ url('index') }}"><label>{{ product.productBasket.category.name }}</label></a></li>
+    {% endif %}
+
+{% endblock %}
 
  {% block blockName %}
      <img src="{{ product.productBasket.store.logo | imagine_filter('banner') }}" />
@@ -22,10 +32,6 @@
         <div class="mb30"></div>
 
         <h5 class="subtitle">商品名</h5>
-        <p class="mb30">
-            {{ product.productDesc }}
-        </p>
-
 
         <div class="mb30"></div>
 
@@ -351,6 +357,49 @@
     </div><!-- rightpanel -->
 
     </section>
+{% endblock %}
 
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('owl/owl-carousel/owl.carousel.css') }}">
+    <link href="{{ asset('owl/owl-carousel/owl.theme.css') }}" rel="stylesheet">
+    <style>
+        #gallery-photo .item img{
+            display: block;
+            height: auto;
+        }
+    </style>
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}
+
+    <script src="{{ asset('owl/owl-carousel/owl.carousel.js') }}"></script>
+    <script>
+
+
+        $(document).ready(function() {
+
+            $("#gallery-photo").owlCarousel({
+
+                navigation : true, // Show next and prev buttons
+                slideSpeed : 200,
+                paginationSpeed : 400,
+                singleItem:true
+
+                // "singleItem:true" is a shortcut for:
+                // items : 1,
+                // itemsDesktop : false,
+                // itemsDesktopSmall : false,
+                // itemsTablet: false,
+                // itemsMobile : false
+
+            });
+
+        });
+
+
+    </script>
 {% endblock %}

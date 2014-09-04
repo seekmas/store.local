@@ -61,6 +61,21 @@ class ProductBasket
      */
     private $removedAt;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Category" , inversedBy="productBasket")
+     * @ORM\JoinColumn(name="category_id" , referencedColumnName="id")
+     */
+    private $category;
+
+    /**
+     * @ORM\Column(name="category_id" , type="integer" , nullable=true)
+     */
+    private $categoryId;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Photo" , mappedBy="productBasket")
+     */
+    private $photo;
 
     /**
      * Get id
@@ -189,5 +204,54 @@ class ProductBasket
     {
         return $this->storeId;
     }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param mixed $categoryId
+     */
+    public function setCategoryId($categoryId)
+    {
+        $this->categoryId = $categoryId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategoryId()
+    {
+        return $this->categoryId;
+    }
+
+    /**
+     * @param mixed $photo
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
 
 }

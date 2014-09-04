@@ -56,6 +56,12 @@ services:
         factory_method: getRepository
         arguments: [ Store\Bundle\BackendBundle\Entity\City ]
 
+    photo.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\Photo ]
+
 #entity paginator
     user.paginator:
         class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory

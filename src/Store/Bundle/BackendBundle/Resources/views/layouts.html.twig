@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ asset('backend/css/jquery.tagsinput.css') }}" />
     <link rel="stylesheet" href="{{ asset('backend/css/colorpicker.css') }}" />
     <link rel="stylesheet" href="{{ asset('backend/css/dropzone.css') }}" />
-
+    <link rel="stylesheet" href="{{ asset('backend/css/bootstrap-wysihtml5.css') }}" />
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="{{ asset('backend/js/html5shiv.js') }}"></script>
@@ -314,6 +314,16 @@
 <script src="{{ asset('backend/js/chosen.jquery.min.js') }}"></script>
 
 <script src="{{ asset('backend/js/custom.js') }}"></script>
+    <script src="{{ asset('backend/js/wysihtml5-0.3.0.min.js') }}"></script>
+    <script src="{{ asset('backend/js/bootstrap-wysihtml5.js') }}"></script>
+<script>
+    jQuery(document).ready(function(){
+        // HTML5 WYSIWYG Editor
+        jQuery('textarea').wysihtml5({color: true,html:true});
+
+    });
+</script>
+
 {% endblock %}
 
 </body>

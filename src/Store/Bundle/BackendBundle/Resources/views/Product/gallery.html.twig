@@ -1,0 +1,78 @@
+{% extends "StoreBackendBundle::layouts.html.twig" %}
+
+
+{% block body %}
+    <div class="row">
+
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    {{ product.productName }}
+
+                    {{ form( photoForm) }}
+
+                </div>
+            </div>
+
+            {% for gallery in product.productBasket.photo %}
+
+                <div class="col-xs-6 col-sm-4 col-md-3 document same_height">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+
+                            <div class="thmb ">
+                                <div class="thmb-prev">
+                                    <img src="{{ asset(gallery.photo | imagine_filter('normal')) }}" class="img-responsive" alt="">
+                                </div>
+                                <hr/>
+                                <div>
+                                    {% if gallery.isEnabled %}
+                                        <a class="btn btn-sm btn-primary" href="{{ url('product_gallery_action' , {'id' : gallery.id , 'action' : 'disable'}) }}">禁用</a>
+                                    {% else %}
+                                        <a class="btn btn-sm btn-success" href="{{ url('product_gallery_action' , {'id' : gallery.id , 'action' : 'enable'}) }}">启用</a>
+                                    {% endif %}
+
+                                    <a class="btn btn-sm btn-danger" href="{{ url('product_gallery_action' , {'id' : gallery.id , 'action' : 'remove'}) }}">删除</a>
+
+                                </div>
+
+                                <small class="text-muted">上传于 {{ gallery.createdAt | date('Y年m月d日') }}</small>
+                            </div><!-- thmb -->
+
+                            </div>
+                        </div>
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+
+                    <ul class="nav nav-pills nav-stacked" role="tablist" style="max-width: 300px;">
+                        <li role="presentation"><a href="{{ url('product_edit' , {'id' : product.id}) }}">产品信息</a></li>
+                        <li role="presentation" class="active"><a href="{{ url('product_gallery' , {'id' : product.id}) }}">产品展示</a></li>
+                        <li role="presentation"><a href="#">产品属性</a></li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}
+
+    <script src="{{ asset('extra/js/same_height.js') }}"></script>
+
+{% endblock %}

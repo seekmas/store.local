@@ -2,7 +2,7 @@
 
 <div class="row">
 
-    <div class="col-md-8">
+    <div class="col-md-7">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="panel-btns">
@@ -33,7 +33,7 @@
                                 <td>{{ category.isEnabled ? "是" : "否" }}</td>
                                 <td>{{ category.keywords }}</td>
                                 <td class="table-action">
-                                    <a href="#"><i class="fa fa-pencil"></i></a>
+                                    <a href="{{ url('product_category_edit' , {'id':category.id}) }}"><i class="fa fa-pencil"></i></a>
                                     <a href="#" class="delete-row"><i class="fa fa-trash-o"></i></a>
                                 </td>
                             </tr>
@@ -46,7 +46,7 @@
     </div>
 
 
-    <div class="col-md-4">
+    <div class="col-md-5">
 
 
             <div class="panel panel-default">

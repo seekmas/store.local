@@ -3,9 +3,11 @@
 namespace Store\Bundle\BackendBundle\Controller;
 
 use Doctrine\ORM\EntityNotFoundException;
+use Store\Bundle\BackendBundle\Entity\Photo;
 use Store\Bundle\BackendBundle\Entity\Product;
 use Store\Bundle\BackendBundle\Entity\ProductBasket;
 use Store\Bundle\BackendBundle\Form\Type\ComplexProductType;
+use Store\Bundle\BackendBundle\Form\Type\PhotoType;
 use Store\Bundle\BackendBundle\Form\Type\ProductType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\AbstractType;
@@ -109,13 +111,9 @@ class ProductController extends Controller
 
     public function editAction(Request $request , $id)
     {
-
         $em = $this->getDoctrine()->getManager();
-
         $product = $this->getEditedProduct($id);
-
         $em->persist( $product );
-
         if( $product->getPhoto() )
         {
             $tmp_photo = $product->getPhoto();
@@ -124,46 +122,102 @@ class ProductController extends Controller
         {
             $tmp_photo = NULL;
         }
-
         $form = $this->createNewForm( $request , new ComplexProductType() , $product);
-
-        if( $form->isValid() )
+        if( $form->isValid())
         {
-
             $data = $form->getData();
-
             $photo = $data->getPhoto();
-
             if( $photo)
             {
                 if( $tmp_photo)
                 {
                     $this->get('file.save')->remove( $tmp_photo);
                 }
-
                 $photo = $this->get('file.save')->save( $photo , 'product' );
-
                 $product->setPhoto( $photo );
-
             }else
             {
                 $product->setPhoto( $tmp_photo);
             }
-
             $em->flush();
-
             return $this->redirect(
                 $this->generateUrl( 'product_edit' , ['id' => $id] )
             );
-
         }
 
         $product->setPhoto( $tmp_photo);
+
+
+
         return $this->render('StoreBackendBundle:Product:edit.html.twig' ,
             [
                 'product' => $product ,
                 'form' => $form->createView() ,
+
             ]
+        );
+    }
+
+    public function galleryAction( Request $request , $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $product = $this->getEditedProduct($id);
+
+        //here come up with product gallery
+        $photo = new Photo();
+        $em->persist($photo);
+        $photo->setProductBasket($product->getProductBasket());
+        $photoForm = $this->createNewForm( $request , new PhotoType() , $photo );
+        if( $photoForm->isValid())
+        {
+            $data = $photoForm->getData();
+            $productPhoto = $data->getPhoto();
+            $productPhoto = $this->get('file.save')->save( $productPhoto , 'productGallery');
+            $photo->setPhoto( $productPhoto);
+            $photo->setCreatedAt( new \Datetime());
+            $em->flush();
+            $request->getSession()->getFlashBag()->add('success' , '添加产品图片成功');
+            return $this->redirect(
+                $this->generateUrl( 'product_gallery' , ['id' => $id] )
+            );
+        }
+        return $this->render('StoreBackendBundle:Product:gallery.html.twig' ,
+            [
+                'product' => $product ,
+                'photoForm' => $photoForm->createView() ,
+            ]
+        );
+    }
+
+    public function editGalleryAction( Request $request , $id , $action)
+    {
+        $photo = $this->get('photo.repo')->find( $id);
+        $em = $this->getDoctrine()->getManager();
+
+        if($photo == NULL)
+        {
+            throw new EntityNotFoundException();
+        }
+        $em->persist( $photo);
+
+        if( $action == 'enable')
+        {
+            $photo->setIsEnabled( true );
+        }else if( $action == 'disable')
+        {
+            $photo->setIsEnabled( false );
+        }else if( $action == 'remove')
+        {
+            $this->get('file.save')->remove( $photo->getPhoto() );
+            $em->remove( $photo );
+        }
+        $em->flush();
+        $request->getSession()->getFlashBag()->add('success' , '操作成功');
+
+        return $this->redirect(
+            $this->generateUrl(
+                'product_gallery' , ['id' => $photo->getProductBasket()->getProduct()->getId()]
+            )
         );
     }
 

@@ -3,6 +3,7 @@
 namespace Store\Bundle\BackendBundle\Controller;
 
 
+use Doctrine\ORM\EntityNotFoundException;
 use Store\Bundle\BackendBundle\Entity\Category;
 use Store\Bundle\BackendBundle\Form\Type\CategoryType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -56,6 +57,31 @@ class CategoryController extends Controller
                 'form' => $form->createView() ,
             ]
         );
+    }
+
+    public function editAction( Request $request , $id)
+    {
+        $category = $this->get('category.repo')->find( $id);
+
+        if( $category == NULL)
+        {
+            throw new EntityNotFoundException();
+        }
+
+        $form = $this->createNewForm( $request , new CategoryType() , $category);
+
+        if( $form->isValid())
+        {
+            $data = $form->getData();
+        }
+
+        return $this->render('StoreBackendBundle:Category:edit/index.html.twig' ,
+            [
+                'category' => $category ,
+                'form'     => $form->createView() ,
+            ]
+        );
+
     }
 
     protected function createNewForm( Request $request , $formType , $entity)

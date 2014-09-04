@@ -7,3 +7,7 @@ find_product_by_id:
     defaults: { _controller: StoreFrontendBundle:Home:product }
     requirements:
         id: \d+
+
+add_to_cart:
+    path: /add_to_cart_success
+    defaults: { _controller: StoreFrontendBundle:Cart:index }
