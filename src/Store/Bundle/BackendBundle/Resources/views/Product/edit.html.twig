@@ -10,7 +10,7 @@
                 <div class="col-md-12">
                     <h4>{{ product.productName }}</h4>
                 </div>
-                
+
                 {% if product.photo %}
 
                     <img src="{{ asset( product.photo ) | imagine_filter('normal') }}" />

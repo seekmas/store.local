@@ -27,23 +27,10 @@
     <div class="contentpanel">
     <div class="row">
     <div class="col-sm-3">
+
         <img src="{{ asset( product.photo ) }}" class="thumbnail img-responsive" alt="" />
-
         <div class="mb30"></div>
-
-        <h5 class="subtitle">商品名</h5>
-
-        <div class="mb30">{{ product.productName }}</div>
-
-        <h5 class="subtitle">产品属性</h5>
-
-        <ul class="profile-social-list">
-        {% for value in product.propertyValue %}
-
-        <li><span class="glyphicon glyphicon-plus"></span> {{ value.property.propertyName }} : {{ value.value }} </li>
-
-        {% endfor %}
-        </ul>
+        <h4 class="subtitle">组合套餐</h4>
 
     </div><!-- col-sm-3 -->
     <div class="col-sm-9">
