@@ -4,6 +4,10 @@
         <div class="panel panel-default">
             <div class="panel-body">
 
+                <div class="col-md-12">
+                    <h4>{{ product.productName }}</h4>
+                </div>
+
                 <div class="col-md-4">
                 {{ form ( form ) }}
                 </div>
@@ -27,7 +31,7 @@
                             <td>{{ value.value }}</td>
                             <td class="table-action">
                                 <a href="{{ url('update_product_property' , {'id':product.id , 'propertyId':value.id}) }}"><i class="fa fa-pencil"></i></a>
-                                <a href="#" class="delete-row"><i class="fa fa-trash-o"></i></a>
+                                <a href="{{ url('remove_product_property' , {'id':value.id}) }}" class="delete-row"><i class="fa fa-trash-o"></i></a>
                             </td>
                         </tr>
                         {% endfor %}

@@ -2,90 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be6b6598-5851-4d56-aae2-effbda3e778d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/property/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/ProductProperty/index/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/property/index_content.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/ProductProperty/index/index_content.html.twig" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/_div style=.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/alerts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/all.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/audio.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/blank.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/blog-list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/blog-single.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/buttons.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/calendar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/document.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/email.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/extras.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/form-layouts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/form-validation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/form-wizards.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/general-forms.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/graphs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/holder.js/100x120.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/holder.js/100x125.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/holder.js/110x110.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/holder.js/60x60.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/holder.js/_div style=.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/icons.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/image.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/invoice.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/layouts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/locked.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/maps.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/media-manager.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/notfound.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/people-directory.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/profile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/read.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/search-results.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/signin.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/signout.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/signup.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/sliders.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/tables.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/tabs-accordions.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/timeline.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/typography.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/video.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/widgets.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/wysiwyg.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Form/PropertyType.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Form/Type/PropertyType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/4ad61906083ce825ae3629e76aa1e47d/27.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/4ad61906083ce825ae3629e76aa1e47d/27.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/4ad61906083ce825ae3629e76aa1e47d/27.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/4ad61906083ce825ae3629e76aa1e47d/27.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/4ad61906083ce825ae3629e76aa1e47d/27.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/4ad61906083ce825ae3629e76aa1e47d/27.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/9c954a0b19f3376cd152aaa67621c359/43.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/9c954a0b19f3376cd152aaa67621c359/43.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/9c954a0b19f3376cd152aaa67621c359/43.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/9c954a0b19f3376cd152aaa67621c359/43.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/9c954a0b19f3376cd152aaa67621c359/43.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/9c954a0b19f3376cd152aaa67621c359/43.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/200x160/product/5e93743653446dedc04d66826fc6da1f/58.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/200x160/product/5e93743653446dedc04d66826fc6da1f/58.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/product/5e93743653446dedc04d66826fc6da1f/58.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/product/5e93743653446dedc04d66826fc6da1f/58.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/product/5e93743653446dedc04d66826fc6da1f/58.jpeg" afterPath="$PROJECT_DIR$/web/product/5e93743653446dedc04d66826fc6da1f/58.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/bd71d435b0cc806f4a3d52a7af6304d6/62.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/bd71d435b0cc806f4a3d52a7af6304d6/62.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/bd71d435b0cc806f4a3d52a7af6304d6/62.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/bd71d435b0cc806f4a3d52a7af6304d6/62.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/bd71d435b0cc806f4a3d52a7af6304d6/62.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/bd71d435b0cc806f4a3d52a7af6304d6/62.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/64bb5257261a48bb1a6c3b964cda9d78/78.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/64bb5257261a48bb1a6c3b964cda9d78/78.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/64bb5257261a48bb1a6c3b964cda9d78/78.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/64bb5257261a48bb1a6c3b964cda9d78/78.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/64bb5257261a48bb1a6c3b964cda9d78/78.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/64bb5257261a48bb1a6c3b964cda9d78/78.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/1face92f37038dcae1bf2589245430ae/98.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/1face92f37038dcae1bf2589245430ae/98.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/a2dbf4820ea61ddb95530de13e273e96/98.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/a2dbf4820ea61ddb95530de13e273e96/98.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/1face92f37038dcae1bf2589245430ae/98.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/1face92f37038dcae1bf2589245430ae/98.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/a2dbf4820ea61ddb95530de13e273e96/98.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/a2dbf4820ea61ddb95530de13e273e96/98.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/1face92f37038dcae1bf2589245430ae/98.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/1face92f37038dcae1bf2589245430ae/98.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/a2dbf4820ea61ddb95530de13e273e96/98.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/a2dbf4820ea61ddb95530de13e273e96/98.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/CoreController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/CoreController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Menu/MainMenuBuilder.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Menu/MainMenuBuilder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Product.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Product.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductPropertyController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductPropertyController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Property.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Property.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/PropertyValue.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/PropertyValue.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ShipmentController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ShipmentController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/edit.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/edit.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/gallery.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/gallery.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/property/index_content.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/property/index_content.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/product/product.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/product/product.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/services.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="store.local.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,24 +31,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProductController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductController.php">
+      <file leaf-file-name="edit.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="300" column="87" selection-start="9434" selection-end="9434" vertical-scroll-proportion="0.60493827" vertical-offset="4457" max-vertical-offset="5520">
-              <folding>
-                <element signature="e#57#128#0" expanded="true" />
-              </folding>
+            <state line="12" column="16" selection-start="332" selection-end="332" vertical-scroll-proportion="-7.68" vertical-offset="0" max-vertical-offset="784">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index_content.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/property/index_content.html.twig">
+      <file leaf-file-name="gallery.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/gallery.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="8" selection-start="54" selection-end="54" vertical-scroll-proportion="-1.92" vertical-offset="0" max-vertical-offset="1040">
-              <folding>
-                <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="12" column="26" selection-start="344" selection-end="344" vertical-scroll-proportion="0.33862433" vertical-offset="0" max-vertical-offset="1360">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -143,11 +62,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Model/Cart.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Category/edit/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Category/index/index_content.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Category/edit/index_content.html.twig" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/product/product.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/CartStorage.php" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
@@ -188,12 +105,14 @@
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Form/Type/PropertyValueType.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/property/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Property.php" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/gallery.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Product.php" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/product/product.html.twig" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/property/index_content.html.twig" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductController.php" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/gallery.html.twig" />
       </list>
     </option>
   </component>
@@ -466,40 +385,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackendBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -593,13 +478,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="12" selection-start="2763" selection-end="2767" vertical-scroll-proportion="0.1891892" vertical-offset="1536" max-vertical-offset="2688">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/Cart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="62" column="56" selection-start="1714" selection-end="1714" vertical-scroll-proportion="0.42068964" vertical-offset="748" max-vertical-offset="1472">
@@ -707,13 +585,6 @@
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Form/Type/ShipmentType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="43" selection-start="610" selection-end="610" vertical-scroll-proportion="0.55172414" vertical-offset="0" max-vertical-offset="752">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="39" selection-start="808" selection-end="850" vertical-scroll-proportion="0.3862069" vertical-offset="528" max-vertical-offset="4704">
           <folding />
         </state>
       </provider>
@@ -857,15 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductPropertyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="25" selection-start="983" selection-end="983" vertical-scroll-proportion="0.77931035" vertical-offset="12" max-vertical-offset="832">
-          <folding>
-            <element signature="e#58#129#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Form/Type/PropertyValueType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="16" selection-start="450" selection-end="450" vertical-scroll-proportion="0.3862069" vertical-offset="0" max-vertical-offset="752">
@@ -901,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/PropertyValue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="67" selection-start="1148" selection-end="1148" vertical-scroll-proportion="1.1103449" vertical-offset="268" max-vertical-offset="3152">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/property/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="16" selection-start="72" selection-end="72" vertical-scroll-proportion="0.08617594" vertical-offset="0" max-vertical-offset="557">
@@ -922,20 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="24" selection-start="467" selection-end="467" vertical-scroll-proportion="0.63448274" vertical-offset="0" max-vertical-offset="736">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/gallery.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="28" selection-start="124" selection-end="124" vertical-scroll-proportion="0.16931216" vertical-offset="0" max-vertical-offset="1328">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="98" column="68" selection-start="3487" selection-end="3487" vertical-scroll-proportion="0.7090909" vertical-offset="1139" max-vertical-offset="1952">
@@ -943,28 +784,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/property/index_content.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="8" selection-start="54" selection-end="54" vertical-scroll-proportion="-1.92" vertical-offset="0" max-vertical-offset="1040">
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="86" column="27" selection-start="1654" selection-end="1654" vertical-scroll-proportion="0.5862069" vertical-offset="1036" max-vertical-offset="5072">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/PropertyValue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="67" selection-start="1148" selection-end="1148" vertical-scroll-proportion="1.1103449" vertical-offset="268" max-vertical-offset="3152">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/product/product.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="58" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.63448274" vertical-offset="304" max-vertical-offset="6672">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="21" selection-start="1260" selection-end="1281" vertical-scroll-proportion="0.6561983" vertical-offset="323" max-vertical-offset="1280">
+        <state line="54" column="22" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.57685953" vertical-offset="515" max-vertical-offset="1344">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="87" selection-start="9434" selection-end="9434" vertical-scroll-proportion="0.60493827" vertical-offset="4457" max-vertical-offset="5520">
+        <state line="326" column="61" selection-start="10228" selection-end="10231" vertical-scroll-proportion="0.5767196" vertical-offset="4889" max-vertical-offset="5840">
           <folding>
             <element signature="e#57#128#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductPropertyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="25" selection-start="983" selection-end="983" vertical-scroll-proportion="0.44827586" vertical-offset="204" max-vertical-offset="832">
+          <folding>
+            <element signature="e#58#129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/property/index_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="126" selection-end="243" vertical-scroll-proportion="0.16551724" vertical-offset="0" max-vertical-offset="1104">
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="16" selection-start="332" selection-end="332" vertical-scroll-proportion="-7.68" vertical-offset="0" max-vertical-offset="784">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/gallery.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="26" selection-start="344" selection-end="344" vertical-scroll-proportion="0.33862433" vertical-offset="0" max-vertical-offset="1360">
+          <folding />
         </state>
       </provider>
     </entry>

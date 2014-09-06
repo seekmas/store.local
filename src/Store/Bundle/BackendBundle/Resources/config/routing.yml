@@ -51,6 +51,10 @@ update_product_property:
     path: /{id}/{propertyId}/add_product_property
     defaults: { _controller: StoreBackendBundle:Product:editProperty }
 
+remove_product_property:
+    path: /{id}/remove_product_property
+    defaults: { _controller: StoreBackendBundle:Product:removePropertyValue }
+
 #######
 user_manage:
     path: /user

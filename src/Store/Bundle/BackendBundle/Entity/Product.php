@@ -81,6 +81,11 @@ class Product
      */
     private $updatedAt;
 
+    /**
+     * @ORM\OneToMany(targetEntity="PropertyValue" , mappedBy="product")
+     */
+    private $propertyValue;
+
 
     /**
      * Get id
@@ -285,4 +290,22 @@ class Product
     {
         return $this->updatedAt;
     }
+
+    /**
+     * @param mixed $propertyValue
+     */
+    public function setPropertyValue($propertyValue)
+    {
+        $this->propertyValue = $propertyValue;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPropertyValue()
+    {
+        return $this->propertyValue;
+    }
+
+
 }

@@ -271,7 +271,7 @@ class ProductController extends Controller
         );
     }
 
-    //
+
     public function editPropertyAction( Request $request , $id , $propertyId = 0)
     {
         $em = $this->getDoctrine()->getManager();
@@ -316,6 +316,26 @@ class ProductController extends Controller
                 'form' => $form->createView() ,
             ]
         );
+    }
+
+    public function removePropertyValueAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $securityContext = $this->get('security.context');
+
+        $value = $this->get('property_value.repo')->find( $id);
+
+        $product = $value->getProduct();
+
+        if (false === $securityContext->isGranted('EDIT', $product)) {
+            throw new AccessDeniedException('这个商品不是你的 , 你没有编辑的权限');
+        }
+        $em->remove($value);
+        $em->flush();
+        $this->addFlashMessage('success' , '删除商品属性成功');
+
+        return $this->redirect( $this->generateUrl('edit_product_property' , ['id'=>$product->getId()]) );
     }
 
     protected function getEditedProduct( $id)
