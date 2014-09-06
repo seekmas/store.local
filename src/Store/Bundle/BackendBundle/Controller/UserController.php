@@ -2,7 +2,7 @@
 
 namespace Store\Bundle\BackendBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Store\Bundle\BackendBundle\Controller\CoreController as Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 class UserController extends Controller

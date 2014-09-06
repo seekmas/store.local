@@ -2,10 +2,358 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be6b6598-5851-4d56-aae2-effbda3e778d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/CoreController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductPropertyController.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/_div style=.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/alerts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/all.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/audio.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/blank.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/blog-list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/blog-single.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/buttons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/calendar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/document.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/email.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/extras.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/form-layouts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/form-validation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/form-wizards.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/general-forms.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/graphs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/holder.js/100x120.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/holder.js/100x125.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/holder.js/110x110.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/holder.js/60x60.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/holder.js/_div style=.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/icons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/image.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/invoice.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/layouts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/locked.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/maps.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/media-manager.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/notfound.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/people-directory.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/profile.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/read.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/search-results.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/signin.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/signout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/signup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/sliders.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/tables.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/tabs-accordions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/timeline.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/typography.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/video.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/widgets.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/backend/wysiwyg.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bla-webfont.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bla-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bla-webfont.svg" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bla-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bla-webfont.ttf" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bla-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bla-webfont.woff" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bla-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bla-webfontd41d.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bla-webfontd41d.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BlaIta-webfont.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BlaIta-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BlaIta-webfont.svg" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BlaIta-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BlaIta-webfont.ttf" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BlaIta-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BlaIta-webfont.woff" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BlaIta-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BlaIta-webfontd41d.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BlaIta-webfontd41d.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bol-webfont.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bol-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bol-webfont.svg" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bol-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bol-webfont.ttf" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bol-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bol-webfont.woff" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bol-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bol-webfontd41d.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Bol-webfontd41d.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BolIta-webfont.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BolIta-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BolIta-webfont.svg" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BolIta-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BolIta-webfont.ttf" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BolIta-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BolIta-webfont.woff" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BolIta-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BolIta-webfontd41d.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-BolIta-webfontd41d.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Hai-webfont.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Hai-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Hai-webfont.svg" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Hai-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Hai-webfont.ttf" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Hai-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Hai-webfont.woff" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Hai-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Hai-webfontd41d.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Hai-webfontd41d.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-HaiIta-webfont.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-HaiIta-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-HaiIta-webfont.svg" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-HaiIta-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-HaiIta-webfont.ttf" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-HaiIta-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-HaiIta-webfont.woff" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-HaiIta-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-HaiIta-webfontd41d.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-HaiIta-webfontd41d.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Lig-webfont.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Lig-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Lig-webfont.svg" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Lig-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Lig-webfont.ttf" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Lig-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Lig-webfont.woff" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Lig-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Lig-webfontd41d.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Lig-webfontd41d.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-LigIta-webfont.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-LigIta-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-LigIta-webfont.svg" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-LigIta-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-LigIta-webfont.ttf" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-LigIta-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-LigIta-webfont.woff" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-LigIta-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-LigIta-webfontd41d.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-LigIta-webfontd41d.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Reg-webfont.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Reg-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Reg-webfont.svg" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Reg-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Reg-webfont.ttf" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Reg-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Reg-webfont.woff" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Reg-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Reg-webfontd41d.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-Reg-webfontd41d.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-RegIta-webfont.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-RegIta-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-RegIta-webfont.svg" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-RegIta-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-RegIta-webfont.ttf" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-RegIta-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-RegIta-webfont.woff" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-RegIta-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-RegIta-webfontd41d.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/lato/Lato-RegIta-webfontd41d.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/blog1.jpg" afterPath="$PROJECT_DIR$/web/backend/images/photos/blog1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/blog2.jpg" afterPath="$PROJECT_DIR$/web/backend/images/photos/blog2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/blog3.jpg" afterPath="$PROJECT_DIR$/web/backend/images/photos/blog3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/blog4.jpg" afterPath="$PROJECT_DIR$/web/backend/images/photos/blog4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/calendar-arrow.png" afterPath="$PROJECT_DIR$/web/backend/images/calendar-arrow.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/chosen-sprite.png" afterPath="$PROJECT_DIR$/web/backend/images/chosen-sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/close-white.png" afterPath="$PROJECT_DIR$/web/backend/images/close-white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_background.png" afterPath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_background.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_hex.png" afterPath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_hex.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_hsb_b.png" afterPath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_hsb_b.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_hsb_h.png" afterPath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_hsb_h.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_hsb_s.png" afterPath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_hsb_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_indic.gif" afterPath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_indic.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_overlay.png" afterPath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_overlay.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_rgb_b.png" afterPath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_rgb_b.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_rgb_g.png" afterPath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_rgb_g.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_rgb_r.png" afterPath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_rgb_r.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_select.gif" afterPath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_select.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_submit.png" afterPath="$PROJECT_DIR$/web/backend/images/colorpicker/colorpicker_submit.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/default_thumb.png" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/default_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/dropdown-arrow.png" afterPath="$PROJECT_DIR$/web/backend/images/dropdown-arrow.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/favicon.png" afterPath="$PROJECT_DIR$/web/backend/images/favicon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/fonts/fontawesome-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/fontawesome-webfontba72.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/fontawesome-webfontba72.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/fontawesome-webfontba72.svg" afterPath="$PROJECT_DIR$/web/backend/fonts/fontawesome-webfontba72.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/fontawesome-webfontba72.ttf" afterPath="$PROJECT_DIR$/web/backend/fonts/fontawesome-webfontba72.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/fontawesome-webfontba72.woff" afterPath="$PROJECT_DIR$/web/backend/fonts/fontawesome-webfontba72.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/fontawesome-webfontd41d.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/fontawesome-webfontd41d.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/web/backend/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/web/backend/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/web/backend/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/fonts/glyphicons-halflings-regulard41d.eot" afterPath="$PROJECT_DIR$/web/backend/fonts/glyphicons-halflings-regulard41d.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/icon-search.png" afterPath="$PROJECT_DIR$/web/backend/images/icon-search.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/is-document.png" afterPath="$PROJECT_DIR$/web/backend/images/is-document.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/is-money.png" afterPath="$PROJECT_DIR$/web/backend/images/is-money.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/is-user.png" afterPath="$PROJECT_DIR$/web/backend/images/is-user.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/loader.gif" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/loader.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader1.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader1.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader10.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader10.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader11.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader11.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader12.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader12.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader13.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader13.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader14.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader14.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader15.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader15.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader16.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader16.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader17.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader17.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader18.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader18.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader19.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader19.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader2.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader2.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader20.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader20.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader21.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader21.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader22.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader22.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader23.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader23.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader24.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader24.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader25.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader25.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader26.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader26.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader27.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader27.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader28.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader28.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader29.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader29.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader3.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader3.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader30.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader30.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader4.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader4.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader5.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader5.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader6.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader6.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader7.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader7.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader8.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader8.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/loaders/loader9.gif" afterPath="$PROJECT_DIR$/web/backend/images/loaders/loader9.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/locked.png" afterPath="$PROJECT_DIR$/web/backend/images/locked.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/loggeduser.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/loggeduser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/media-audio.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/media-audio.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/media-doc.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/media-doc.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/media1.jpg" afterPath="$PROJECT_DIR$/web/backend/images/photos/media1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/media2.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/media2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/media3.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/media3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/media4.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/media4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/media5.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/media5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/media6.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/media6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/media7.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/media7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/minus.png" afterPath="$PROJECT_DIR$/web/backend/images/minus.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/photo1.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/photo1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/photo2.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/photo2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/photo3.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/photo3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/plus-white.png" afterPath="$PROJECT_DIR$/web/backend/images/plus-white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/plus.png" afterPath="$PROJECT_DIR$/web/backend/images/plus.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/profile-1.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/profile-1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/profilepic1.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/profilepic1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/colorpicker/select2.png" afterPath="$PROJECT_DIR$/web/backend/images/colorpicker/select2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/sort_asc.png" afterPath="$PROJECT_DIR$/web/backend/images/sort_asc.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/sort_asc_disabled.png" afterPath="$PROJECT_DIR$/web/backend/images/sort_asc_disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/sort_both.png" afterPath="$PROJECT_DIR$/web/backend/images/sort_both.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/sort_desc.png" afterPath="$PROJECT_DIR$/web/backend/images/sort_desc.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/sort_desc_disabled.png" afterPath="$PROJECT_DIR$/web/backend/images/sort_desc_disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/sprite.png" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/sprite_next.png" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/sprite_next.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/sprite_prev.png" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/sprite_prev.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/sprite_x.png" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/sprite_x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/sprite_y.png" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/sprite_y.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/spritemap.png" afterPath="$PROJECT_DIR$/web/backend/images/spritemap.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/spritemap@2x.png" afterPath="$PROJECT_DIR$/web/backend/images/spritemap@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/themeforest.png" afterPath="$PROJECT_DIR$/web/backend/images/themeforest.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/uploadfile.png" afterPath="$PROJECT_DIR$/web/backend/images/uploadfile.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/user.png" afterPath="$PROJECT_DIR$/web/backend/images/user.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/user1.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/user1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/user2.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/user2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/user3.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/user3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/user4.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/user4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/user5.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/user5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/photos/userprofile.png" afterPath="$PROJECT_DIR$/web/backend/images/photos/userprofile.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/CategoryController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/CategoryController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/HomeController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/HomeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ShipmentController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ShipmentController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_bordered-pulled.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_core.scss" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_core.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/_div style=.html" afterPath="$PROJECT_DIR$/web/backend/css/_div style=.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/images/_div style=.html" afterPath="$PROJECT_DIR$/web/backend/css/images/_div style=.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_rounded/_div style=.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_rounded/_div style=.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_square/_div style=.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_square/_div style=.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/_div style=.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/_div style=.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_rounded/_div style=.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_rounded/_div style=.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_square/_div style=.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_square/_div style=.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_fixed-width.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_icons.scss" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_larger.scss" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_larger.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_list.scss" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_mixins.scss" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_path.scss" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_path.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_rotated-flipped.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_spinning.scss" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_spinning.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_stacked.scss" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_stacked.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_variables.scss" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/animate.delay.css" afterPath="$PROJECT_DIR$/web/backend/css/animate.delay.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/animate.min.css" afterPath="$PROJECT_DIR$/web/backend/css/animate.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/images/animated-overlay.html" afterPath="$PROJECT_DIR$/web/backend/css/images/animated-overlay.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/bootstrap-fileupload.min.css" afterPath="$PROJECT_DIR$/web/backend/css/bootstrap-fileupload.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/bootstrap-fileupload.min.js" afterPath="$PROJECT_DIR$/web/backend/js/bootstrap-fileupload.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/bootstrap-override.css" afterPath="$PROJECT_DIR$/web/backend/css/bootstrap-override.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/bootstrap-timepicker.min.css" afterPath="$PROJECT_DIR$/web/backend/css/bootstrap-timepicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/bootstrap-timepicker.min.js" afterPath="$PROJECT_DIR$/web/backend/js/bootstrap-timepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/bootstrap-wizard.min.js" afterPath="$PROJECT_DIR$/web/backend/js/bootstrap-wizard.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/bootstrap-wysihtml5.css" afterPath="$PROJECT_DIR$/web/backend/css/bootstrap-wysihtml5.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/bootstrap-wysihtml5.js" afterPath="$PROJECT_DIR$/web/backend/js/bootstrap-wysihtml5.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/web/backend/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/web/backend/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/bordered-pulled.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_rounded/btnNext.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_rounded/btnNext.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_square/btnNext.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_square/btnNext.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/btnNext.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/btnNext.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_rounded/btnNext.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_rounded/btnNext.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_square/btnNext.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_square/btnNext.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_rounded/btnPrevious.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_rounded/btnPrevious.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_square/btnPrevious.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_square/btnPrevious.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/btnPrevious.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/btnPrevious.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_rounded/btnPrevious.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_rounded/btnPrevious.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_square/btnPrevious.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_square/btnPrevious.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/charts.js" afterPath="$PROJECT_DIR$/web/backend/js/charts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/chosen-sprite.html" afterPath="$PROJECT_DIR$/web/backend/css/chosen-sprite.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/chosen-sprite@2x.html" afterPath="$PROJECT_DIR$/web/backend/css/chosen-sprite@2x.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/chosen.css" afterPath="$PROJECT_DIR$/web/backend/css/chosen.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/chosen.jquery.min.js" afterPath="$PROJECT_DIR$/web/backend/js/chosen.jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/ckeditor/ckeditor.js" afterPath="$PROJECT_DIR$/web/backend/js/ckeditor/ckeditor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/colorpicker.css" afterPath="$PROJECT_DIR$/web/backend/css/colorpicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/colorpicker.js" afterPath="$PROJECT_DIR$/web/backend/js/colorpicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_rounded/contentPattern.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_rounded/contentPattern.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/contentPatternBottom.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/contentPatternBottom.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/contentPatternLeft.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/contentPatternLeft.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/contentPatternRight.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/contentPatternRight.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/contentPatternTop.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/contentPatternTop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/core.less" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/core.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/custom.js" afterPath="$PROJECT_DIR$/web/backend/js/custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/dashboard.js" afterPath="$PROJECT_DIR$/web/backend/js/dashboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/default_thumbnail.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/default_thumbnail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/dropzone.css" afterPath="$PROJECT_DIR$/web/backend/css/dropzone.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/dropzone.min.js" afterPath="$PROJECT_DIR$/web/backend/js/dropzone.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/fixed-width.less" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/fixed-width.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/flot/flot.categories.min.js" afterPath="$PROJECT_DIR$/web/backend/js/flot/flot.categories.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/flot/flot.crosshair.min.js" afterPath="$PROJECT_DIR$/web/backend/js/flot/flot.crosshair.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/flot/flot.min.js" afterPath="$PROJECT_DIR$/web/backend/js/flot/flot.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/flot/flot.pie.min.js" afterPath="$PROJECT_DIR$/web/backend/js/flot/flot.pie.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/flot/flot.resize.min.js" afterPath="$PROJECT_DIR$/web/backend/js/flot/flot.resize.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/flot/flot.symbol.min.js" afterPath="$PROJECT_DIR$/web/backend/js/flot/flot.symbol.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/css/font-awesome.css" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/font-awesome.less" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/font-awesome.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/web/backend/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/fullcalendar.css" afterPath="$PROJECT_DIR$/web/backend/css/fullcalendar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/fullcalendar.min.js" afterPath="$PROJECT_DIR$/web/backend/js/fullcalendar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/gmaps.js" afterPath="$PROJECT_DIR$/web/backend/js/gmaps.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/holder.js" afterPath="$PROJECT_DIR$/web/backend/js/holder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/icons.less" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/index.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery-1.10.2.min.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery-1.10.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/jquery-jvectormap-1.2.2.css" afterPath="$PROJECT_DIR$/web/backend/css/jquery-jvectormap-1.2.2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery-jvectormap-1.2.2.min.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery-jvectormap-1.2.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery-jvectormap-us-aea-en.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery-jvectormap-us-aea-en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery-jvectormap-world-mill-en.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery-jvectormap-world-mill-en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery-migrate-1.2.1.min.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery-migrate-1.2.1.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/jquery-ui-1.10.3.css" afterPath="$PROJECT_DIR$/web/backend/css/jquery-ui-1.10.3.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery-ui-1.10.3.min.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery-ui-1.10.3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery.autogrow-textarea.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery.autogrow-textarea.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery.cookies.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery.cookies.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/jquery.datatables.css" afterPath="$PROJECT_DIR$/web/backend/css/jquery.datatables.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery.datatables.min.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery.datatables.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/jquery.gritter.css" afterPath="$PROJECT_DIR$/web/backend/css/jquery.gritter.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery.gritter.min.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery.gritter.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/ckeditor/adapters/jquery.js" afterPath="$PROJECT_DIR$/web/backend/js/ckeditor/adapters/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery.maskedinput.min.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery.maskedinput.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery.mousewheel.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery.mousewheel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery.prettyPhoto.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery.prettyPhoto.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery.sparkline.min.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery.sparkline.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/jquery.tagsinput.css" afterPath="$PROJECT_DIR$/web/backend/css/jquery.tagsinput.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery.tagsinput.min.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery.tagsinput.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/jquery.validate.min.js" afterPath="$PROJECT_DIR$/web/backend/js/jquery.validate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/larger.less" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/larger.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/lato.css" afterPath="$PROJECT_DIR$/web/backend/css/lato.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/layouts.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/layouts.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/layouts.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/layouts.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/list.less" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_rounded/loader.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_rounded/loader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_square/loader.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_square/loader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/loader.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/loader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_rounded/loader.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_rounded/loader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/masonry.pkgd.min.js" afterPath="$PROJECT_DIR$/web/backend/js/masonry.pkgd.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/mixins.less" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/modernizr.min.js" afterPath="$PROJECT_DIR$/web/backend/js/modernizr.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/morris.css" afterPath="$PROJECT_DIR$/web/backend/css/morris.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/morris.min.js" afterPath="$PROJECT_DIR$/web/backend/js/morris.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/path.less" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/prettyPhoto.css" afterPath="$PROJECT_DIR$/web/backend/css/prettyPhoto.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/raphael-2.1.0.min.js" afterPath="$PROJECT_DIR$/web/backend/js/raphael-2.1.0.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/retina.min.js" afterPath="$PROJECT_DIR$/web/backend/js/retina.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/rotated-flipped.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/spinning.less" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/spinning.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_rounded/sprite.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_rounded/sprite.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_square/sprite.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/dark_square/sprite.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/sprite.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/facebook/sprite.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_rounded/sprite.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_rounded/sprite.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_square/sprite.html" afterPath="$PROJECT_DIR$/web/backend/images/prettyphoto/light_square/sprite.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/stacked.less" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/stacked.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/store.local.iml" afterPath="$PROJECT_DIR$/.idea/store.local.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/style.default.css" afterPath="$PROJECT_DIR$/web/backend/css/style.default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/style.inverse.css" afterPath="$PROJECT_DIR$/web/backend/css/style.inverse.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/css/toggles.css" afterPath="$PROJECT_DIR$/web/backend/css/toggles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/toggles.min.js" afterPath="$PROJECT_DIR$/web/backend/js/toggles.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/variables.less" afterPath="$PROJECT_DIR$/web/backend/font-awesome-4.1.0/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/wysihtml5-0.3.0.min.js" afterPath="$PROJECT_DIR$/web/backend/js/wysihtml5-0.3.0.min.js" />
     </list>
     <ignored path="store.local.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,11 +376,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index_content.html.twig" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig">
+      <file leaf-file-name="Property.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Property.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="43" selection-start="889" selection-end="889" vertical-scroll-proportion="0.33103448" vertical-offset="384" max-vertical-offset="1904">
+            <state line="14" column="7" selection-start="165" selection-end="165" vertical-scroll-proportion="-1.28" vertical-offset="192" max-vertical-offset="1120">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CoreController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/CoreController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="45" selection-start="461" selection-end="461" vertical-scroll-proportion="0.4413793" vertical-offset="0" max-vertical-offset="580">
+              <folding>
+                <element signature="e#56#113#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,19 +409,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/form/form_div_layouts.html.twig" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Top/index/sign.html.twig" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Top/index/anonymous.html.twig" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Category.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Form/Type/ProductType.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/ProductBasket.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Photo.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Form/Type/PhotoType.php" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/layouts.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/gallery.html.twig" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/web/extra/js/same_height.js" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/product/tab.html.twig" />
@@ -71,7 +423,6 @@
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Category/edit/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Category/index/index_content.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Category/edit/index_content.html.twig" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/CategoryController.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/product/product.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/CartStorage.php" />
@@ -96,11 +447,19 @@
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Shipment.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Shipment/index/index_content.html.twig" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ShipmentController.php" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/layouts.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/layouts.html.twig" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/layouts.html.twig" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/HomeController.php" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/CategoryController.php" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductController.php" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/UserController.php" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ShipmentController.php" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductPropertyController.php" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/CoreController.php" />
       </list>
     </option>
   </component>
@@ -219,6 +578,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -244,8 +635,30 @@
               <option name="myItemId" value="Bundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FrontendBundle" />
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -271,211 +684,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FrontendBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontendBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontendBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontendBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontendBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontendBundle" />
+              <option name="myItemId" value="BackendBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -567,49 +780,11 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Category/index/index_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="68" selection-start="1166" selection-end="1166" vertical-scroll-proportion="-0.22068965" vertical-offset="624" max-vertical-offset="1216" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Category/edit/index_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="138" selection-start="2106" selection-end="2106" vertical-scroll-proportion="0.47971782" vertical-offset="688" max-vertical-offset="1328" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/FOSUserEvents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3088" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="863" selection-end="863" vertical-scroll-proportion="0.03448276" vertical-offset="284" max-vertical-offset="864" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/product/product.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1488" selection-end="1488" vertical-scroll-proportion="-5.16" vertical-offset="671" max-vertical-offset="6624" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/CartStorage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="33" selection-start="154" selection-end="154" vertical-scroll-proportion="-4.48" vertical-offset="0" max-vertical-offset="224" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-components/src/Knp/Component/Pager/Pagination/AbstractPagination.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3056" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Knp/Bundle/PaginatorBundle/KnpPaginatorBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="559" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Knp/Bundle/PaginatorBundle/Helper/Processor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="169" column="59" selection-start="5850" selection-end="5861" vertical-scroll-proportion="3.3205373" vertical-offset="958" max-vertical-offset="3040" />
@@ -849,23 +1024,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/layouts.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="17" selection-start="2150" selection-end="2150" vertical-scroll-proportion="0.1724138" vertical-offset="844" max-vertical-offset="1856">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="5" selection-start="1373" selection-end="1373" vertical-scroll-proportion="-19.08" vertical-offset="355" max-vertical-offset="960">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="18" selection-start="572" selection-end="590" vertical-scroll-proportion="0.58181816" vertical-offset="0" max-vertical-offset="605">
           <folding />
         </state>
       </provider>
@@ -879,22 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ShipmentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="21" selection-start="2336" selection-end="2336" vertical-scroll-proportion="1.9655173" vertical-offset="60" max-vertical-offset="1520">
-          <folding>
-            <element signature="e#57#104#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/CategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="10" selection-start="2942" selection-end="2942" vertical-scroll-proportion="2.0388007" vertical-offset="236" max-vertical-offset="2160">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="13" selection-start="2395" selection-end="2404" vertical-scroll-proportion="0.49752066" vertical-offset="819" max-vertical-offset="1744">
@@ -902,10 +1047,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/layouts.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="96" selection-start="334" selection-end="334" vertical-scroll-proportion="0.19753087" vertical-offset="0" max-vertical-offset="5248">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/layouts.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="83" selection-start="646" selection-end="646" vertical-scroll-proportion="0.3862069" vertical-offset="0" max-vertical-offset="1760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="43" selection-start="889" selection-end="889" vertical-scroll-proportion="0.33103448" vertical-offset="384" max-vertical-offset="1904">
+        <state line="44" column="47" selection-start="1159" selection-end="1159" vertical-scroll-proportion="-0.027586207" vertical-offset="720" max-vertical-offset="1904">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="18" selection-start="572" selection-end="590" vertical-scroll-proportion="0.58181816" vertical-offset="0" max-vertical-offset="605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="0" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.24827586" vertical-offset="720" max-vertical-offset="1568">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="70" selection-start="127" selection-end="127" vertical-scroll-proportion="0.11490126" vertical-offset="0" max-vertical-offset="557">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductPropertyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="5" selection-start="286" selection-end="286" vertical-scroll-proportion="0.33103448" vertical-offset="0" max-vertical-offset="580">
+          <folding>
+            <element signature="e#58#129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="44" selection-start="173" selection-end="173" vertical-scroll-proportion="0.14362657" vertical-offset="0" max-vertical-offset="1488">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="5" selection-start="880" selection-end="880" vertical-scroll-proportion="0.5925926" vertical-offset="0" max-vertical-offset="4720">
+          <folding>
+            <element signature="e#57#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="54" selection-start="273" selection-end="273" vertical-scroll-proportion="0.19753087" vertical-offset="0" max-vertical-offset="2080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ShipmentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="71" selection-start="128" selection-end="128" vertical-scroll-proportion="0.11034483" vertical-offset="0" max-vertical-offset="1520">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Property.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="7" selection-start="165" selection-end="165" vertical-scroll-proportion="-1.28" vertical-offset="192" max-vertical-offset="1120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/CoreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="45" selection-start="461" selection-end="461" vertical-scroll-proportion="0.4413793" vertical-offset="0" max-vertical-offset="580">
+          <folding>
+            <element signature="e#56#113#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

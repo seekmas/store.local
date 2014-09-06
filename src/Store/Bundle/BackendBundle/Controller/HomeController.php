@@ -2,10 +2,9 @@
 
 namespace Store\Bundle\BackendBundle\Controller;
 
+use Store\Bundle\BackendBundle\Controller\CoreController as Controller;
 use Store\Bundle\BackendBundle\Entity\Store;
 use Store\Bundle\BackendBundle\Form\Type\StoreType;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Form\AbstractType;
 use Symfony\Component\HttpFoundation\Request;
 
 use JMS\DiExtraBundle\Annotation as DI;
@@ -85,12 +84,5 @@ class HomeController extends Controller
                 'store' => $store ,
             ]
         );
-    }
-
-    protected function createNewForm(Request $request , AbstractType $type , $entity)
-    {
-        $form = $this->createForm( $type , $entity );
-        $form->handleRequest( $request );
-        return $form;
     }
 }

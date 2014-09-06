@@ -2,11 +2,10 @@
 
 namespace Store\Bundle\BackendBundle\Controller;
 
-
+use Store\Bundle\BackendBundle\Controller\CoreController as Controller;
 use Doctrine\ORM\EntityNotFoundException;
 use Store\Bundle\BackendBundle\Entity\Category;
 use Store\Bundle\BackendBundle\Form\Type\CategoryType;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 class CategoryController extends Controller
@@ -122,13 +121,5 @@ class CategoryController extends Controller
 
 
         return $this->redirect( $this->generateUrl('product_category_edit' , ['id' => $categoryId]) );
-    }
-
-
-    protected function createNewForm( Request $request , $formType , $entity)
-    {
-        $form = $this->createForm( $formType , $entity );
-        $form->handleRequest( $request);
-        return $form;
     }
 }

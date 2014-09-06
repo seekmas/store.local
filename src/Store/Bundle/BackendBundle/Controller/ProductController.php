@@ -2,6 +2,7 @@
 
 namespace Store\Bundle\BackendBundle\Controller;
 
+use Store\Bundle\BackendBundle\Controller\CoreController as Controller;
 use Doctrine\ORM\EntityNotFoundException;
 use Store\Bundle\BackendBundle\Entity\Photo;
 use Store\Bundle\BackendBundle\Entity\Product;
@@ -9,8 +10,6 @@ use Store\Bundle\BackendBundle\Entity\ProductBasket;
 use Store\Bundle\BackendBundle\Form\Type\ComplexProductType;
 use Store\Bundle\BackendBundle\Form\Type\PhotoType;
 use Store\Bundle\BackendBundle\Form\Type\ProductType;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Form\AbstractType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Acl\Domain\ObjectIdentity;
 use Symfony\Component\Security\Acl\Domain\UserSecurityIdentity;
@@ -268,13 +267,6 @@ class ProductController extends Controller
                 'product_trash_manage'
             )
         );
-    }
-
-    protected function createNewForm(Request $request , AbstractType $type , $entity)
-    {
-        $form = $this->createForm( $type , $entity );
-        $form->handleRequest( $request );
-        return $form;
     }
 
     protected function getEditedProduct( $id)

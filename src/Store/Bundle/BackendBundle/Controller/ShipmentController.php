@@ -2,9 +2,9 @@
 
 namespace Store\Bundle\BackendBundle\Controller;
 
+use Store\Bundle\BackendBundle\Controller\CoreController as Controller;
 use Store\Bundle\BackendBundle\Entity\Shipment;
 use Store\Bundle\BackendBundle\Form\Type\ShipmentType;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\HttpFoundation\Request;
 
