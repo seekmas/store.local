@@ -47,3 +47,17 @@ product_to_category:
 user_manage:
     path: /user
     defaults: { _controller: StoreBackendBundle:User:index }
+
+
+####
+shipment:
+    path: /shipment
+    defaults: { _controller: StoreBackendBundle:Shipment:index }
+
+shipment_edit:
+    path: /{id}/shipment_edit
+    defaults: { _controller: StoreBackendBundle:Shipment:index }
+
+shipment_remove:
+    path: /{id}/shipment_remove
+    defaults: { _controller: StoreBackendBundle:Shipment:removeShipment }

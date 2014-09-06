@@ -62,6 +62,29 @@ services:
         factory_method: getRepository
         arguments: [ Store\Bundle\BackendBundle\Entity\Photo ]
 
+    cart.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\Cart ]
+
+    cart_item.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\CartItem ]
+
+    address.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\Address ]
+
+    shipment.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\Shipment ]
 #entity paginator
     user.paginator:
         class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory
@@ -74,3 +97,8 @@ services:
     product.paginator:
         class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory
         arguments: [@request_stack,@knp_paginator,@product.repo]
+
+#service
+    store.cart:
+        class: Store\Bundle\BackendBundle\Cart\Cart
+        arguments: [@service_container]

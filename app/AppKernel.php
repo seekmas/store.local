@@ -19,7 +19,6 @@ class AppKernel extends Kernel
             new Store\Bundle\BackendBundle\StoreBackendBundle(),
             new Store\Bundle\FrontendBundle\StoreFrontendBundle(),
 
-
             new Liip\ImagineBundle\LiipImagineBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
@@ -28,6 +27,7 @@ class AppKernel extends Kernel
 
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\AopBundle\JMSAopBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
 
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
 

@@ -2,6 +2,7 @@
 
 namespace Store\Bundle\BackendBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,6 +23,12 @@ class Cart
     private $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity="User" , inversedBy="cart")
+     * @ORM\JoinColumn(name="user_id" ,referencedColumnName="id")
+     */
+    private $user;
+
+    /**
      * @var integer
      *
      * @ORM\Column(name="user_id", type="integer")
@@ -38,10 +45,19 @@ class Cart
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="expired_at", type="datetime")
+     * @ORM\Column(name="expired_at", type="datetime" , nullable=true)
      */
     private $expiredAt;
 
+    /**
+     * @ORM\OneToMany(targetEntity="CartItem" , mappedBy="cart")
+     */
+    private $cartItem;
+
+    public function __construct()
+    {
+        $this->cartItem = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -51,6 +67,22 @@ class Cart
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param mixed $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 
     /**
@@ -120,5 +152,23 @@ class Cart
     public function getExpiredAt()
     {
         return $this->expiredAt;
+    }
+
+    /**
+     * @param mixed $cartItem
+     * @return Cart
+     */
+    public function addCartItem($cartItem)
+    {
+        $this->cartItem[] = $cartItem;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCartItem()
+    {
+        return $this->cartItem;
     }
 }

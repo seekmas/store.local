@@ -1,0 +1,11 @@
+{% block form_row %}
+    {% spaceless %}
+        <div class="form-group">
+            <label>{{ form_label(form) }}</label>
+
+            {{ form_widget(form) }}
+
+            {{ form_errors(form) }}
+        </div>
+    {% endspaceless %}
+{% endblock form_row %}

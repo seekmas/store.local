@@ -9,5 +9,17 @@ find_product_by_id:
         id: \d+
 
 add_to_cart:
+    path: /{productId}/add_to_cart
+    defaults: { _controller: StoreFrontendBundle:Cart:addCart }
+
+add_to_cart_success:
     path: /add_to_cart_success
     defaults: { _controller: StoreFrontendBundle:Cart:index }
+
+checkout_dashboard:
+    path: /check_out
+    defaults: { _controller: StoreFrontendBundle:Cart:dashboard }
+
+set_default_address:
+    path: /{id}/set_as_default_address
+    defaults: { _controller: StoreFrontendBundle:Cart:setDefaultAddress }

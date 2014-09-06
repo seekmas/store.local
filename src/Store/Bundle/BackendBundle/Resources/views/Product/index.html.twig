@@ -36,7 +36,7 @@
                             <td>{{ product_basket.product.id }}</td>
                             <td>{% if product_basket.product.photo %}<img src="{{ asset( product_basket.product.photo ) | imagine_filter('tiny') }}">{% endif %}</td>
                             <td>{{ product_basket.product.productName }}</td>
-                            <td>{{ product_basket.product.productPrice }}</td>
+                            <td>{{ product_basket.product.productPrice | currency | raw }}</td>
                             <td>{{ product_basket.product.isAvailable ? "是" : "否" }}</td>
                             <td class="table-action">
                                 <a href="{{ url('product_edit' , {'id' : product_basket.product.id } ) }}"><i class="fa fa-pencil"></i></a>

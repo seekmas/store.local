@@ -29,7 +29,7 @@ class MainMenuBuilder extends ContainerAware
 
         // configuration menu
         $menu->addChild('configuration',['attributes' =>['icon' => 'fa fa-file-text-o'],'label' => '设置' ,'route' => '']);
-
+        $menu['configuration']->addChild('shipment' , ['attributes' =>['icon' => 'fa fa-file-text-o'],'label' => '快递方式' ,'route' => 'shipment']);
         return $menu;
     }
 }

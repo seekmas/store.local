@@ -1,0 +1,109 @@
+{% form_theme form 'StoreFrontendBundle:form_theme:form_div_theme.html.twig' %}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+
+        <div class="row">
+
+            <div class="col-md-12"><h4>创建新的地址</h4></div>
+
+            {{ form_start(form) }}
+
+            <div class="col-md-3">
+                {{ form_row(form.name) }}
+            </div>
+
+            <div class="col-md-3">
+                {{ form_row(form.phone) }}
+            </div>
+
+            <div class="col-md-6">
+                {{ form_row(form.street) }}
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                <label></label>
+                {{ form_row(form.submit) }}
+                </div>
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+
+        <hr/>
+
+        <div class="row">
+            <div class="col-md-12">
+                {% for address in user.address %}
+                <address>
+                    <div class="col-md-3">
+
+                        {% if address.isDefault %}
+                            <i class="fa fa-check-circle-o"></i> 当前寄送地址
+                        {% else %}
+                            <a href="{{ url('set_default_address' , {'id':address.id}) }}"><i class="fa fa-circle-o"></i> 设为收货地址</a>
+                        {% endif %}
+
+                    </div>
+                    <div class="col-md-2"><abbr title="Name">联系人: {{ address.name }}</abbr></div>
+                    <div class="col-md-2"><abbr title="Phone">手机号: {{ address.phone }}</abbr></div>
+                    <div class="col-md-5"><abbr title="street">收货地址: {{ address.street }}</abbr></div>
+                </address>
+                {% endfor %}
+            </div>
+        </div><!-- row -->
+
+        <div class="table-responsive">
+            <table class="table table-invoice">
+                <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in cart.cartItem %}
+                <tr>
+                    <td>
+                        <div class="text-primary">
+                            <img src="{{ asset(item.productBasket.product.photo | imagine_filter('tiny')) }}">
+                            <strong>{{ item.productBasket.product.productName }}</strong>
+                        </div>
+                    </td>
+                    <td>{{ item.sum }}</td>
+                    <td>{{ item.singlePrice | currency | raw }}</td>
+                    <td>{{ item.totalPrice | currency | raw }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div><!-- table-responsive -->
+
+        <table class="table table-total">
+            <tbody>
+            <tr>
+                <td><strong>TOTAL :</strong></td>
+                <td>{{ totalCost | currency | raw }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="text-right btn-invoice">
+            <button class="btn btn-primary mr5"><i class="fa fa-dollar mr5"></i> Make A Payment</button>
+            <button class="btn btn-white"><i class="fa fa-print mr5"></i> Print Invoice</button>
+        </div>
+
+        <div class="mb40"></div>
+
+        <div class="well">
+            <p>以上商品将会在付款后被寄送到 "<strong>{{ defaultAddress.street }}</strong>"</p>
+            <p>收件人为 {{ defaultAddress.name }}</p>
+            <p>联系人手机号 {{ defaultAddress.phone }}</p>
+        </div>
+
+
+    </div><!-- panel-body -->
+</div><!-- panel -->

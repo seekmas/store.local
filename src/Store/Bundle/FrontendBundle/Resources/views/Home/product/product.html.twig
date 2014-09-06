@@ -49,12 +49,16 @@
         <h2 class="profile-name">{{ product.productName }}</h2>
         <div class="profile-position"><i class="fa fa-money"></i> 价格 {{ product.productPrice | currency | raw }}</div>
 
-
-
         <div class="mb20"></div>
 
-        <button class="btn btn-success btn-large mr5"><i class="fa fa-user"></i> 立即购买</button>
-        <button class="btn btn-white btn-large"><i class="fa fa-envelope-o"></i> 加入购物车</button>
+        <a class="btn btn-success btn-large mr5" href="">
+            <i class="fa fa-user"></i> 立即购买
+        </a>
+
+        <a class="btn btn-white btn-large" href="{{ url('add_to_cart' , {'productId':product.id}) }}">
+            <i class="fa fa-envelope-o"></i> 加入购物车
+        </a>
+
     </div><!-- profile-header -->
 
 

@@ -23,7 +23,7 @@ class CartItem
 
     /**
      * @ORM\ManyToOne(targetEntity="ProductBasket" , inversedBy="cartItem")
-     * @ORM\JoinColumn(name="productBasketId" , referencedColumnName="id")
+     * @ORM\JoinColumn(name="productBasket_id" , referencedColumnName="id")
      */
     private $productBasket;
 
@@ -48,11 +48,26 @@ class CartItem
     private $cartId;
 
     /**
+     * @ORM\Column(name="single_price" , type="decimal" , precision=10 , scale=2)
+     */
+    private $singlePrice;
+
+    /**
+     * @ORM\Column(name="total_price" , type="decimal" , precision=10 , scale=2)
+     */
+    private $totalPrice;
+
+    /**
      * @var integer
      *
      * @ORM\Column(name="sum", type="integer")
      */
     private $sum;
+
+    /**
+     * @ORM\Column(name="params" , type="text")
+     */
+    private $params;
 
     /**
      * @var \DateTime
@@ -64,7 +79,7 @@ class CartItem
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="removed_at", type="datetime")
+     * @ORM\Column(name="removed_at", type="datetime" , nullable=true)
      */
     private $removedAt;
 
@@ -226,5 +241,51 @@ class CartItem
         return $this->productBasket;
     }
 
+    /**
+     * @param mixed $params
+     */
+    public function setParams($params)
+    {
+        $this->params = $params;
+    }
 
+    /**
+     * @return mixed
+     */
+    public function getParams()
+    {
+        return $this->params;
+    }
+
+    /**
+     * @param mixed $singlePrice
+     */
+    public function setSinglePrice($singlePrice)
+    {
+        $this->singlePrice = $singlePrice;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSinglePrice()
+    {
+        return $this->singlePrice;
+    }
+
+    /**
+     * @param mixed $totalPrice
+     */
+    public function setTotalPrice($totalPrice)
+    {
+        $this->totalPrice = $totalPrice;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTotalPrice()
+    {
+        return $this->totalPrice;
+    }
 }
