@@ -48,7 +48,8 @@ class CartController extends Controller
         $totalCost = 0;
         foreach($cart->getCartItem() as $item)
         {
-            $totalCost += $item->getTotalPrice();
+            if( $item->getRemovedAt() == NULL)
+                $totalCost += $item->getTotalPrice();
         }
 
         return $this->render('StoreFrontendBundle:Cart:dashboard/index.html.twig' ,
@@ -104,6 +105,28 @@ class CartController extends Controller
 
         return $this->redirect($this->generateUrl('checkout_dashboard'));
 
+    }
+
+    public function removeItemAction(Request $request,$id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+
+        $item = $this->get('cart_item.repo')->find( $id);
+        $cart = $item->getCart();
+
+        if( $user->getId() == $cart->getUser()->getId())
+        {
+            $em->persist($item);
+            $item->setRemovedAt(new \Datetime());
+            $em->flush();
+            $request->getSession()->getFlashBag()->add('success' , '移除成功');
+        }else
+        {
+            $request->getSession()->getFlashBag()->add('danger' , '移除失败');
+        }
+
+        return $this->redirect($this->generateUrl('checkout_dashboard'));
     }
 
     protected function createNewForm(Request $request,AbstractType $type , $entity)

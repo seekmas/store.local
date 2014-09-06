@@ -12,6 +12,10 @@ add_to_cart:
     path: /{productId}/add_to_cart
     defaults: { _controller: StoreFrontendBundle:Cart:addCart }
 
+remove_from_cart:
+    path: /{id}/remove_from_cart
+    defaults: { _controller: StoreFrontendBundle:Cart:removeItem }
+
 add_to_cart_success:
     path: /add_to_cart_success
     defaults: { _controller: StoreFrontendBundle:Cart:index }

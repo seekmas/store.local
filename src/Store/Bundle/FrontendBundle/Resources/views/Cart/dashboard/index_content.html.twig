@@ -34,6 +34,8 @@
         <hr/>
 
         <div class="row">
+            <div class="col-md-12"><h4>选择送货的地址</h4></div>
+
             <div class="col-md-12">
                 {% for address in user.address %}
                 <address>
@@ -58,14 +60,16 @@
             <table class="table table-invoice">
                 <thead>
                 <tr>
-                    <th>Item</th>
-                    <th>Quantity</th>
-                    <th>Unit Price</th>
-                    <th>Total Price</th>
+                    <th>商品</th>
+                    <th>数量</th>
+                    <th>单价</th>
+                    <th>合计</th>
+
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
-                {% for item in cart.cartItem %}
+                {% for item in cart.cartItem if item.removedAt == NULL %}
                 <tr>
                     <td>
                         <div class="text-primary">
@@ -76,6 +80,7 @@
                     <td>{{ item.sum }}</td>
                     <td>{{ item.singlePrice | currency | raw }}</td>
                     <td>{{ item.totalPrice | currency | raw }}</td>
+                    <td><a href="{{ url('remove_from_cart' , {'id':item.id}) }}" class="btn btn-sm btn-default">移除商品</a></td>
                 </tr>
                 {% endfor %}
                 </tbody>
@@ -85,15 +90,15 @@
         <table class="table table-total">
             <tbody>
             <tr>
-                <td><strong>TOTAL :</strong></td>
+                <td><strong>所有合计 :</strong></td>
                 <td>{{ totalCost | currency | raw }}</td>
             </tr>
             </tbody>
         </table>
 
         <div class="text-right btn-invoice">
-            <button class="btn btn-primary mr5"><i class="fa fa-dollar mr5"></i> Make A Payment</button>
-            <button class="btn btn-white"><i class="fa fa-print mr5"></i> Print Invoice</button>
+            <button class="btn btn-primary mr5"><i class="fa fa-dollar mr5"></i> 在线付款</button>
+            <button class="btn btn-white"><i class="fa fa-rocket mr5"></i> 线下汇款</button>
         </div>
 
         <div class="mb40"></div>

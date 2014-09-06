@@ -2,72 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be6b6598-5851-4d56-aae2-effbda3e778d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/Cart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/CartInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/CartStorage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ShipmentController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/form_theme/form_div_theme.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Shipment/index/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Shipment/index/index_content.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/b73d96ec47adef1c9b0d74e244e150e1/18.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/b73d96ec47adef1c9b0d74e244e150e1/18.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/b73d96ec47adef1c9b0d74e244e150e1/18.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/b73d96ec47adef1c9b0d74e244e150e1/18.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/b73d96ec47adef1c9b0d74e244e150e1/18.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/b73d96ec47adef1c9b0d74e244e150e1/18.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/3b37f3fdb114f8acb5b0c111cc88cf95/22.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/3b37f3fdb114f8acb5b0c111cc88cf95/22.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/3b37f3fdb114f8acb5b0c111cc88cf95/22.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/3b37f3fdb114f8acb5b0c111cc88cf95/22.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/3b37f3fdb114f8acb5b0c111cc88cf95/22.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/3b37f3fdb114f8acb5b0c111cc88cf95/22.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/e7fa1b5676902b60a605fbe2f51a7878/39.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/e7fa1b5676902b60a605fbe2f51a7878/39.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/e7fa1b5676902b60a605fbe2f51a7878/39.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/e7fa1b5676902b60a605fbe2f51a7878/39.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/e7fa1b5676902b60a605fbe2f51a7878/39.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/e7fa1b5676902b60a605fbe2f51a7878/39.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/48ed3ffa83e21c5284755fd3f21752b4/43.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/48ed3ffa83e21c5284755fd3f21752b4/43.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/48ed3ffa83e21c5284755fd3f21752b4/43.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/48ed3ffa83e21c5284755fd3f21752b4/43.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/48ed3ffa83e21c5284755fd3f21752b4/43.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/48ed3ffa83e21c5284755fd3f21752b4/43.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/8413178ed2be80ef331b69b0a78290ff/56.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/8413178ed2be80ef331b69b0a78290ff/56.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/d880fc8040536f1e6eb831ad71608e8c/56.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/d880fc8040536f1e6eb831ad71608e8c/56.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/8413178ed2be80ef331b69b0a78290ff/56.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/8413178ed2be80ef331b69b0a78290ff/56.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/d880fc8040536f1e6eb831ad71608e8c/56.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/d880fc8040536f1e6eb831ad71608e8c/56.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/8413178ed2be80ef331b69b0a78290ff/56.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/8413178ed2be80ef331b69b0a78290ff/56.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/d880fc8040536f1e6eb831ad71608e8c/56.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/d880fc8040536f1e6eb831ad71608e8c/56.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/72480e504e6c4ea2f530f65d3386aacf/6.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/72480e504e6c4ea2f530f65d3386aacf/6.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/72480e504e6c4ea2f530f65d3386aacf/6.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/72480e504e6c4ea2f530f65d3386aacf/6.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/72480e504e6c4ea2f530f65d3386aacf/6.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/72480e504e6c4ea2f530f65d3386aacf/6.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/1a9af31d62c58544b629911c44273ea2/61.png" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/1a9af31d62c58544b629911c44273ea2/61.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/1a9af31d62c58544b629911c44273ea2/61.png" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/1a9af31d62c58544b629911c44273ea2/61.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/1a9af31d62c58544b629911c44273ea2/61.png" afterPath="$PROJECT_DIR$/web/productGallery/1a9af31d62c58544b629911c44273ea2/61.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/200x160/product/04051eba04217a2ea0d84c9bce0c1f4e/7.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/200x160/product/04051eba04217a2ea0d84c9bce0c1f4e/7.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/product/04051eba04217a2ea0d84c9bce0c1f4e/7.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/product/04051eba04217a2ea0d84c9bce0c1f4e/7.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/tiny/product/04051eba04217a2ea0d84c9bce0c1f4e/7.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/tiny/product/04051eba04217a2ea0d84c9bce0c1f4e/7.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/product/04051eba04217a2ea0d84c9bce0c1f4e/7.jpeg" afterPath="$PROJECT_DIR$/web/product/04051eba04217a2ea0d84c9bce0c1f4e/7.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/b02ccde7d598c417b7f467bbd676c63f/71.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/b02ccde7d598c417b7f467bbd676c63f/71.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/b02ccde7d598c417b7f467bbd676c63f/71.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/b02ccde7d598c417b7f467bbd676c63f/71.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/b02ccde7d598c417b7f467bbd676c63f/71.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/b02ccde7d598c417b7f467bbd676c63f/71.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/de6045cce21e558a4ba2462c374d66dc/80.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/gallery/productGallery/de6045cce21e558a4ba2462c374d66dc/80.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/productGallery/de6045cce21e558a4ba2462c374d66dc/80.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/productGallery/de6045cce21e558a4ba2462c374d66dc/80.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/productGallery/de6045cce21e558a4ba2462c374d66dc/80.jpeg" afterPath="$PROJECT_DIR$/web/productGallery/de6045cce21e558a4ba2462c374d66dc/80.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/200x160/product/50d2b462ca960275ebcff9ccbbb9f4c9/92.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/200x160/product/50d2b462ca960275ebcff9ccbbb9f4c9/92.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/product/50d2b462ca960275ebcff9ccbbb9f4c9/92.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/product/50d2b462ca960275ebcff9ccbbb9f4c9/92.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/tiny/product/50d2b462ca960275ebcff9ccbbb9f4c9/92.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/tiny/product/50d2b462ca960275ebcff9ccbbb9f4c9/92.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/product/50d2b462ca960275ebcff9ccbbb9f4c9/92.jpeg" afterPath="$PROJECT_DIR$/web/product/50d2b462ca960275ebcff9ccbbb9f4c9/92.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/200x160/product/7b7850024bfaa564fbb195566669c7c6/97.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/200x160/product/7b7850024bfaa564fbb195566669c7c6/97.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/normal/product/7b7850024bfaa564fbb195566669c7c6/97.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/normal/product/7b7850024bfaa564fbb195566669c7c6/97.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/tiny/product/7b7850024bfaa564fbb195566669c7c6/97.jpeg" afterPath="$PROJECT_DIR$/web/media/cache/tiny/product/7b7850024bfaa564fbb195566669c7c6/97.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/product/7b7850024bfaa564fbb195566669c7c6/97.jpeg" afterPath="$PROJECT_DIR$/web/product/7b7850024bfaa564fbb195566669c7c6/97.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Cart.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Cart.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/CartItem.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/CartItem.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Menu/MainMenuBuilder.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Menu/MainMenuBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/index.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Product/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/index.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/layouts.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/layouts.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/product/product.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/product/product.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/routing.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/services.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/extra/css/theme.css" afterPath="$PROJECT_DIR$/web/extra/css/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="store.local.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,7 +27,17 @@
     <favorites_list name="store.local" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="index_content.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="43" selection-start="889" selection-end="889" vertical-scroll-proportion="0.33103448" vertical-offset="384" max-vertical-offset="1904">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -134,16 +82,12 @@
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/Cart.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/CartItem.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/form_theme/form_div_theme.html.twig" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/layouts.html.twig" />
         <option value="$PROJECT_DIR$/web/locale/area.js" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Address.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Form/Type/AddressType.php" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/web/extra/css/theme.css" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Shipment/index/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Menu/MainMenuBuilder.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Form/Type/ShipmentType.php" />
@@ -153,6 +97,10 @@
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Shipment/index/index_content.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ShipmentController.php" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/layouts.html.twig" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig" />
       </list>
     </option>
   </component>
@@ -271,60 +219,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -377,7 +271,211 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackendBundle" />
+              <option name="myItemId" value="FrontendBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontendBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontendBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontendBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontendBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrontendBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -432,10 +530,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30527085" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26281112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -477,19 +575,9 @@
         <state line="31" column="68" selection-start="1166" selection-end="1166" vertical-scroll-proportion="-0.22068965" vertical-offset="624" max-vertical-offset="1216" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/CategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="10" selection-start="2942" selection-end="2942" vertical-scroll-proportion="1.9931035" vertical-offset="236" max-vertical-offset="2160" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Category/edit/index_content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="138" selection-start="2106" selection-end="2106" vertical-scroll-proportion="0.47971782" vertical-offset="688" max-vertical-offset="1328" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="5" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.77931035" vertical-offset="380" max-vertical-offset="960" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/FOSUserEvents.php">
@@ -610,18 +698,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/layouts.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="0" selection-start="3733" selection-end="3795" vertical-scroll-proportion="0.71274686" vertical-offset="1299" max-vertical-offset="1856">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/locale/index.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="24" selection-start="790" selection-end="802" vertical-scroll-proportion="-9.12" vertical-offset="284" max-vertical-offset="864">
           <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -682,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="19" selection-start="561" selection-end="580" vertical-scroll-proportion="0.58181816" vertical-offset="0" max-vertical-offset="605">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/extra/css/theme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="25" selection-start="58" selection-end="58" vertical-scroll-proportion="0.105785124" vertical-offset="0" max-vertical-offset="605">
@@ -726,13 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="49" selection-start="2967" selection-end="2967" vertical-scroll-proportion="0.6689655" vertical-offset="1004" max-vertical-offset="1824">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Form/Type/ShipmentType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="43" selection-start="610" selection-end="610" vertical-scroll-proportion="0.55172414" vertical-offset="0" max-vertical-offset="752">
@@ -743,22 +810,6 @@
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Menu/MainMenuBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="141" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.76895946" vertical-offset="44" max-vertical-offset="624">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="30" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.28275862" vertical-offset="604" max-vertical-offset="1920">
-          <folding>
-            <element signature="e#58#104#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="63" selection-start="3040" selection-end="3040" vertical-scroll-proportion="0.76198345" vertical-offset="915" max-vertical-offset="1744">
           <folding />
         </state>
       </provider>
@@ -798,12 +849,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/layouts.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="17" selection-start="2150" selection-end="2150" vertical-scroll-proportion="0.1724138" vertical-offset="844" max-vertical-offset="1856">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="5" selection-start="1373" selection-end="1373" vertical-scroll-proportion="-19.08" vertical-offset="355" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="18" selection-start="572" selection-end="590" vertical-scroll-proportion="0.58181816" vertical-offset="0" max-vertical-offset="605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="16" selection-start="1667" selection-end="1667" vertical-scroll-proportion="0.5586207" vertical-offset="492" max-vertical-offset="2288">
+          <folding>
+            <element signature="e#58#104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/ShipmentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="21" selection-start="2336" selection-end="2336" vertical-scroll-proportion="0.5586207" vertical-offset="876" max-vertical-offset="1520">
+        <state line="75" column="21" selection-start="2336" selection-end="2336" vertical-scroll-proportion="1.9655173" vertical-offset="60" max-vertical-offset="1520">
           <folding>
             <element signature="e#57#104#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="10" selection-start="2942" selection-end="2942" vertical-scroll-proportion="2.0388007" vertical-offset="236" max-vertical-offset="2160">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="13" selection-start="2395" selection-end="2404" vertical-scroll-proportion="0.49752066" vertical-offset="819" max-vertical-offset="1744">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="43" selection-start="889" selection-end="889" vertical-scroll-proportion="0.33103448" vertical-offset="384" max-vertical-offset="1904">
+          <folding />
         </state>
       </provider>
     </entry>
