@@ -1,0 +1,21 @@
+<div class="col-md-6">
+
+    <div class="panel">
+        <div class="panel-body">
+
+            {% for property in properties %}
+                <span class="label label-default">{{ property.propertyName }}</span>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+
+    <div class="panel">
+        <div class="panel-body">
+            {{ form(form) }}
+        </div>
+    </div>
+</div>

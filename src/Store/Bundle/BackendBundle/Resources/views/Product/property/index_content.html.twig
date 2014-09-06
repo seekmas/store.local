@@ -1,0 +1,60 @@
+<div class="row">
+
+    <div class="col-md-9">
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <div class="col-md-4">
+                {{ form ( form ) }}
+                </div>
+
+                <div class="col-md-8">
+
+                    <table class="table mb30">
+                        <thead>
+                        <tr>
+                            <th>#序号</th>
+                            <th>属性</th>
+                            <th>值</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for value in values %}
+                        <tr>
+                            <td>#{{ value.orderId }}</td>
+                            <td>{{ value.property.propertyName }}</td>
+                            <td>{{ value.value }}</td>
+                            <td class="table-action">
+                                <a href="{{ url('update_product_property' , {'id':product.id , 'propertyId':value.id}) }}"><i class="fa fa-pencil"></i></a>
+                                <a href="#" class="delete-row"><i class="fa fa-trash-o"></i></a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <ul class="nav nav-pills nav-stacked" role="tablist" style="max-width: 300px;">
+                    <li role="presentation"><a href="{{ url('product_edit' , {'id' : product.id}) }}">产品信息</a></li>
+                    <li role="presentation"><a href="{{ url('product_gallery' , {'id' : product.id}) }}">产品展示</a></li>
+                    <li role="presentation" class="active"><a href="{{ url('edit_product_property' , {'id' : product.id}) }}">产品属性</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,12 +1,12 @@
 <?php
 
-namespace Store\Bundle\BackendBundle\Form;
+namespace Store\Bundle\BackendBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class PropertyType extends AbstractType
+class PropertyValueType extends AbstractType
 {
         /**
      * @param FormBuilderInterface $builder
@@ -15,8 +15,12 @@ class PropertyType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('propertyName')
+            ->add('property')
+            ->add('value')
+            ->add('orderId')
         ;
+
+        $builder->add('submit' , 'submit');
     }
     
     /**
@@ -25,7 +29,7 @@ class PropertyType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Store\Bundle\BackendBundle\Entity\Property'
+            'data_class' => 'Store\Bundle\BackendBundle\Entity\PropertyValue'
         ));
     }
 
@@ -34,6 +38,6 @@ class PropertyType extends AbstractType
      */
     public function getName()
     {
-        return 'store_bundle_backendbundle_property';
+        return 'store_bundle_backendbundle_propertyvalue';
     }
 }

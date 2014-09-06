@@ -22,11 +22,23 @@ class PropertyValue
     private $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Product" , inversedBy="propertyValue")
+     * @ORM\JoinColumn(name="product_id" , referencedColumnName="id")
+     */
+    private $product;
+
+    /**
      * @var integer
      *
      * @ORM\Column(name="product_id", type="integer")
      */
     private $productId;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Property" ,inversedBy="propertyValue")
+     * @ORM\JoinColumn(name="property_id" , referencedColumnName="id")
+     */
+    private $property;
 
     /**
      * @var integer
@@ -41,6 +53,11 @@ class PropertyValue
      * @ORM\Column(name="value", type="string", length=255)
      */
     private $value;
+
+    /**
+     * @ORM\Column(name="order_id" , type="integer" , nullable=true)
+     */
+    private $orderId;
 
 
     /**
@@ -121,4 +138,54 @@ class PropertyValue
     {
         return $this->value;
     }
+
+    /**
+     * @param mixed $product
+     */
+    public function setProduct($product)
+    {
+        $this->product = $product;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProduct()
+    {
+        return $this->product;
+    }
+
+    /**
+     * @param mixed $property
+     */
+    public function setProperty($property)
+    {
+        $this->property = $property;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProperty()
+    {
+        return $this->property;
+    }
+
+    /**
+     * @param mixed $orderId
+     */
+    public function setOrderId($orderId)
+    {
+        $this->orderId = $orderId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOrderId()
+    {
+        return $this->orderId;
+    }
+
+
 }

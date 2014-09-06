@@ -5,7 +5,6 @@ namespace Store\Bundle\BackendBundle\Controller;
 use Store\Bundle\BackendBundle\Controller\CoreController as Controller;
 use Store\Bundle\BackendBundle\Entity\Shipment;
 use Store\Bundle\BackendBundle\Form\Type\ShipmentType;
-use Symfony\Component\Form\AbstractType;
 use Symfony\Component\HttpFoundation\Request;
 
 class ShipmentController extends Controller
@@ -77,14 +76,5 @@ class ShipmentController extends Controller
         $request->getSession()->getFlashBag()->add('success' , '快递方式删除成功');
 
         return $this->redirect($this->generateUrl('shipment'));
-    }
-
-    protected function createNewForm(Request $request , AbstractType $type , $entity)
-    {
-        $form = $this->createForm($type , $entity);
-
-        $form->handleRequest( $request);
-
-        return $form;
     }
 }

@@ -61,4 +61,9 @@ class Property
     {
         return $this->propertyName;
     }
+
+    public function __toString()
+    {
+        return $this->getPropertyName();
+    }
 }

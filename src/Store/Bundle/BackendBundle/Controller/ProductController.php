@@ -7,9 +7,11 @@ use Doctrine\ORM\EntityNotFoundException;
 use Store\Bundle\BackendBundle\Entity\Photo;
 use Store\Bundle\BackendBundle\Entity\Product;
 use Store\Bundle\BackendBundle\Entity\ProductBasket;
+use Store\Bundle\BackendBundle\Entity\PropertyValue;
 use Store\Bundle\BackendBundle\Form\Type\ComplexProductType;
 use Store\Bundle\BackendBundle\Form\Type\PhotoType;
 use Store\Bundle\BackendBundle\Form\Type\ProductType;
+use Store\Bundle\BackendBundle\Form\Type\PropertyValueType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Acl\Domain\ObjectIdentity;
 use Symfony\Component\Security\Acl\Domain\UserSecurityIdentity;
@@ -269,6 +271,53 @@ class ProductController extends Controller
         );
     }
 
+    //
+    public function editPropertyAction( Request $request , $id , $propertyId = 0)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $product = $this->getEditedProduct($id);
+
+        if( $propertyId > 0)
+        {
+            $propertyValue = $this->get('property_value.repo')->find( $propertyId);
+        }else
+        {
+            $propertyValue = new PropertyValue();
+        }
+
+
+        $em->persist($propertyValue);
+
+        $propertyValue->setProduct($product);
+
+        $form = $this->createNewForm($request , new PropertyValueType() , $propertyValue);
+
+        if( $form->isValid())
+        {
+            $em->flush();
+            $this->addFlashMessage('success' , '添加/更新商品属性成功');
+
+            return $this->redirect($this->generateUrl('edit_product_property' , ['id'=>$id] ));
+        }
+
+        $values = $this->get('property_value.repo')->createQueryBuilder('v')
+                       ->select('v')
+                       ->where('v.productId = '.$id)
+                       ->orderBy('v.orderId' , 'asc')
+                       ->getQuery()
+                       ->getResult();
+
+
+        return $this->render('StoreBackendBundle:Product:property/index.html.twig' ,
+            [
+                'product' => $product ,
+                'values' => $values ,
+                'form' => $form->createView() ,
+            ]
+        );
+    }
+
     protected function getEditedProduct( $id)
     {
         $product = $this->get('product.repo')->find( $id);
@@ -287,4 +336,5 @@ class ProductController extends Controller
 
         return $product;
     }
+
 }

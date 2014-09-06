@@ -43,6 +43,14 @@ product_to_category:
     path: /{productId}/addTo/{categoryId}/{dropCategory}
     defaults: { _controller: StoreBackendBundle:Category:addProductToCategory }
 
+edit_product_property:
+    path: /{id}/add_product_property
+    defaults: { _controller: StoreBackendBundle:Product:editProperty }
+
+update_product_property:
+    path: /{id}/{propertyId}/add_product_property
+    defaults: { _controller: StoreBackendBundle:Product:editProperty }
+
 #######
 user_manage:
     path: /user
@@ -61,3 +69,7 @@ shipment_edit:
 shipment_remove:
     path: /{id}/shipment_remove
     defaults: { _controller: StoreBackendBundle:Shipment:removeShipment }
+
+product_property:
+    path: /product_property
+    defaults: { _controller: StoreBackendBundle:ProductProperty:index }
