@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class HomeController extends Controller
 {
-    public function indexAction()
+    public function indexAction($categoryId = 0 , $tagId = 0)
     {
 
         $store = $this->get('store.repo')->findAll();
@@ -20,14 +20,36 @@ class HomeController extends Controller
 
         $standardStore = $store[0];
 
-        $pagination = $this->get('productBasket.paginator')
-                           ->setCondition( ['storeId' => $standardStore->getId()] )
-                           ->createPagination();
+        if( $categoryId > 0)
+        {
+            $pagination = $this->get('productBasket.paginator')
+                ->setCondition( ['storeId' => $standardStore->getId()  , 'categoryId' => $categoryId] )
+                ->createPagination();
+        }
+        else if( $tagId > 0)
+        {
+            $tag = $this->get('tag.repo')->find($tagId);
+            $pagination = $tag->getProductBasket();
+        }
+        else
+        {
+            $pagination = $this->get('productBasket.paginator')
+                ->setCondition( ['storeId' => $standardStore->getId()] )
+                ->createPagination();
+        }
+
+        $tags = $this->get('tag.repo')->findAll();
+
+        $category = $this->get('category.repo')->find( $categoryId);
+        $tag = $this->get('tag.repo')->find( $tagId);
 
         return $this->render('StoreFrontendBundle:Home:index.html.twig',
             [
-                'store' => $standardStore ,
-                'products' => $pagination ,
+                'store'      => $standardStore ,
+                'products'   => $pagination ,
+                'tags'       => $tags ,
+                'category'   => $category ,
+                'tag'        => $tag
             ]
         );
     }

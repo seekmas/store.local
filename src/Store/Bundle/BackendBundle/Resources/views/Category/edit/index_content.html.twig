@@ -21,14 +21,10 @@
                         <img alt="" src="images/photos/media1.jpg" class="media-object">
                     </a>
                     <div class="media-body">
-                        <h4 class="filename text-primary">
-
                             <a href="{{ url('product_to_category' , {'productId':p.product.id , 'categoryId':category.id , 'dropCategory' : 0} ) }}">
                             <img class="img-thumbnail" src="{{ asset(p.product.photo) | imagine_filter('tiny') }}">
                             #{{ p.product.id }} . {{ p.product.productName }} <i class="fa fa-exchange"></i>
                             </a>
-
-                        </h4>
                     </div>
                 </div>
 
@@ -56,14 +52,13 @@
                             <img alt="" src="images/photos/media1.jpg" class="media-object">
                         </a>
                         <div class="media-body">
-                            <h4 class="filename text-primary">
+
 
                                 <a href="{{ url('product_to_category' , {'productId':p.product.id , 'categoryId':category.id , 'dropCategory' : 1} ) }}">
                                     <img class="img-thumbnail" src="{{ asset(p.product.photo) | imagine_filter('tiny') }}">
                                     #{{ p.product.id }} . {{ p.product.productName }} <i class="fa fa-exchange"></i>
                                 </a>
 
-                            </h4>
                         </div>
                     </div>
 

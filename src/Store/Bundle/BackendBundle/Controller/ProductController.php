@@ -8,10 +8,12 @@ use Store\Bundle\BackendBundle\Entity\Photo;
 use Store\Bundle\BackendBundle\Entity\Product;
 use Store\Bundle\BackendBundle\Entity\ProductBasket;
 use Store\Bundle\BackendBundle\Entity\PropertyValue;
+use Store\Bundle\BackendBundle\Entity\Tag;
 use Store\Bundle\BackendBundle\Form\Type\ComplexProductType;
 use Store\Bundle\BackendBundle\Form\Type\PhotoType;
 use Store\Bundle\BackendBundle\Form\Type\ProductType;
 use Store\Bundle\BackendBundle\Form\Type\PropertyValueType;
+use Store\Bundle\BackendBundle\Form\Type\TagType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Acl\Domain\ObjectIdentity;
 use Symfony\Component\Security\Acl\Domain\UserSecurityIdentity;
@@ -318,6 +320,40 @@ class ProductController extends Controller
         );
     }
 
+    public function editTagAction(Request $request , $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $product = $this->getEditedProduct( $id);
+
+        $tag = new Tag();
+
+        $tag->setProductBasket($product->getProductBasket());
+
+        $form = $this->createNewForm($request,new TagType(),$tag);
+        if($form->isValid())
+        {
+
+            $data = $form->getData();
+            if( $isExist = $this->get('tag.repo')->findOneByName($data->getName()) )
+            {
+                $tag = $isExist;
+                $tag->setProductBasket($product->getProductBasket());
+            }
+
+            $em->persist($tag);
+            $em->flush();
+            $this->addFlashMessage('success','标签添加成功');
+            return $this->redirect($this->generateUrl('edit_product_tag',['id'=>$id]));
+        }
+
+        return $this->render('StoreBackendBundle:Product:tag/index.html.twig',
+            [
+                'product' => $product ,
+                'form' => $form->createView() ,
+            ]
+        );
+    }
+
     public function removePropertyValueAction($id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -331,6 +367,7 @@ class ProductController extends Controller
         if (false === $securityContext->isGranted('EDIT', $product)) {
             throw new AccessDeniedException('这个商品不是你的 , 你没有编辑的权限');
         }
+
         $em->remove($value);
         $em->flush();
         $this->addFlashMessage('success' , '删除商品属性成功');

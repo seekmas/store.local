@@ -32,6 +32,11 @@
         <div class="mb30"></div>
         <h4 class="subtitle">组合套餐</h4>
 
+        <h4 class="subtitle">产品标签</h4>
+            {% for tag in product.productBasket.tag %}
+                <a href="#"><span class="label label-success">{{ tag.name }}</span></a>
+            {% endfor %}
+
     </div><!-- col-sm-3 -->
     <div class="col-sm-9">
 

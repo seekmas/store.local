@@ -1,0 +1,46 @@
+<div class="row">
+
+    <div class="col-md-9">
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <div class="col-md-12">
+                    <h4>{{ product.productName }}</h4>
+                </div>
+
+                <div class="col-md-12">
+                    {{ form ( form ) }}
+                </div>
+
+                <div class="col-md-12">
+                    <h4>{{ product.productName }}的标签</h4>
+
+                    {% for tag in product.productBasket.tag %}
+                        <span class="label label-success">{{ tag.name }}</span>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <ul class="nav nav-pills nav-stacked" role="tablist" style="max-width: 300px;">
+                    <li role="presentation"><a href="{{ url('product_edit' , {'id' : product.id}) }}">产品信息</a></li>
+                    <li role="presentation"><a href="{{ url('product_gallery' , {'id' : product.id}) }}">产品展示</a></li>
+                    <li role="presentation"><a href="{{ url('edit_product_property' , {'id' : product.id}) }}">产品属性</a></li>
+                    <li role="presentation" class="active"><a href="{{ url('edit_product_tag' , {'id' : product.id}) }}">产品标签</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

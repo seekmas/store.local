@@ -17,6 +17,13 @@ class TopController extends Controller
         }
 
         return $this->render('StoreFrontendBundle:Top:index/sign.html.twig');
+    }
 
+    public function bottomAction()
+    {
+        $store = $this->get('store.repo')->findAll();
+        $store = $store[0];
+
+        return $this->render('StoreFrontendBundle:Top:bottom/index.html.twig' , ['store' => $store] );
     }
 }

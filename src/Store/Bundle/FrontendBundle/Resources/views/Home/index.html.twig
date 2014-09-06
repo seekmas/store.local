@@ -8,6 +8,19 @@
         <label>{{ store.name }}</label>
  {% endblock %}
 
+{% block breadcrumb %}
+    {{ parent() }}
+
+    {% if category %}
+    <li><a href="{{ url('index_by_category' , {'categoryId' : category.id}) }}"><label>{{ category.name }}</label></a></li>
+    {% endif %}
+
+    {% if tag %}
+        <li><a href="{{ url('index_by_tag' , {'tagId' : tag.id}) }}"><label>{{ tag.name }}</label></a></li>
+    {% endif %}
+
+{% endblock %}
+
 {% block body %}
     <div class="contentpanel">
     <div class="row">
@@ -22,36 +35,38 @@
                 <input id="check1" value="1" type="checkbox">
                 <label for="check1"></label>
             </div>
-            <div style="display: none;" class="btn-group fm-group">
-                <button type="button" class="btn btn-default dropdown-toggle fm-toggle" data-toggle="dropdown">
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu fm-menu" role="menu">
-                    <li><a href="#"><i class="fa fa-share"></i> Share</a></li>
-                    <li><a href="#"><i class="fa fa-envelope-o"></i> Email</a></li>
-                    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
-                    <li><a href="#"><i class="fa fa-download"></i> Download</a></li>
-                    <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
-                </ul>
-            </div><!-- btn-group -->
             <div class="thmb-prev">
+                <a href="{{ url('find_product_by_id' , {'id' : productBasket.product.id} ) }}">
                 <img src="{{ productBasket.product.photo | imagine_filter('200x160') }}" class="img-responsive" alt="">
+                </a>
             </div>
+            <br/>
+            <small class="text-muted">{{ productBasket.product.productPrice | currency | raw }}</small>
 
-            <h5 class="fm-title">
+            <h4 class="fm-title">
                 <a href="{{ url('find_product_by_id' , {'id' : productBasket.product.id} ) }}">
                     {{ productBasket.product.productName | truncate(64) }}
                 </a>
-            </h5>
+            </h4>
 
-            <small class="text-muted">{{ productBasket.product.productPrice | currency | raw }}</small>
+
+            <p>
+            {% for id,tag in productBasket.tag %}
+                {% if id < 5 %}
+                <span class="label label-success">{{ tag.name }}</span>
+                {% endif %}
+            {% endfor %}
+            </p>
         </div><!-- thmb -->
     </div><!-- col-xs-6 -->
     {% endfor %}
 
     </div><!-- row -->
 
+        {% if tag == NULL %}
         {{ knp_pagination_render(products) }}
+        {% endif %}
+
 
     </div><!-- col-sm-9 -->
     <div class="col-sm-3">
@@ -63,8 +78,18 @@
 
             <h5 class="subtitle">分类 <a href="#" class="pull-right"></a></h5>
             <ul class="folder-list">
+                <li>
+                    <a href="{{ url('index') }}">
+                        <i class="fa fa-folder-o"></i> 所有
+                    </a>
+                </li>
+
                 {% for category in store.category if category.isEnabled %}
-                <li><a href="#"><i class="fa fa-folder-o"></i> {{ category.name }}</a></li>
+                <li>
+                    <a href="{{ url('index_by_category' , {'categoryId' : category.id} ) }}">
+                        <i class="fa fa-folder-o"></i> {{ category.name }}
+                    </a>
+                </li>
                 {% endfor %}
             </ul>
 
@@ -72,16 +97,9 @@
 
             <h5 class="subtitle">标签</h5>
             <ul class="tag-list">
-                <li><a href="#">Animation</a></li>
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Trailer</a></li>
-                <li><a href="#">Short Film</a></li>
-                <li><a href="#">Dubstep</a></li>
-                <li><a href="#">Soundtrack</a></li>
-                <li><a href="#">Photography</a></li>
-                <li><a href="#">Macro</a></li>
-                <li><a href="#">Tuturials</a></li>
-                <li><a href="#">Documentation</a></li>
+                {% for tag in tags %}
+                <li><a href="{{ url('index_by_tag' , {'tagId':tag.id} ) }}">{{ tag.name }}</a></li>
+                {% endfor %}
             </ul>
 
         </div>

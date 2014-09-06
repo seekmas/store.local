@@ -1729,9 +1729,9 @@ div.error label.error:before {
 
 .filemanager-options li {
     display: inline-block;
-    padding: 12px 15px;
+    padding: 10px;
     border-right: 1px solid #eee;
-    font-size: 12px;
+    font-size: 16px;
     color: #666;
 }
 
@@ -1855,8 +1855,8 @@ div.error label.error:before {
 }
 
 .filemanager .fm-title {
-    margin-bottom: 0;
-    font-size: 13px;
+    margin-bottom: 5;
+    font-size: 16px;
 }
 
 .fm-sidebar {

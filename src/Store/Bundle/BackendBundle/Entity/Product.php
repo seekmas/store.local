@@ -87,6 +87,7 @@ class Product
     private $propertyValue;
 
 
+
     /**
      * Get id
      *
@@ -306,6 +307,5 @@ class Product
     {
         return $this->propertyValue;
     }
-
 
 }

@@ -76,6 +76,10 @@ class ProductBasket
      * @ORM\OneToMany(targetEntity="Photo" , mappedBy="productBasket")
      */
     private $photo;
+    /**
+     * @ORM\ManyToMany(targetEntity="Tag" , mappedBy="productBasket")
+     */
+    private $tag;
 
     /**
      * Get id
@@ -253,5 +257,19 @@ class ProductBasket
         return $this->photo;
     }
 
+    /**
+     * @param mixed $tag
+     */
+    public function setTag($tag)
+    {
+        $this->tag = $tag;
+    }
 
+    /**
+     * @return mixed
+     */
+    public function getTag()
+    {
+        return $this->tag;
+    }
 }

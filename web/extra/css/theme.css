@@ -4,7 +4,13 @@ a {
 a:hover{
     text-decoration: none;
 }
+img {
+    max-width: 100%;
+}
 
+footer {
+    padding: 20px;
+}
 .mainpanel_single {
     background: #e4e7ea;
     min-height: 1000px;

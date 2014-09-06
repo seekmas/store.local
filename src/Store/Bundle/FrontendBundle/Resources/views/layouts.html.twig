@@ -46,12 +46,6 @@
     <ul class="filemanager-options">
         {% block breadcrumb %}
             <li><a href="{{ url('index') }}"><label>商城首页</label></a></li>
-            <li class="filter-type">
-                显示:
-                <a href="#">所有热门商品</a>
-                <a href="#">按销量</a>
-                <a href="#">按上架日期</a>
-            </li>
         {% endblock %}
     </ul>
 
@@ -69,15 +63,17 @@
     {% endblock %}
 
 
-
-    <footer>
-        {% block footer %}{% endblock %}
-    </footer>
-
 </div><!-- contentpanel -->
 </div><!-- mainpanel -->
 </section>
 
+<footer>
+    {% block footer %}
+
+        {{ render_esi( controller('StoreFrontendBundle:Top:bottom')) }}
+
+    {% endblock %}
+</footer>
 
 {% block javascripts %}
 <script src="{{ asset('backend/js/jquery-1.10.2.min.js') }}"></script>
