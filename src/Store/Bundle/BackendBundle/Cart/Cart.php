@@ -35,8 +35,10 @@ class Cart implements CartInterface
         if( $cart == NULL)
         {
             $cart = new CartEntity();
+            $em->persist($cart);
             $cart->setUserId( $user->getId() );
             $cart->setCreatedAt( new \Datetime());
+            $em->flush();
         }
 
         $this->cart = $cart;

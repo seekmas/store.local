@@ -35,7 +35,7 @@ class CartItem
     private $productBasketId;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Cart" , inversedBy="cartItem")
+     * @ORM\ManyToOne(targetEntity="Cart" , inversedBy="cartItem" , cascade={"persist"})
      * @ORM\JoinColumn(name="cart_id" , referencedColumnName="id")
      */
     private $cart;
