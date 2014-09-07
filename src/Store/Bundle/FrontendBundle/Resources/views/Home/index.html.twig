@@ -87,7 +87,7 @@
                 {% for category in store.category if category.isEnabled %}
                 <li>
                     <a href="{{ url('index_by_category' , {'categoryId' : category.id} ) }}">
-                        <i class="fa fa-folder-o"></i> {{ category.name }}
+                        <i class="fa fa-folder-o"></i> {{ category.name }} ( {{  category.productBasket | length }} )
                     </a>
                 </li>
                 {% endfor %}
