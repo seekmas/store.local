@@ -30,19 +30,26 @@ class Cart implements CartInterface
             throw new UnsupportedUserException();
         }
 
-        $cart = $this->get('cart.repo')->findOneBy(['userId'=>$user->getId()]);
+
+
+        $query = $this->get('cart.repo')
+                     ->createQueryBuilder('cart')
+                     ->select('cart')
+                     ->where('cart.userId = '.$user->getId())
+                     ->AndWhere('cart.expiredAt is NULL')
+                     ->getQuery();
+
+        $cart = $query->getOneOrNullResult();
 
         if( $cart == NULL)
         {
             $cart = new CartEntity();
             $em->persist($cart);
-            $cart->setUserId( $user->getId() );
+            $cart->setUser( $user );
             $cart->setCreatedAt( new \Datetime());
             $em->flush();
         }
-
         $this->cart = $cart;
-
         return $cart;
     }
 

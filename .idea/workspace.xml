@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="be6b6598-5851-4d56-aae2-effbda3e778d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/Cart.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/Cart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/CartItem.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/CartItem.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/PaymentController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/PaymentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="store.local.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,7 +57,7 @@
       <file leaf-file-name="Cart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/Cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="25" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.66206896" vertical-offset="176" max-vertical-offset="1424">
+            <state line="51" column="28" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.3862069" vertical-offset="512" max-vertical-offset="1536">
               <folding />
             </state>
           </provider>
@@ -746,7 +743,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/Cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="25" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.66206896" vertical-offset="176" max-vertical-offset="1424">
+        <state line="51" column="28" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.3862069" vertical-offset="512" max-vertical-offset="1536">
           <folding />
         </state>
       </provider>
