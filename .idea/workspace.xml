@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be6b6598-5851-4d56-aae2-effbda3e778d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/PaymentController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/PaymentController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig" />
     </list>
     <ignored path="store.local.iws" />
@@ -50,7 +48,7 @@
       <file leaf-file-name="index_content.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="23" selection-start="4053" selection-end="4053" vertical-scroll-proportion="0.6689655" vertical-offset="1580" max-vertical-offset="2208">
+            <state line="99" column="41" selection-start="3363" selection-end="3363" vertical-scroll-proportion="0.66206896" vertical-offset="1200" max-vertical-offset="2208">
               <folding />
             </state>
           </provider>
@@ -822,7 +820,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="23" selection-start="4053" selection-end="4053" vertical-scroll-proportion="0.6689655" vertical-offset="1580" max-vertical-offset="2208">
+        <state line="99" column="41" selection-start="3363" selection-end="3363" vertical-scroll-proportion="0.66206896" vertical-offset="1200" max-vertical-offset="2208">
           <folding />
         </state>
       </provider>

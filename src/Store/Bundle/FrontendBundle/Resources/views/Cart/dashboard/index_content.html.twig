@@ -97,7 +97,7 @@
             </tbody>
         </table>
 
-        {% if user.address[0] == NULL %}
+        {% if user.address.offsetExists(0) == NULL %}
 
             <div class="alert alert-danger" role="alert">
                 目前无法支付:请先添加一个默认送货地址 再继续支付
