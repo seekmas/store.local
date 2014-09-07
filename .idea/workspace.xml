@@ -57,7 +57,7 @@
       <file leaf-file-name="Cart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/Cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="28" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.3862069" vertical-offset="512" max-vertical-offset="1536">
+            <state line="69" column="0" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.63448274" vertical-offset="656" max-vertical-offset="1552">
               <folding />
             </state>
           </provider>
@@ -743,7 +743,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/Cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="28" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.3862069" vertical-offset="512" max-vertical-offset="1536">
+        <state line="69" column="0" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.63448274" vertical-offset="656" max-vertical-offset="1552">
           <folding />
         </state>
       </provider>

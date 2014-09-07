@@ -30,8 +30,6 @@ class Cart implements CartInterface
             throw new UnsupportedUserException();
         }
 
-
-
         $query = $this->get('cart.repo')
                      ->createQueryBuilder('cart')
                      ->select('cart')
@@ -61,11 +59,14 @@ class Cart implements CartInterface
     public function addProduct(Product $product , $params = [])
     {
         $em = $this->get('doctrine')->getManager();
+
+        $cart = $this->getCart();
+
         $item = new CartItem();
         $em->persist($item);
 
         $item->setProductBasket($product->getProductBasket());
-        $item->setCart($this->getCart());
+        $item->setCartId( $cart->getId());
 
         $item->setSum(1);
         $item->setSinglePrice($product->getProductPrice());
