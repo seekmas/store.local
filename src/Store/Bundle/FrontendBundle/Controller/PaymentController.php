@@ -14,7 +14,5 @@ class PaymentController extends Controller
 
         $cart = $this->get('cart.repo')->findOneBy( ['id'=>$cartId,'store'=>$store->getId()]);
 
-
-
     }
 }

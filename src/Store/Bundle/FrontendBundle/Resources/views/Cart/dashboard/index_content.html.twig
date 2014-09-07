@@ -56,6 +56,7 @@
             </div>
         </div><!-- row -->
 
+
         <div class="table-responsive">
             <table class="table table-invoice">
                 <thead>
@@ -96,17 +97,31 @@
             </tbody>
         </table>
 
+        {% if user.address[0] == NULL %}
+
+            <div class="alert alert-danger" role="alert">
+                目前无法支付:请先添加一个默认送货地址 再继续支付
+            </div>
+
+        {% else %}
+
         <div class="text-right btn-invoice">
             <button class="btn btn-primary mr5"><i class="fa fa-dollar mr5"></i> 在线付款</button>
             <button class="btn btn-white"><i class="fa fa-rocket mr5"></i> 线下汇款</button>
         </div>
 
+
+        {% endif %}
+
         <div class="mb40"></div>
 
         <div class="well">
             {% if defaultAddress == NULL %}
-            <p>请先添加一个默认送货地址</p>
+                <div class="alert alert-danger" role="alert">
+                    目前无法支付:请先添加一个默认送货地址 再继续支付
+                </div>
             {% else %}
+            <h3>地址信息确认:</h3>
             <p>以上商品将会在付款后被寄送到 "<strong>{{ defaultAddress.street }}</strong>"</p>
             <p>收件人为 {{ defaultAddress.name }}</p>
             <p>联系人手机号 {{ defaultAddress.phone }}</p>

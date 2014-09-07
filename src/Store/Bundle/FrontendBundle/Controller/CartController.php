@@ -36,6 +36,7 @@ class CartController extends Controller
         $form = $this->createNewForm($request,new AddressType(),$address);
         if( $form->isValid())
         {
+            $address->setIsDefault(true);
             $address->setCreatedAt( new \Datetime());
             $em->flush();
 

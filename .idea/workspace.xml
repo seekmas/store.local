@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be6b6598-5851-4d56-aae2-effbda3e778d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/PaymentController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/PaymentController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig" />
     </list>
     <ignored path="store.local.iws" />
@@ -28,28 +30,10 @@
       <file leaf-file-name="PaymentController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/PaymentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="453" selection-end="453" vertical-scroll-proportion="-10.24" vertical-offset="0" max-vertical-offset="400">
+            <state line="15" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="368">
               <folding>
                 <element signature="e#58#115#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Orders.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Orders.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="17" selection-start="337" selection-end="337" vertical-scroll-proportion="-8.96" vertical-offset="144" max-vertical-offset="5456">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CartController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2224">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -66,7 +50,7 @@
       <file leaf-file-name="index_content.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="27" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.6689655" vertical-offset="1324" max-vertical-offset="1968">
+            <state line="123" column="23" selection-start="4053" selection-end="4053" vertical-scroll-proportion="0.6689655" vertical-offset="1580" max-vertical-offset="2208">
               <folding />
             </state>
           </provider>
@@ -85,7 +69,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/ProductProperty/index/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Menu/MainMenuBuilder.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/ProductProperty/index/index_content.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Form/Type/PropertyType.php" />
@@ -132,9 +115,10 @@
         <option value="$PROJECT_DIR$/web/backend/css/style.default.css" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/CartItem.php" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/PaymentController.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Orders.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Cart/Cart.php" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/PaymentController.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig" />
       </list>
     </option>
@@ -806,26 +790,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/PaymentController.php">
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="453" selection-end="453" vertical-scroll-proportion="-10.24" vertical-offset="0" max-vertical-offset="400">
-          <folding>
-            <element signature="e#58#115#0" expanded="true" />
-          </folding>
+        <state line="38" column="41" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.5241379" vertical-offset="240" max-vertical-offset="2240">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/Orders.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="337" selection-end="337" vertical-scroll-proportion="-8.96" vertical-offset="144" max-vertical-offset="5456">
+        <state line="23" column="17" selection-start="337" selection-end="337" vertical-scroll-proportion="0.3862069" vertical-offset="144" max-vertical-offset="5456">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/CartController.php">
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/PaymentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2224">
-          <folding />
+        <state line="15" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="368">
+          <folding>
+            <element signature="e#58#115#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -838,7 +822,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="27" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.6689655" vertical-offset="1324" max-vertical-offset="1968">
+        <state line="123" column="23" selection-start="4053" selection-end="4053" vertical-scroll-proportion="0.6689655" vertical-offset="1580" max-vertical-offset="2208">
           <folding />
         </state>
       </provider>
