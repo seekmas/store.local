@@ -116,12 +116,9 @@
         <div class="mb40"></div>
 
         <div class="well">
-            {% if defaultAddress == NULL %}
-                <div class="alert alert-danger" role="alert">
-                    目前无法支付:请先添加一个默认送货地址 再继续支付
-                </div>
-            {% else %}
+
             <h3>地址信息确认:</h3>
+            {% if defaultAddress != NULL %}
             <p>以上商品将会在付款后被寄送到 "<strong>{{ defaultAddress.street }}</strong>"</p>
             <p>收件人为 {{ defaultAddress.name }}</p>
             <p>联系人手机号 {{ defaultAddress.phone }}</p>

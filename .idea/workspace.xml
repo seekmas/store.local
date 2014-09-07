@@ -48,7 +48,7 @@
       <file leaf-file-name="index_content.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="41" selection-start="3363" selection-end="3363" vertical-scroll-proportion="0.66206896" vertical-offset="1200" max-vertical-offset="2208">
+            <state line="120" column="43" selection-start="3918" selection-end="3918" vertical-scroll-proportion="0.6137931" vertical-offset="1564" max-vertical-offset="2160">
               <folding />
             </state>
           </provider>
@@ -820,7 +820,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Cart/dashboard/index_content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="41" selection-start="3363" selection-end="3363" vertical-scroll-proportion="0.66206896" vertical-offset="1200" max-vertical-offset="2208">
+        <state line="120" column="43" selection-start="3918" selection-end="3918" vertical-scroll-proportion="0.6137931" vertical-offset="1564" max-vertical-offset="2160">
           <folding />
         </state>
       </provider>
