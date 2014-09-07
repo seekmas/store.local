@@ -24,9 +24,19 @@ class PaymentController extends Controller
             echo '购物车已经过期';
         }
 
+        $address = $this->get('address.repo')->findOneBy(['userId'=>$user->getId(),'isDefault'=>true]);
+
         $shipments = $this->get('shipment.repo')->findAll();
 
         $order = $this->get('order.manager')->createOrder($cart);
+
+        if( $address->getId() != $order->getAddress()->getId())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($order);
+            $order->setAddress( $address);
+            $em->flush();
+        }
 
         return $this->render('StoreFrontendBundle:Payment:index.html.twig' ,
             [

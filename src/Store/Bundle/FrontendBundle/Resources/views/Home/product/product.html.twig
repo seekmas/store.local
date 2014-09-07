@@ -29,13 +29,23 @@
     <div class="col-sm-3">
 
         <img src="{{ asset( product.photo ) }}" class="thumbnail img-responsive" alt="" />
-        <div class="mb30"></div>
-        <h4 class="subtitle">组合套餐</h4>
 
-        <h4 class="subtitle">产品标签</h4>
+        <div class="mb30"></div>
+
+        <div class="panel">
+            <div class="panel-body">
+            <h4 class="subtitle">组合套餐</h4>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-body">
+            <h4 class="subtitle">产品标签</h4>
             {% for tag in product.productBasket.tag %}
                 <a href="{{ url('index_by_tag' , {'tagId' : tag.id}) }}"><span class="label label-success">{{ tag.name }}</span></a>
             {% endfor %}
+            </div>
+        </div>
 
     </div><!-- col-sm-3 -->
     <div class="col-sm-9">
