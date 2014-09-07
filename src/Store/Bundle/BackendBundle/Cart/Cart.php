@@ -66,7 +66,7 @@ class Cart implements CartInterface
         $em->persist($item);
 
         $item->setProductBasket($product->getProductBasket());
-        $item->setCartId( $cart->getId());
+        $item->setCart( $cart);
 
         $item->setSum(1);
         $item->setSinglePrice($product->getProductPrice());
