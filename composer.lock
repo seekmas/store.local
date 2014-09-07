@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "970193e691255a63ea07b85f9799f964",
+    "hash": "7856606d374e23a404bbfe686bb1779e",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2092,6 +2092,37 @@
             "time": "2014-06-04 16:30:04"
         },
         {
+            "name": "mot/alipay",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/seekmas/alipay.git",
+                "reference": "c2451dabadfdf77d19d3392fa3cea48f6069026c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/seekmas/alipay/zipball/c2451dabadfdf77d19d3392fa3cea48f6069026c",
+                "reference": "c2451dabadfdf77d19d3392fa3cea48f6069026c",
+                "shasum": ""
+            },
+            "type": "library",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mot Wu",
+                    "email": "seekmas@msn.cn"
+                }
+            ],
+            "description": "This is a library from alipay",
+            "support": {
+                "source": "https://github.com/seekmas/alipay/tree/master",
+                "issues": "https://github.com/seekmas/alipay/issues"
+            },
+            "time": "2014-09-07 04:15:50"
+        },
+        {
             "name": "phpcollection/phpcollection",
             "version": "0.4.0",
             "source": {
@@ -3374,7 +3405,8 @@
         "jms/security-extra-bundle": 20,
         "knplabs/knp-menu-bundle": 20,
         "knplabs/knp-paginator-bundle": 20,
-        "raulfraile/ladybug-bundle": 20
+        "raulfraile/ladybug-bundle": 20,
+        "mot/alipay": 20
     },
     "prefer-stable": false,
     "platform": {

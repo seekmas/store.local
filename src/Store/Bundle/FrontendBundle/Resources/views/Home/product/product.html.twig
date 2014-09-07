@@ -34,7 +34,7 @@
 
         <h4 class="subtitle">产品标签</h4>
             {% for tag in product.productBasket.tag %}
-                <a href="#"><span class="label label-success">{{ tag.name }}</span></a>
+                <a href="{{ url('index_by_tag' , {'tagId' : tag.id}) }}"><span class="label label-success">{{ tag.name }}</span></a>
             {% endfor %}
 
     </div><!-- col-sm-3 -->

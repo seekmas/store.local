@@ -4,8 +4,22 @@
     "type": "project",
     "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
-        "psr-0": { "": "src/", "SymfonyStandard": "app/" }
+        "psr-0": { "": "src/", "SymfonyStandard": "app/" } ,
+        "classmap" : [
+            "vendor/mot/alipay/lib/alipay_notify.class.php" ,
+            "vendor/mot/alipay/lib/alipay_submit.class.php"
+        ],
+        "files" : [
+            "vendor/mot/alipay/lib/alipay_core.function.php" ,
+            "vendor/mot/alipay/lib/alipay_md5.function.php"
+        ]
     },
+    "repositories" : [
+        {
+            "type" : "vcs" ,
+            "url"  : "https://github.com/seekmas/alipay"
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.5.*",
@@ -33,7 +47,8 @@
 
         "knplabs/knp-menu-bundle": "2.0.*@dev",
         "knplabs/knp-paginator-bundle": "2.4.*@dev",
-        "raulfraile/ladybug-bundle": "dev-master"
+        "raulfraile/ladybug-bundle": "dev-master",
+        "mot/alipay" : "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

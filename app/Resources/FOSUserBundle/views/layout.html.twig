@@ -53,7 +53,7 @@
                         <li><i class="fa fa-arrow-circle-o-right mr5"></i> and much more...</li>
                     </ul>
                     <div class="mb20"></div>
-                    <strong>Not a member? <a href="signup.html">Sign Up</a></strong>
+                    <strong>Not a member? <a href="{{ url('fos_user_registration_register') }}">Sign Up</a></strong>
                     <div>
                     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                         {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
