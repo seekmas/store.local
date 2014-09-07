@@ -9,6 +9,6 @@ class PaymentController extends Controller
 {
     public function indexAction(Request $request)
     {
-        
+
     }
 }
