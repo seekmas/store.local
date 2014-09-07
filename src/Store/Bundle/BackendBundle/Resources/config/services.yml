@@ -74,6 +74,12 @@ services:
         factory_method: getRepository
         arguments: [ Store\Bundle\BackendBundle\Entity\CartItem ]
 
+    order.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\Orders ]
+
     address.repo:
         class: Doctrine\Common\Persistence\ObjectRepository
         factory_service: doctrine

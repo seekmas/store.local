@@ -59,15 +59,12 @@ class Cart implements CartInterface
     public function addProduct(Product $product , $params = [])
     {
         $em = $this->get('doctrine')->getManager();
-
         $cart = $this->getCart();
 
         $item = new CartItem();
         $em->persist($item);
-
         $item->setProductBasket($product->getProductBasket());
         $item->setCart( $cart);
-
         $item->setSum(1);
         $item->setSinglePrice($product->getProductPrice());
         $item->setTotalPrice($product->getProductPrice());
@@ -79,7 +76,7 @@ class Cart implements CartInterface
 
     public function removeItem()
     {
-        // TODO: Implement removeItem() method.
+
     }
 
     protected function get($service)
@@ -87,7 +84,8 @@ class Cart implements CartInterface
         if( $this->service_container->has($service))
         {
             return $this->service_container->get($service);
-        }else
+        }
+        else
         {
             throw new ServiceNotFoundException($service);
         }

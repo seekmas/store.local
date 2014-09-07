@@ -21,13 +21,24 @@ class Orders
      */
     private $id;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="User" , inversedBy="orders")
+     * @ORM\JoinColumn(name="user_id" , referencedColumnName="id")
+     */
     private $user;
+
     /**
      * @var integer
      *
      * @ORM\Column(name="user_id", type="integer")
      */
     private $userId;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Cart" , inversedBy="orders")
+     * @ORM\JoinColumn(name="cart_id" , referencedColumnName="id")
+     */
+    private $cart;
 
     /**
      * @var integer
@@ -39,16 +50,33 @@ class Orders
     /**
      * @var string
      *
-     * @ORM\Column(name="totoal_cost", type="decimal")
+     * @ORM\Column(name="total_cost", type="decimal")
      */
-    private $totoalCost;
+    private $totalCost;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Shipment" , inversedBy="orders")
+     * @ORM\JoinColumn(name="shipment_id" , referencedColumnName="id")
+     */
+    private $shipment;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="shipment_id", type="integer")
+     * @ORM\Column(name="shipment_id", type="integer" , nullable=true)
      */
     private $shipmentId;
+
+    /**
+     * @ORM\Column(name="trackingNumber" , type="string" , length=255)
+     */
+    private $trackingNumber;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Address" , inversedBy="orders")
+     * @ORM\JoinColumn(name="address_id" , referencedColumnName="id")
+     */
+    private $address;
 
     /**
      * @var integer
@@ -150,26 +178,26 @@ class Orders
     }
 
     /**
-     * Set totoalCost
+     * Set totalCost
      *
-     * @param string $totoalCost
+     * @param string $totalCost
      * @return Orders
      */
-    public function setTotoalCost($totoalCost)
+    public function setTotalCost($totalCost)
     {
-        $this->totoalCost = $totoalCost;
+        $this->totalCost = $totalCost;
 
         return $this;
     }
 
     /**
-     * Get totoalCost
+     * Get totalCost
      *
      * @return string 
      */
-    public function getTotoalCost()
+    public function getTotalCost()
     {
-        return $this->totoalCost;
+        return $this->totalCost;
     }
 
     /**
@@ -193,6 +221,22 @@ class Orders
     public function getShipmentId()
     {
         return $this->shipmentId;
+    }
+
+    /**
+     * @param mixed $trackingNumber
+     */
+    public function setTrackingNumber($trackingNumber)
+    {
+        $this->trackingNumber = $trackingNumber;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTrackingNumber()
+    {
+        return $this->trackingNumber;
     }
 
     /**
@@ -311,25 +355,84 @@ class Orders
     }
 
     /**
-     * Set locked
-     *
-     * @param string $locked
-     * @return Orders
+     * @param mixed $address
      */
-    public function setLocked($locked)
+    public function setAddress($address)
     {
-        $this->locked = $locked;
-
-        return $this;
+        $this->address = $address;
     }
 
     /**
-     * Get locked
-     *
-     * @return string 
+     * @return mixed
      */
-    public function getLocked()
+    public function getAddress()
     {
-        return $this->locked;
+        return $this->address;
     }
+
+    /**
+     * @param mixed $cart
+     */
+    public function setCart($cart)
+    {
+        $this->cart = $cart;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCart()
+    {
+        return $this->cart;
+    }
+
+    /**
+     * @param string $isLocked
+     */
+    public function setIsLocked($isLocked)
+    {
+        $this->isLocked = $isLocked;
+    }
+
+    /**
+     * @return string
+     */
+    public function getIsLocked()
+    {
+        return $this->isLocked;
+    }
+
+    /**
+     * @param mixed $shipment
+     */
+    public function setShipment($shipment)
+    {
+        $this->shipment = $shipment;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getShipment()
+    {
+        return $this->shipment;
+    }
+
+    /**
+     * @param mixed $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+
 }

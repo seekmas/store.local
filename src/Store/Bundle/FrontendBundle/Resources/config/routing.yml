@@ -35,3 +35,11 @@ checkout_dashboard:
 set_default_address:
     path: /{id}/set_as_default_address
     defaults: { _controller: StoreFrontendBundle:Cart:setDefaultAddress }
+
+cart_to_payment:
+    path: /{cartId}/payment
+    defaults: { _controller: StoreFrontendBundle:Payment:index }
+
+cart_to_shipment:
+    path: /{cartId}/{shipmentId}/set_shipment
+    defaults: { _controller: StoreFrontendBundle:Payment:selectShipment }

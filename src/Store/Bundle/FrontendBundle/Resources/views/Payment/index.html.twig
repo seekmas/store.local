@@ -1,0 +1,88 @@
+{% extends "StoreFrontendBundle::layouts.html.twig" %}
+
+{% block title %}StoreFrontendBundle:Home:index{% endblock %}
+
+{% block blockName %}
+     <img src="{{ store.logo | imagine_filter('banner') }}" />
+     <label>{{ store.name }}</label>
+{% endblock %}
+
+
+
+{% block body %}
+
+<div class="row">
+
+    <div class="col-md-12">
+        <h4>选择快递:</h4>
+    </div>
+
+    {% for shipment in shipments if shipment.removedAt == NULL %}
+
+    <div class="col-sm-6 col-md-2">
+        <a href="{{ url('cart_to_shipment' , {'cartId' : order.cartId , 'shipmentId':shipment.id} ) }}">
+        <div class="panel panel-primary panel-stat">
+            <div class="panel-heading">
+
+                <div class="stat">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2>{{ shipment.shipmentName }}</h2>
+                        </div>
+                    </div><!-- row -->
+
+                    <div class="mb15"></div>
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <small class="stat-label">价格</small>
+                            <h4>{{ shipment.shipmentPrice }}</h4>
+                        </div>
+
+                        <div class="col-xs-6">
+
+                        </div>
+                    </div><!-- row -->
+                </div><!-- stat -->
+
+            </div><!-- panel-heading -->
+        </div><!-- panel -->
+        </a>
+    </div>
+{% endfor %}
+
+    <div class="col-md-12">
+
+        <div class="people-item">
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="person-name">当前订单详情</h4>
+
+
+                    {% if order.shipment %}
+                        {% set total = order.totalCost + order.shipment.shipmentPrice %}
+                        <div class="text-muted">合计: {{ total | currency | raw }}
+                            ( 商品: {{ order.totalCost | currency | raw }} + {{ order.shipment.shipmentName }}: {{ order.shipment.shipmentPrice | currency | raw }})
+                        </div>
+                        <div class="text-muted">快递方式: {{ order.shipment.shipmentName }}</div>
+                        <div class="text-muted">快递费: {{ order.shipment.shipmentPrice }}</div>
+
+                    {% else %}
+
+                        <div class="text-muted">合计: {{ order.totalCost | currency | raw }}</div>
+
+                    {% endif %}
+
+                    <div class="text-muted">收件地址: {{ order.address.street }}</div>
+                    <div class="text-muted">收件人: {{ order.address.name }}</div>
+                    <div class="text-muted">联系方式: {{ order.address.phone }}</div>
+                    <div class="text-muted">描述信息: {{ order.description }}</div>
+
+                </div>
+            </div>
+        </div>
+
+</div>
+
+
+{% endblock %}
