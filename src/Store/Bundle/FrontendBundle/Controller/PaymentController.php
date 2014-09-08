@@ -68,10 +68,10 @@ class PaymentController extends Controller
         return $this->redirect($this->generateUrl('cart_to_payment' , ['cartId'=>$cartId]));
     }
 
-    public function notyfyAction(Request $request)
+    public function notifyAction(Request $request)
     {
         $data = json_encode($_REQUEST);
-        file_put_contents( $this->get('router')->getRootDir().'/../log.txt' , $data);
+        file_put_contents( $this->get('kernel')->getRootDir().'/../log.txt' , $data , FILE_APPEND);
     }
 
 }
