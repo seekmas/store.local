@@ -55,7 +55,7 @@ class Orders
     /**
      * @var string
      *
-     * @ORM\Column(name="total_cost", type="decimal")
+     * @ORM\Column(name="total_cost", type="decimal" , precision=10 , scale=2 )
      */
     private $totalCost;
 

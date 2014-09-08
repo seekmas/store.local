@@ -75,6 +75,15 @@ class CartController extends Controller
         return $this->redirect($this->generateUrl('add_to_cart_success'));
     }
 
+    public function addCartAndPayAction( $productId)
+    {
+        $product = $this->get('product.repo')->find($productId);
+
+        $cartManager = $this->get('store.cart');
+        $cartManager->addProduct($product);
+
+        return $this->redirect($this->generateUrl('checkout_dashboard'));
+    }
     public function setDefaultAddressAction(Request $request , $id)
     {
         $em = $this->getDoctrine()->getManager();

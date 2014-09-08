@@ -16,7 +16,13 @@ class TopController extends Controller
             return $this->render('StoreFrontendBundle:Top:index/anonymous.html.twig');
         }
 
-        return $this->render('StoreFrontendBundle:Top:index/sign.html.twig');
+        $cart = $this->get('cart.repo')->findOneBy(['userId'=>$user->getId() , 'expiredAt' => NULL]);
+
+        return $this->render('StoreFrontendBundle:Top:index/sign.html.twig' ,
+            [
+                'cart' => $cart ,
+            ]
+        );
     }
 
     public function bottomAction()

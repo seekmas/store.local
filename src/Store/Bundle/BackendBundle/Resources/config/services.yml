@@ -18,6 +18,10 @@ services:
         class: Store\Bundle\BackendBundle\Twig\CurrencyExtension
         tags:
             - { name: twig.extension }
+    payment_status.twig.extension:
+        class: Store\Bundle\BackendBundle\Twig\PaymentStatusExtension
+        tags:
+            - { name: twig.extension }
 #RepositoryFactory
 
     user.repo:
@@ -128,6 +132,10 @@ services:
     product.paginator:
         class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory
         arguments: [@request_stack,@knp_paginator,@product.repo]
+
+    order.paginator:
+        class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory
+        arguments: [@request_stack,@knp_paginator,@order.repo]
 
 #service
     store.cart:

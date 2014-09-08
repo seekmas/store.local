@@ -83,9 +83,9 @@ class Order implements OrderInterface
 
         $order = new Orders();
 
-        $orderId = '19970623'.( $user->getId() . date('YmdHis') . mt_rand(1000,9999) );
+        $orderId = '10'.( $user->getId() . date('YmdHis') . mt_rand(1000,9999) );
         $order->setOrderId($orderId);
-        $order->setDescription(description);
+        $order->setDescription($description);
         $order->setTotalCost($cost);
         $order->setCart($cart);
         $order->setUser($user);

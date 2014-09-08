@@ -93,3 +93,11 @@ payment_remove:
 payment_set_default:
     path: /{id}/set_default_payment
     defaults: { _controller: StoreBackendBundle:Payment:setDefault }
+
+order_manage:
+    path: /order_manage
+    defaults: { _controller: StoreBackendBundle:Order:index }
+
+order_update:
+    path: /{orderId}/order_update
+    defaults: { _controller: StoreBackendBundle:Order:update }

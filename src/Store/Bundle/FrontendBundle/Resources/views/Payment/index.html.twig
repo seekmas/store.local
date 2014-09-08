@@ -20,7 +20,7 @@
     {% for shipment in shipments if shipment.removedAt == NULL %}
 
     <div class="col-sm-6 col-md-2">
-        <a href="{{ url('cart_to_shipment' , {'cartId' : order.cartId , 'shipmentId':shipment.id} ) }}">
+        <a href="{{ url('cart_to_shipment' , {'cartId' : cart.Id , 'shipmentId':shipment.id} ) }}">
         <div class="panel panel-primary panel-stat">
             <div class="panel-heading">
 

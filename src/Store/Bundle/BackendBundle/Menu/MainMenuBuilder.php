@@ -23,6 +23,9 @@ class MainMenuBuilder extends ContainerAware
         $menu['category']->addChild('category_manage',['attributes' =>['icon' => 'fa fa-caret-right'],'label'=>'添加/更新分类','route' => 'product_category']);
         //order menu
         $menu->addChild('order',['attributes' =>['icon' => 'fa fa-file-text-o'],'label' => '订单' ,'route' => '']);
+        $menu['order']->addChild('order_manage' , ['attributes' =>['icon' => 'fa fa-caret-right'],'label' => '订单管理' ,'route' => 'order_manage']);
+
+
 
         //client menu
         $menu->addChild('client',['attributes' =>['icon' => 'fa fa-file-text-o'],'label' => '顾客' ,'route' => 'user_manage']);

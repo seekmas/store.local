@@ -15,18 +15,11 @@
             <i class="fa fa-thumbs-o-up"></i>
         </div>
         <div class="logged">
-            <h4>支付成功成功!</h4>
-            <div>
-                你可以在已经购买的列表里看到如下商品:
-                {% for item in order.cart.cartItem %}
-
-                    <p>{{ item.productBasket.product.productName }}</p>
-
-                {% endfor %}
-            </div>
+            <h4>确定收货吗</h4>
         </div>
         <div class="logged">
-            <a href="{{ url('index') }}" class="btn btn-success">继续购物</a>
+            <a href="{{ url('tracking_confirm_ok' , {'id':orderId}) }}" class="btn btn-primary">确定 我已经收到</a>
+            <a href="{{ url('shipment_dashboard') }}" class="btn btn-success">不确定 取消</a>
         </div>
     </div><!-- lockedpanel -->
 

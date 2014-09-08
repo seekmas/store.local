@@ -32,8 +32,14 @@ class PaymentController extends Controller
 
         $order = $this->get('order.manager')->createOrder($cart);
 
+        if( $order == NULL)
+        {
+            return $this->redirect($this->generateUrl('cart_to_payment' , ['cartId' => $cartId]));
+        }
+
         return $this->render('StoreFrontendBundle:Payment:index.html.twig' ,
             [
+                'cart' => $cart ,
                 'store' => $store ,
                 'shipments' => $shipments ,
                 'order' => $order ,
@@ -82,7 +88,6 @@ class PaymentController extends Controller
 //        {
 //            $_POST[$key] = $value;
 //        }
-
 
         $dispatcher = $this->get('event_dispatcher');
         $event = new CommonEvent($request,$this->container);

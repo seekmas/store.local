@@ -20,6 +20,10 @@ add_to_cart:
     path: /{productId}/add_to_cart
     defaults: { _controller: StoreFrontendBundle:Cart:addCart }
 
+add_to_cart_and_checkout:
+    path: /{productId}/add_to_cart_and_pay
+    defaults: { _controller: StoreFrontendBundle:Cart:addCartAndPay }
+
 remove_from_cart:
     path: /{id}/remove_from_cart
     defaults: { _controller: StoreFrontendBundle:Cart:removeItem }
@@ -31,6 +35,10 @@ add_to_cart_success:
 checkout_dashboard:
     path: /check_out
     defaults: { _controller: StoreFrontendBundle:Cart:dashboard }
+
+shipment_dashboard:
+    path: /shipment_dashboard
+    defaults: { _controller: StoreFrontendBundle:Home:shipment }
 
 set_default_address:
     path: /{id}/set_as_default_address
@@ -51,6 +59,15 @@ create_payment:
 alipay_notify:
     path: /notify.php
     defaults: { _controller: StoreFrontendBundle:Payment:notify }
+
 alipay_return:
     path: /return.php
     defaults: { _controller: StoreFrontendBundle:Payment:return }
+
+tracking_confirm:
+    path: /{id}/confirm_shipment
+    defaults: { _controller: StoreFrontendBundle:Home:confirm }
+
+tracking_confirm_ok:
+    path: /{id}/confirmed_shipment
+    defaults: { _controller: StoreFrontendBundle:Home:confirmed }

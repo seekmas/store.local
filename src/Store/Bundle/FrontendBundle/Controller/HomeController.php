@@ -3,6 +3,7 @@
 namespace Store\Bundle\FrontendBundle\Controller;
 
 use Doctrine\ORM\EntityNotFoundException;
+use Store\Bundle\BackendBundle\Cart\OrderStatus;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -73,6 +74,65 @@ class HomeController extends Controller
 
     public function shipmentAction()
     {
+        $user = $this->getUser();
+        $store = $this->get('store.repo')->findAll();
 
+        if( $store == NULL)
+        {
+            return $this->render('StoreFrontendBundle:Home:under_construction.html.twig');
+        }
+
+        $store = $store[0];
+
+        $orders = $this->get('order.repo')->findBy(
+            [
+                'userId' => $user->getId() ,
+            ]
+        );
+
+        return $this->render('StoreFrontendBundle:Home:shipment/index.html.twig' ,
+            [
+                'store' => $store ,
+                'orders' => $orders ,
+            ]
+        );
+    }
+
+    public function confirmAction(Request $request , $id)
+    {
+
+        $store = $this->get('store.repo')->findAll();
+
+        if( $store == NULL)
+        {
+            return $this->render('StoreFrontendBundle:Home:under_construction.html.twig');
+        }
+
+        $store = $store[0];
+
+        return $this->render('StoreFrontendBundle:Home:confirm/confirm.html.twig' ,
+            [
+                'store'     => $store ,
+                'orderId'   => $id ,
+            ]
+        );
+    }
+
+    public function confirmedAction(Request $request , $id)
+    {
+        $store = $this->get('store.repo')->findAll();
+        $user = $this->getUser();
+        if( $store == NULL)
+        {
+            return $this->render('StoreFrontendBundle:Home:under_construction.html.twig');
+        }
+
+        $order = $this->get('order.repo')->findOneBy(['userId'=>$user->getId() , 'id'=>$id]);
+
+        $this->get('order.manager')->updateOrderStatus($order,OrderStatus::OrderInvoiceCreated);
+
+        $request->getSession()->getFlashBag()->add('success' , '确认收货成功');
+
+        return $this->redirect($this->generateUrl('shipment_dashboard'));
     }
 }
