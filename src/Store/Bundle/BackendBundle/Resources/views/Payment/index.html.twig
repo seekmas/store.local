@@ -1,0 +1,63 @@
+{% extends "StoreBackendBundle::layouts.html.twig" %}
+
+
+{% block body %}
+<div class="row">
+
+    <div class="col-md-8">
+        <div class="panel">
+
+            <div class="panel-body">
+
+                <div class="table-responsive">
+                    <table class="table mb30">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>支付宝账号</th>
+                            <th>支付宝合作Id</th>
+                            <th>支付宝合作Key</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for alipay in alipays %}
+                        <tr>
+                            <td>#{{ alipay.id }}</td>
+                            <td>{{ alipay.account }}</td>
+                            <td>{{ alipay.partnerId }}</td>
+                            <td>{{ alipay.partnerKey }}</td>
+
+                            <td class="table-action">
+                            {% if alipay.isDefault %}
+                                <i class="fa fa-check-square"></i> 当前默认
+                            {% else %}
+                                <a href="{{ url('payment_set_default' , {'id':alipay.id}) }}"><i class="fa fa-check"></i> 设为默认</a>
+                            {% endif %}
+
+                                <a href="{{ url('payment_remove' , {'id':alipay.id}) }}" class="delete-row"><i class="fa fa-trash-o"></i> 删除</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel">
+
+            <div class="panel-body">
+
+                {{ form(form) }}
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

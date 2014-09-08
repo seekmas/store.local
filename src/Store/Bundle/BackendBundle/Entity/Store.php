@@ -98,6 +98,11 @@ class Store
     private $extraInfo;
 
     /**
+     * @ORM\OneToMany(targetEntity="Alipay" , mappedBy="store")
+     */
+    private $alipay;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -340,4 +345,21 @@ class Store
     {
         return $this->extraInfo;
     }
+
+    /**
+     * @param mixed $alipay
+     */
+    public function setAlipay($alipay)
+    {
+        $this->alipay = $alipay;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAlipay()
+    {
+        return $this->alipay;
+    }
+
 }

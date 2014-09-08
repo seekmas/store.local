@@ -22,6 +22,11 @@ class Orders
     private $id;
 
     /**
+     * @ORM\Column(name="order_id" , type="string" , length=255)
+     */
+    private $orderId;
+
+    /**
      * @ORM\ManyToOne(targetEntity="User" , inversedBy="orders")
      * @ORM\JoinColumn(name="user_id" , referencedColumnName="id")
      */
@@ -68,7 +73,7 @@ class Orders
     private $shipmentId;
 
     /**
-     * @ORM\Column(name="trackingNumber" , type="string" , length=255)
+     * @ORM\Column(name="trackingNumber" , type="string" , length=255 , nullable=true)
      */
     private $trackingNumber;
 
@@ -129,6 +134,22 @@ class Orders
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param mixed $orderId
+     */
+    public function setOrderId($orderId)
+    {
+        $this->orderId = $orderId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOrderId()
+    {
+        return $this->orderId;
     }
 
     /**

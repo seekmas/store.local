@@ -81,3 +81,15 @@ shipment_remove:
 product_property:
     path: /product_property
     defaults: { _controller: StoreBackendBundle:ProductProperty:index }
+
+payment_manage:
+    path: /payment_manage
+    defaults: { _controller: StoreBackendBundle:Payment:index }
+
+payment_remove:
+    path: /{id}/remove_payment
+    defaults: { _controller: StoreBackendBundle:Payment:remove }
+
+payment_set_default:
+    path: /{id}/set_default_payment
+    defaults: { _controller: StoreBackendBundle:Payment:setDefault }

@@ -43,3 +43,11 @@ cart_to_payment:
 cart_to_shipment:
     path: /{cartId}/{shipmentId}/set_shipment
     defaults: { _controller: StoreFrontendBundle:Payment:selectShipment }
+
+create_payment:
+    path: /{cartId}/create_payment
+    defaults: { _controller: StoreFrontendBundle:Payment:createPayment }
+
+alipay_notify:
+    path: /notify.php
+    defaults: { _controller: StoreFrontendBundle:Payment:notify }

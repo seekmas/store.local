@@ -3,6 +3,7 @@
 namespace Store\Bundle\FrontendBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
 class PaymentController extends Controller
@@ -24,19 +25,9 @@ class PaymentController extends Controller
             echo '购物车已经过期';
         }
 
-        $address = $this->get('address.repo')->findOneBy(['userId'=>$user->getId(),'isDefault'=>true]);
-
         $shipments = $this->get('shipment.repo')->findAll();
 
         $order = $this->get('order.manager')->createOrder($cart);
-
-        if( $address->getId() != $order->getAddress()->getId())
-        {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($order);
-            $order->setAddress( $address);
-            $em->flush();
-        }
 
         return $this->render('StoreFrontendBundle:Payment:index.html.twig' ,
             [
@@ -46,6 +37,16 @@ class PaymentController extends Controller
             ]
         );
     }
+
+    public function createPaymentAction( $cartId)
+    {
+        $cart = $this->get('cart.repo')->find( $cartId);
+        $order = $this->get('order.manager')->createOrder($cart);
+        $store = $this->get('store.repo')->findAll();
+        $store = $store[0];
+        return new Response( $this->get('order.manager')->createPayment($order->getId(),$store->getId()) );
+    }
+
 
     public function selectShipmentAction(Request $request , $cartId , $shipmentId)
     {
@@ -65,6 +66,12 @@ class PaymentController extends Controller
         $em->flush();
 
         return $this->redirect($this->generateUrl('cart_to_payment' , ['cartId'=>$cartId]));
+    }
+
+    public function notyfyAction(Request $request)
+    {
+        $data = json_encode($_REQUEST);
+        file_put_contents( $this->get('router')->getRootDir().'/../log.txt' , $data);
     }
 
 }
