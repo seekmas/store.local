@@ -51,3 +51,6 @@ create_payment:
 alipay_notify:
     path: /notify.php
     defaults: { _controller: StoreFrontendBundle:Payment:notify }
+alipay_return:
+    path: /return.php
+    defaults: { _controller: StoreFrontendBundle:Payment:return }

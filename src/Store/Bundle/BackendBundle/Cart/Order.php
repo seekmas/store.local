@@ -36,6 +36,7 @@ class Order implements OrderInterface
         $this->_format = 'json';
     }
 
+    //This menthod creates or got a current order;
     public function createOrder($cart)
     {
         $em = $this->_em;
@@ -100,10 +101,11 @@ class Order implements OrderInterface
         $em->flush();
     }
 
+    //This method creates a payment link
     public function createPayment($orderId , $storeId)
     {
         $order = $this->get('order.repo')->find($orderId);
-        $payment = $this->get('alipay.repo')->findOneBy(['isDefault' => 1, 'storeId' => $storeId]);
+        $payment = $this->get('alipay.repo')->findOneBy(['isDefault' => 1]);
 
         if( $payment == NULL)
         {
@@ -137,7 +139,7 @@ class Order implements OrderInterface
         //需http://格式的完整路径，不能加?id=123这类自定义参数
 
         //页面跳转同步通知页面路径
-        $return_url = $this->get('router')->generate('alipay_notify',[],true);
+        $return_url = $this->get('router')->generate('alipay_return',[],true);
         //需http://格式的完整路径，不能加?id=123这类自定义参数，不能写成http://localhost/
 
         //卖家支付宝帐户
@@ -196,9 +198,50 @@ class Order implements OrderInterface
         echo $html_text;
     }
 
-    public function updateOrderStatue($orderId, OrderStatus $status_code)
+    //This method got payment parameters
+    public function getPaymentConfig()
     {
-        // TODO: Implement updateOrderStatue() method.
+        $payment = $this->get('alipay.repo')->findOneBy(['isDefault' => 1]);
+
+        //合作身份者id，以2088开头的16位纯数字
+        $alipay_config['partner']		= $payment->getPartnerId();
+
+        //安全检验码，以数字和字母组成的32位字符
+        $alipay_config['key']			= $payment->getPartnerKey();
+
+        //签名方式 不需修改
+        $alipay_config['sign_type']    = strtoupper('MD5');
+
+        //字符编码格式 目前支持 gbk 或 utf-8
+        $alipay_config['input_charset']= strtolower('utf-8');
+
+        //ca证书路径地址，用于curl中ssl校验
+        //请保证cacert.pem文件在当前文件夹目录中
+        $alipay_config['cacert']    = $this->get('kernel')->getRootDir().'/../vendor/mot/alipay/cacert.pem';
+
+        //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
+        $alipay_config['transport']    = 'http';
+
+        return $alipay_config;
+    }
+
+    //This method updates status of order
+    public function updateOrderStatus(Orders $order, $status_code)
+    {
+        $em = $this->get('doctrine')->getManager();
+
+        if( $status_code === OrderStatus::OrderPaymentSuccess)
+        {
+            $order->setIsLocked(true);
+            $cart = $order->getCart();
+            $cart->setExpiredAt(new \Datetime());
+            $em->persist($cart);
+        }
+
+
+        $order->setPaymentStatus($status_code);
+        $em->persist($order);
+        $em->flush();
     }
 
     public function setOrder(Orders $order)

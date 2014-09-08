@@ -8,7 +8,7 @@ interface OrderInterface
 {
     public function createOrder($cartId);
     public function createPayment($orderId,$storeId);
-    public function updateOrderStatue($orderId , OrderStatus $status_code);
+    public function updateOrderStatus(Orders $order, $status_code);
     public function setOrder(Orders $order);
     public function getOrder();
     public function getAllOrders();
