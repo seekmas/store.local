@@ -9,7 +9,13 @@
                 </div>
 
                 <div class="col-sm-6">
-                    <h4 class="subtitle mb10">用户选择的快递: {{ order.shipment.shipmentName }}</h4>
+                    <h4 class="subtitle mb10">
+                        用户选择的快递:
+
+                        {% if order.shipment %}
+                        {{ order.shipment.shipmentName }}
+                        {% endif %}
+                    </h4>
                     {{ form(form) }}
 
                 </div><!-- col-sm-6 -->
