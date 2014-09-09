@@ -40,28 +40,26 @@
 
                 <div class="signin-info">
                     <div class="logopanel">
-                        <h1><span>[</span> bracket <span>]</span></h1>
+                        <h1><span>[</span><a href="{{ url('index') }}"> 首页 </a><span>]</span></h1>
                     </div><!-- logopanel -->
 
                     <div class="mb20"></div>
-                    <h5><strong>Welcome to Bracket Bootstrap 3 Template!</strong></h5>
+                    <h5><strong>欢迎使用在线商店</strong></h5>
                     <ul>
-                        <li><i class="fa fa-arrow-circle-o-right mr5"></i> Fully Responsive Layout</li>
-                        <li><i class="fa fa-arrow-circle-o-right mr5"></i> HTML5/CSS3 Valid</li>
-                        <li><i class="fa fa-arrow-circle-o-right mr5"></i> Retina Ready</li>
-                        <li><i class="fa fa-arrow-circle-o-right mr5"></i> WYSIWYG CKEditor</li>
-                        <li><i class="fa fa-arrow-circle-o-right mr5"></i> and much more...</li>
+                        <li><i class="fa fa-arrow-circle-o-right mr5"></i> 最快50秒购物: 注册=>购买=>支付宝支付=>完成</li>
+                        <li><i class="fa fa-arrow-circle-o-right mr5"></i> 购物有保证</li>
                     </ul>
                     <div class="mb20"></div>
-                    <strong>Not a member? <a href="{{ url('fos_user_registration_register') }}">Sign Up</a></strong>
+                    <strong>还没有注册? <a href="{{ url('fos_user_registration_register') }}">注册</a></strong>
+                    <br/>
                     <div>
                     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                         {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
                         <a href="{{ path('fos_user_security_logout') }}">
-                            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                            注销登陆
                         </a>
                     {% else %}
-                        <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+                        <a href="{{ path('fos_user_security_login') }}">直接登陆</a>
                     {% endif %}
                     </div>
                 </div><!-- signin0-info -->
