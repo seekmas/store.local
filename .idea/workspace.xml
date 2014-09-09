@@ -28,7 +28,7 @@
       <file leaf-file-name="index_content.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Order/update/index_content.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="32" selection-start="506" selection-end="506" vertical-scroll-proportion="0.4413793" vertical-offset="0" max-vertical-offset="1744">
+            <state line="82" column="44" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.7724138" vertical-offset="864" max-vertical-offset="1744">
               <folding />
             </state>
           </provider>
@@ -785,7 +785,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Order/update/index_content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="32" selection-start="506" selection-end="506" vertical-scroll-proportion="0.4413793" vertical-offset="0" max-vertical-offset="1744">
+        <state line="82" column="44" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.7724138" vertical-offset="864" max-vertical-offset="1744">
           <folding />
         </state>
       </provider>

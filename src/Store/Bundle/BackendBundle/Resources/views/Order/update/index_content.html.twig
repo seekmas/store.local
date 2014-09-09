@@ -80,7 +80,7 @@
                 <tr>
                     <td><strong>快递费用 :</strong></td>
 
-                    <td>{% if order.shipmentPrice %}{{ order.shipment.shipmentPrice  | currency | raw }}{% endif %}</td>
+                    <td>{% if order.shipment %}{{ order.shipment.shipmentPrice  | currency | raw }}{% endif %}</td>
 
                 </tr>
                 <tr>
