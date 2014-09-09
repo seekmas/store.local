@@ -45,7 +45,7 @@ class OrderController extends CoreController
             return $this->redirect($this->generateUrl('order_update' , ['orderId'=>$orderId]));
         }
 
-        $total = $order->getTotalCost() + $order->getShipment()->getShipmentPrice();
+        $total = $order->getShipment()? $order->getTotalCost() + $order->getShipment()->getShipmentPrice():$order->getTotalCost();
 
         return $this->render('StoreBackendBundle:Order:update/index.html.twig',
             [
