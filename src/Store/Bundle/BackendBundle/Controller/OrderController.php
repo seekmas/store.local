@@ -1,6 +1,7 @@
 <?php
 namespace Store\Bundle\BackendBundle\Controller;
 
+use Doctrine\ORM\EntityNotFoundException;
 use Store\Bundle\BackendBundle\Form\Type\OrdersType;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -27,7 +28,13 @@ class OrderController extends CoreController
 
         $em = $this->getDoctrine()->getManager();
 
-        $order = $this->get('order.repo')->find($orderId);
+        $order = $this->get('order.repo')->findOneByOrderId($orderId);
+
+        if( $order == NULL)
+        {
+            throw new EntityNotFoundException('订单不存在');
+        }
+
         $em->persist($order);
         $form = $this->createNewForm($request , new OrdersType() , $order);
 

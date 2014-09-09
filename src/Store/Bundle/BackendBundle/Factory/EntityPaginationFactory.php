@@ -41,8 +41,13 @@ class EntityPaginationFactory
         return $pagination;
     }
 
-    protected function parseWhere( $query , $alias , array $array)
+    protected function parseWhere( $query , $alias , array $array = null)
     {
+        if( $array == NULL)
+        {
+            return $query;
+        }
+
         if( $alias == '')
             throw new DoctrineQueryBuilderAliasException();
 

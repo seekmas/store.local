@@ -22,6 +22,11 @@ services:
         class: Store\Bundle\BackendBundle\Twig\PaymentStatusExtension
         tags:
             - { name: twig.extension }
+
+    regex.twig.extension:
+        class: Store\Bundle\BackendBundle\Twig\RegexExtension
+        tags:
+            - { name: twig.extension }
 #RepositoryFactory
 
     user.repo:

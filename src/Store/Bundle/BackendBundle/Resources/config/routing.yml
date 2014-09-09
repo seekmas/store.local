@@ -64,6 +64,9 @@ user_manage:
     path: /user
     defaults: { _controller: StoreBackendBundle:User:index }
 
+user_profile:
+    path: /{userId}/user
+    defaults: { _controller: StoreBackendBundle:User:user }
 
 ####
 shipment:

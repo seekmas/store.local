@@ -4,7 +4,9 @@
         <div class="panel-body">
             <div class="row">
 
-
+                <div class="col-sm-12">
+                    <h4>订单号: {{ order.orderId }}</h4>
+                </div>
 
                 <div class="col-sm-6">
                     <h4 class="subtitle mb10">用户选择的快递: {{ order.shipment.shipmentName }}</h4>
@@ -12,19 +14,23 @@
 
                 </div><!-- col-sm-6 -->
 
-                <div class="col-sm-6 text-right">
+                <div class="col-sm-6">
 
 
                     <h5 class="subtitle mb10">To</h5>
                     <address>
-                        <strong>ThemePixels, Inc.</strong><br>
-                        795 Folsom Ave, Suite 600<br>
-                        San Francisco, CA 94107<br>
-                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                        <p>客户寄送地址:</p>
+                        <p><strong>{{ order.address.street }}</p>
+
+                        <p>收件人:</p>
+                        <p><strong>{{ order.address.name }}</p>
+
+                        <p>收件人联系方式:</p>
+                        <p><strong>{{ order.address.phone }}</p>
                     </address>
 
-                    <p><strong>Invoice Date:</strong> January 20, 2014</p>
-                    <p><strong>Due Date:</strong> January 22, 2014</p>
+                    <p><strong>下单日期: </strong> {{ order.createdAt | date('Y/m/d H:i:s') }}</p>
+                    <p><strong>付款日期:</strong> {% if order.cart.expiredAt != NULL %} {{ order.cart.expiredAt | date('Y/m/d H:i:s') }} {% endif %}</p>
 
                 </div>
 
@@ -34,10 +40,10 @@
                 <table class="table table-invoice">
                     <thead>
                     <tr>
-                        <th>Item</th>
-                        <th>Quantity</th>
-                        <th>Unit Price</th>
-                        <th>Total Price</th>
+                        <th>产品名</th>
+                        <th>数量</th>
+                        <th>单价</th>
+                        <th>总价</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -79,7 +85,6 @@
             <div class="mb40"></div>
 
             <div class="well">
-                Thank you for your business. Please make sure all cheques payable to <strong>ThemeForest Web Services, Inc.</strong> Account No. 54353535
             </div>
 
 

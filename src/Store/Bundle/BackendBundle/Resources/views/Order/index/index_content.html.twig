@@ -17,7 +17,11 @@
         {% for order in orders %}
         <tr>
             <td>#{{ order.id }}</td>
-            <td>{% if order.orderId %}{{ order.orderId }}{% else %}还是购物车{% endif %}</td>
+            <td>
+                <a href="{{ url('order_update' , {'orderId':order.orderId}) }}">
+                    {{ order.orderId }}
+                </a>
+            </td>
             <td>{{ order.totalCost | currency | raw }}</td>
             <td>{{ order.user.username }}</td>
             <td>{{ order.paymentStatus | display_status | raw }}</td>
@@ -41,7 +45,7 @@
                 {% endif %}
             </th>
             <td class="table-action">
-                <a href="{{ url('order_update' , {'orderId':order.id}) }}"><i class="fa fa-pencil"></i></a>
+                <a href="{{ url('order_update' , {'orderId':order.orderId}) }}"><i class="fa fa-pencil"></i></a>
                 <a href="#" class="delete-row"><i class="fa fa-trash-o"></i></a>
             </td>
         </tr>

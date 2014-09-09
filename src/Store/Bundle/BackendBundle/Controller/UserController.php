@@ -20,4 +20,22 @@ class UserController extends Controller
         );
     }
 
+    public function userAction(Request $request , $userId)
+    {
+        $user = $this->get('user.repo')->find($userId);
+
+        $orders = $this->get('order.repo')->findBy(['userId' => $userId]);
+
+        $carts = $this->get('cart.repo')->findBy(['userId' => $userId]);
+
+        return $this->render('StoreBackendBundle:User:user/index.html.twig' ,
+            [
+                'user' => $user ,
+                'orders' => $orders ,
+                'carts' => $carts ,
+            ]
+        );
+    }
+
+
 }

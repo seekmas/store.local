@@ -1,0 +1,145 @@
+<div class="contentpanel">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns">
+                <a href="#" class="panel-close">×</a>
+                <a href="#" class="minimize">−</a>
+            </div><!-- panel-btns -->
+            <h4 class="panel-title">客户信息 </h4>
+        </div><!-- panel-heading -->
+        <div class="panel-body">
+
+            <div class="row">
+                <div class="col-md-6 mb30">
+                    <h5 class="subtitle mb5">客户资料</h5>
+                    <dl class="dl-horizontal">
+                        <dt>用户账户</dt>
+                        <dd>{{ user.username }}</dd>
+
+                        <dt>用户邮箱</dt>
+                        <dd>{{ user.email }}</dd>
+
+                        <dt>用户密码</dt>
+                        <dd>
+                            <span title="{{ user.password | regex_replace('/{.+}/' , '') }}">
+                                {{ user.password | regex_replace('/{.+}/' , '') | regex_replace('/./' , '*') }}
+                            </span>
+                        </dd>
+
+                        <dt>最后登陆</dt>
+                        <dd>{{ user.lastLogin | date('Y/m/d H:i') }}</dd>
+
+                    </dl>
+                    <p class="mb15"></p>
+                </div><!-- col-md-6 -->
+                <div class="col-md-6 mb30">
+                    <h5 class="subtitle mb5">客户订单</h5>
+
+
+                    <div class="table-responsive">
+                        <table class="table table-striped mb30">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>订单号</th>
+                                <th>订单状态</th>
+                                <th>创建日期</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for order in orders %}
+                            <tr>
+                                <td>#{{ order.id }}</td>
+                                <td><a href="{{ url('order_update',{'orderId':order.orderId}) }}">{{ order.orderId }}</a></td>
+                                <td>{{ order.paymentStatus | display_status | raw }}</td>
+                                <td>{{ order.createdAt | date('Y/m/d H:i') }}</td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <p class="mb15"></p>
+                </div><!-- col-md-6 -->
+            </div><!-- row -->
+
+            <div class="row">
+                <div class="col-md-6 mb30">
+                    <h5 class="subtitle mb5">客户购物车</h5>
+
+                    {% for cart in carts %}
+
+                         <p>#{{ cart.id }}
+                             购物车状态:
+                             {% if cart.expiredAt %}
+                                 过期于{{ cart.expiredAt | date('Y/m/d H:i') }}
+                             {% else %}
+                                 活跃
+                             {% endif %}
+                         </p>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped mb30">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>产品名</th>
+                                    <th>数量</th>
+                                    <th>单价</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for item in cart.cartItem %}
+                                <tr>
+                                    <td>#{{ item.id }}</td>
+                                    <td>{{ item.productBasket.product.productName }}</td>
+                                    <td>{{ item.sum }}</td>
+                                    <td>{{ item.singlePrice | currency | raw }}</td>
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+
+                    {% endfor %}
+
+                    <p class="mb15"></p>
+                </div><!-- col-md-6 -->
+
+                <div class="col-md-6 mb30">
+                    <h5 class="subtitle mb5">客户评价</h5>
+
+                    <p class="mb15"></p>
+                </div><!-- col-md-6 -->
+            </div><!-- row -->
+
+
+
+        </div><!-- panel-body -->
+    </div><!-- panel -->
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns">
+                <a href="#" class="panel-close">×</a>
+                <a href="#" class="minimize">−</a>
+            </div><!-- panel-btns -->
+            <h4 class="panel-title panel-title-alt">客户地址信息</h4>
+        </div><!-- panel-heading -->
+        <div class="panel-body">
+
+            {% for address in user.address %}
+
+                <div>
+                    联系人: {{ address.name }} 手机号: {{ address.phone }} 地址: {{ address.street }}
+                </div>
+
+            {% endfor %}
+
+        </div><!-- panel-body -->
+    </div><!-- panel -->
+
+</div>
