@@ -73,7 +73,9 @@
                 </tr>
                 <tr>
                     <td><strong>快递费用 :</strong></td>
-                    <td>{{ order.shipment.shipmentPrice  | currency | raw }}</td>
+
+                    <td>{% if order.shipmentPrice %}{{ order.shipment.shipmentPrice  | currency | raw }}{% endif %}</td>
+
                 </tr>
                 <tr>
                     <td><strong>总费用 :</strong></td>

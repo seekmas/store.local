@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be6b6598-5851-4d56-aae2-effbda3e778d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/OrderController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/OrderController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Order/update/index_content.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Order/update/index_content.html.twig" />
     </list>
     <ignored path="store.local.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,22 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index_content.html.twig" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index_content.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Order/update/index_content.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="54" selection-start="1653" selection-end="1661" vertical-scroll-proportion="2.56" vertical-offset="864" max-vertical-offset="1616">
+            <state line="76" column="112" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.6068966" vertical-offset="864" max-vertical-offset="1648">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/OrderController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="129" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.6366843" vertical-offset="391" max-vertical-offset="1024">
-              <folding>
-                <element signature="e#56#97#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -98,7 +87,6 @@
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Twig/RegexExtension.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Order/index/index_content.html.twig" />
-        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Order/update/index_content.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/User/user/index_content.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" />
@@ -109,6 +97,7 @@
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/layouts.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/layouts.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/OrderController.php" />
+        <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Order/update/index_content.html.twig" />
       </list>
     </option>
   </component>
@@ -785,19 +774,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Order/update/index_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="54" selection-start="1653" selection-end="1661" vertical-scroll-proportion="2.56" vertical-offset="864" max-vertical-offset="1616">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="129" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.6366843" vertical-offset="391" max-vertical-offset="1024">
+        <state line="47" column="129" selection-start="1454" selection-end="1454" vertical-scroll-proportion="-14.44" vertical-offset="391" max-vertical-offset="1024">
           <folding>
             <element signature="e#56#97#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/Order/update/index_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="112" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.6068966" vertical-offset="864" max-vertical-offset="1648">
+          <folding />
         </state>
       </provider>
     </entry>
