@@ -125,6 +125,12 @@ services:
         factory_method: getRepository
         arguments: [ Store\Bundle\BackendBundle\Entity\Alipay ]
 
+    mail.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\MailTemplate ]
+
 #entity paginator
     user.paginator:
         class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory
@@ -141,6 +147,10 @@ services:
     order.paginator:
         class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory
         arguments: [@request_stack,@knp_paginator,@order.repo]
+
+    mail.paginator:
+        class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory
+        arguments: [@request_stack,@knp_paginator,@mail.repo]
 
 #service
     store.cart:

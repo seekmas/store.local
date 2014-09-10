@@ -104,3 +104,20 @@ order_manage:
 order_update:
     path: /{orderId}/order_update
     defaults: { _controller: StoreBackendBundle:Order:update }
+
+
+mail:
+    path: /mail
+    defaults: { _controller: StoreBackendBundle:Message:index }
+
+edit_mail:
+    path: /{id}/edit_mail
+    defaults: { _controller: StoreBackendBundle:Message:index }
+
+remove_mail:
+    path: /{id}/remove_mail
+    defaults: { _controller: StoreBackendBundle:Message:remove }
+
+prew_mail:
+    path: /{id}/preview_mail
+    defaults: { _controller: StoreBackendBundle:Message:preview }

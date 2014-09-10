@@ -28,7 +28,9 @@ class MainMenuBuilder extends ContainerAware
 
 
         //client menu
-        $menu->addChild('client',['attributes' =>['icon' => 'fa fa-file-text-o'],'label' => '顾客' ,'route' => 'user_manage']);
+        $menu->addChild('client',['attributes' =>['icon' => 'fa fa-file-text-o'],'label' => '顾客' ,'route' => '']);
+        $menu['client']->addChild('user_manage' , ['attributes' =>['icon' => 'fa fa-caret-right'],'label' => '用户管理' ,'route' => 'user_manage']);
+        $menu['client']->addChild('mail_manage' , ['attributes' =>['icon' => 'fa fa-caret-right'],'label' => '订阅管理' ,'route' => 'mail']);
 
         // configuration menu
         $menu->addChild('configuration',['attributes' =>['icon' => 'fa fa-file-text-o'],'label' => '设置' ,'route' => '']);
