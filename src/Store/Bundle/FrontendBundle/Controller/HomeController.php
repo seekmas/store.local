@@ -11,9 +11,6 @@ class HomeController extends Controller
 {
     public function indexAction($categoryId = 0 , $tagId = 0)
     {
-
-        $this->get('smtp.sender')->send("Welcome to Hello world" , "欢迎访问在线商城");
-
         $store = $this->get('store.repo')->findAll();
 
         if( $store == NULL)

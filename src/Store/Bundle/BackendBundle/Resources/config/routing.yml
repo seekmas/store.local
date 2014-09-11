@@ -121,3 +121,7 @@ remove_mail:
 prew_mail:
     path: /{id}/preview_mail
     defaults: { _controller: StoreBackendBundle:Message:preview }
+
+send_mail:
+    path: /{id}/execute_mail
+    defaults: { _controller: StoreBackendBundle:Message:execute }

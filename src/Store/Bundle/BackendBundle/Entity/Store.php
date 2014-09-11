@@ -103,6 +103,26 @@ class Store
     private $alipay;
 
     /**
+     * @ORM\Column(name="smtp_user" , type="string" , length=255 , nullable=true)
+     */
+    private $smtpUser;
+
+    /**
+     * @ORM\Column(name="smtp_password" , type="string" , length=255 , nullable=true)
+     */
+    private $smtpPassword;
+
+    /**
+     * @ORM\Column(name="smtp_address" , type="string" , length=255 , nullable=true)
+     */
+    private $smtpAddress;
+
+    /**
+     * @ORM\Column(name="smtp_port" , type="string" , length=255 , nullable=true)
+     */
+    private $smtpPort;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -361,5 +381,70 @@ class Store
     {
         return $this->alipay;
     }
+
+    /**
+     * @param mixed $smtpAddress
+     */
+    public function setSmtpAddress($smtpAddress)
+    {
+        $this->smtpAddress = $smtpAddress;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSmtpAddress()
+    {
+        return $this->smtpAddress;
+    }
+
+    /**
+     * @param mixed $smtpPassword
+     */
+    public function setSmtpPassword($smtpPassword)
+    {
+        $this->smtpPassword = $smtpPassword;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSmtpPassword()
+    {
+        return $this->smtpPassword;
+    }
+
+    /**
+     * @param mixed $smtpUser
+     */
+    public function setSmtpUser($smtpUser)
+    {
+        $this->smtpUser = $smtpUser;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSmtpUser()
+    {
+        return $this->smtpUser;
+    }
+
+    /**
+     * @param mixed $smtpPort
+     */
+    public function setSmtpPort($smtpPort)
+    {
+        $this->smtpPort = $smtpPort;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSmtpPort()
+    {
+        return $this->smtpPort;
+    }
+
 
 }

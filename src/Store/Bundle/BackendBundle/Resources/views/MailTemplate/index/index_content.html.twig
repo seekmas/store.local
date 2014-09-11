@@ -22,6 +22,7 @@
                     <td>{% if mail.isSent %} 已经发送 {% else %} 还未发送 {% endif %}</td>
                     <td></td>
                     <td class="table-action">
+                        <a href="{{ url('send_mail' , {'id':mail.id}) }}">发送</a>
                         <a href="{{ url('prew_mail' , {'id':mail.id}) }}"><i class="fa fa-eye"></i></a>
                         <a href="{{ url('edit_mail' , {'id':mail.id}) }}"><i class="fa fa-pencil"></i></a>
                         <a href="{{ url('remove_mail' , {'id':mail.id}) }}" class="delete-row"><i class="fa fa-trash-o"></i></a>

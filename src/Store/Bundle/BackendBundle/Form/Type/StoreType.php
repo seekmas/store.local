@@ -20,6 +20,10 @@ class StoreType extends AbstractType
             ->add('city')
             ->add('address')
             ->add('extraInfo' , 'textarea' , array('label' => '网站备案信息' , 'required' => false ))
+            ->add('smtpUser')
+            ->add('smtpPassword')
+            ->add('smtpAddress')
+            ->add('smtpPort')
         ;
 
         $builder->add('submit' , 'submit');

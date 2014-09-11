@@ -156,3 +156,9 @@ services:
     store.cart:
         class: Store\Bundle\BackendBundle\Cart\Cart
         arguments: [@service_container]
+
+    mailer.send:
+        class:  Store\Bundle\BackendBundle\Mailer\SmtpMailer
+        arguments: [ @service_container]
+        calls:
+            - [ setConfig , ['446146366@qq.com' , '在线商城'] ]

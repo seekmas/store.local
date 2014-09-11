@@ -6,6 +6,7 @@ use Doctrine\ORM\EntityNotFoundException;
 use Store\Bundle\BackendBundle\Entity\MailTemplate;
 use Store\Bundle\BackendBundle\Form\Type\MailTemplateType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class MessageController extends CoreController
 {
@@ -63,7 +64,10 @@ class MessageController extends CoreController
     {
         $mail = $this->get('mail.repo')->find( $id);
 
-        return $this->render('StoreBackendBundle:MailTemplate:preview/index.html.twig' , ['mail'=>$mail]);
+        $store = $mail->getStore();
+
+        return new Response( $this->get('mailer.send')->getTemplate($store,$mail->getMailTitle() , $mail->getMailContent()));
+        //return $this->render('StoreBackendBundle:MailTemplate:preview/index.html.twig' , ['mail'=>$mail]);
     }
 
     public function removeAction(Request $request , $id)
@@ -85,5 +89,45 @@ class MessageController extends CoreController
         $em->flush();
         $this->addFlashMessage('success' , '邮件模板删除成功');
         return $this->redirect($this->generateUrl('mail'));
+    }
+
+    public function executeAction( $id)
+    {
+        $user = $this->getUser();
+        $em = $this->getDoctrine()->getManager();
+        $dispatcher = $this->get('event_dispatcher');
+        $store = $this->get('store.repo')->findOneBy(['userId'=>$user->getId()]);
+
+
+        $users = $this->get('user.repo')->findAll();
+
+        $mailTemplate = $this->get('mail.repo')
+                             ->createQueryBuilder('m')
+                             ->select('m')
+                             ->AndWhere('m.id = '.$id)
+                             ->AndWhere('m.storeId = '.$store->getId())
+                             ->getQuery()
+                             ->getResult();
+
+        foreach( $mailTemplate as $template)
+        {
+            $list = [];
+            foreach($users as $user)
+            {
+                $list[] = $user->getEmail();
+            }
+
+            $mailer = $this->get('mailer.send');
+            $mailer->setConfig( $template->getFromEmail() , $template->getFromName() );
+            $mailer->send($list , $template->getMailTitle() , $template->getMailContent()  ,$store);
+
+            $em->persist( $template);
+            $template->setIsSent(true);
+            $em->flush();
+        }
+
+
+
+        return new Response('发送任务完成');
     }
 }
