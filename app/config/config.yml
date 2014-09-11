@@ -102,7 +102,6 @@ liip_imagine:
           web_path: ~
     filter_sets:
         cache: ~
-
         tiny:
             quality: 75
             filters:
