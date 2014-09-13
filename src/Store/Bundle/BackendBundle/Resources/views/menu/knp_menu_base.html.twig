@@ -1,1 +1,9 @@
 {% if options.compressed %}{{ block('compressed_root') }}{% else %}{{ block('root') }}{% endif %}
+
+<script>
+    $(function(){
+
+        $('li.active').parent().parent().attr({class:'nav-parent nav-active active'});
+
+    });
+</script>
