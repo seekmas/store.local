@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be6b6598-5851-4d56-aae2-effbda3e778d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/topline.jpg" afterPath="$PROJECT_DIR$/web/topline.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/media/cache/line/topline.jpg" afterPath="$PROJECT_DIR$/web/media/cache/line/topline.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Menu/MainMenuBuilder.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Menu/MainMenuBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/MessageController.php" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Controller/MessageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/backend/js/bootstrap-wysihtml5.js" afterPath="$PROJECT_DIR$/web/backend/js/bootstrap-wysihtml5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/MailTemplate/preview/index.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/MailTemplate/preview/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/MailTemplate/index/index_content.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/MailTemplate/index/index_content.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/MailTemplate/preview/index_content.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/MailTemplate/preview/index_content.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/menu/knp_menu.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/menu/knp_menu.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/menu/knp_menu_base.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/menu/knp_menu_base.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/layouts.html.twig" afterPath="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/layouts.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="store.local.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,8 +93,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="2171" />
-    <option name="y" value="191" />
+    <option name="x" value="1567" />
+    <option name="y" value="59" />
     <option name="width" value="1719" />
     <option name="height" value="973" />
   </component>
@@ -299,6 +288,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackendBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -407,7 +430,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2171" y="191" width="1719" height="973" extended-state="0" />
+    <frame x="1567" y="59" width="1719" height="973" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -745,7 +768,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/layouts.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="50" selection-start="3160" selection-end="3160" vertical-scroll-proportion="0.66158867" vertical-offset="688" max-vertical-offset="2544">
+        <state line="35" column="32" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.4352557" vertical-offset="160" max-vertical-offset="2224">
           <folding />
         </state>
       </provider>
