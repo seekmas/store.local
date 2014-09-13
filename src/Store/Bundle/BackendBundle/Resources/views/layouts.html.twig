@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="{{ asset('backend/images/favicon.png') }}" type="image/png">
@@ -54,16 +54,18 @@
             <li>
                 <div class="btn-group">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        <img src="{{ asset('backend/images/photos/loggeduser.png') }}" alt="" />
                         {{ app.user.username }}
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-                        <li><a href="{{ url('index') }}"><i class="glyphicon glyphicon-log-out"></i> 商店首页</a></li>
                         <li><a href="{{ url('fos_user_security_logout') }}"><i class="glyphicon glyphicon-log-out"></i> 注销</a></li>
                     </ul>
                 </div>
             </li>
+            <button type="button" class="btn btn-default  dropdown-toggle" onClick="javascript:window.location.href='{{ url('index') }}'">
+                商店首页
+            </button>
+
 
         </ul>
 
