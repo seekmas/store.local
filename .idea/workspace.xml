@@ -32,7 +32,7 @@
       <file leaf-file-name="layouts.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/layouts.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="16" selection-start="5198" selection-end="5198" vertical-scroll-proportion="0.835691" vertical-offset="1264" max-vertical-offset="4352">
+            <state line="144" column="16" selection-start="5846" selection-end="5846" vertical-scroll-proportion="0.609358" vertical-offset="1744" max-vertical-offset="4384">
               <folding />
             </state>
           </provider>
@@ -998,7 +998,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/layouts.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="16" selection-start="5198" selection-end="5198" vertical-scroll-proportion="0.835691" vertical-offset="1264" max-vertical-offset="4352">
+        <state line="144" column="16" selection-start="5846" selection-end="5846" vertical-scroll-proportion="0.609358" vertical-offset="1744" max-vertical-offset="4384">
           <folding />
         </state>
       </provider>
