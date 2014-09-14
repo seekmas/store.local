@@ -1,0 +1,27 @@
+
+
+<div id="main" class="twelve columns offset-by-one">
+    <div id="page-content">
+
+
+        <div class="columns six alpha">
+            <img src="//cdn.shopify.com/s/files/1/0044/8732/t/2/assets/about-page-1.jpg?1504">
+        </div>
+        <div class="columns six omega">
+            <h1>订阅更新</h1>
+            <div class="wysiwyg">
+                <p>填写你常用的邮箱 我们会不定期给你发送最近的更新跟优惠信息.</p>
+
+                {{ form_start(form) }}
+
+                {{ form_row(form.email) }}
+                <input type="submit" value="订阅" />
+                {{ form_end(form) }}
+
+            </div>
+        </div>
+
+
+        <br class="clear">
+    </div>
+</div>

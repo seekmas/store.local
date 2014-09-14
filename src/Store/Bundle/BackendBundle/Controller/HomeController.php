@@ -3,7 +3,9 @@
 namespace Store\Bundle\BackendBundle\Controller;
 
 use Store\Bundle\BackendBundle\Controller\CoreController as Controller;
+use Store\Bundle\BackendBundle\Entity\AboutUs;
 use Store\Bundle\BackendBundle\Entity\Store;
+use Store\Bundle\BackendBundle\Form\Type\AboutUsType;
 use Store\Bundle\BackendBundle\Form\Type\StoreType;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -82,6 +84,40 @@ class HomeController extends Controller
             [
                 'form' => $form->createView() ,
                 'store' => $store ,
+            ]
+        );
+    }
+
+    public function aboutusAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->get('security.context')->getToken()->getUser();
+        $store = $this->get('store.repo')->findOneBy(['userId' => $user->getId() ]);
+
+        $posts = $this->get('aboutus.repo')->findBy(['storeId' => $store->getId()]);
+
+        $aboutus = new AboutUs();
+        $em->persist($aboutus);
+        $aboutus->setStore($store);
+        $form = $this->createNewForm($request,new AboutUsType(),$aboutus);
+        if( $form->isValid())
+        {
+            $data = $form->getData();
+            $photo = $data->getPhoto();
+            $photo = $this->get('file.save')->save($photo , 'storePost');
+            $aboutus->setPhoto($photo);
+            $aboutus->setCreatedAt(new \Datetime());
+            $aboutus->setEnabled(true);
+
+            $em->flush();
+            $this->addFlashMessage('success' , '新的Post添加成功');
+            return $this->redirect($this->generateUrl('create_about_us'));
+        }
+
+        return $this->render( 'StoreBackendBundle:Home:aboutus/index.html.twig' ,
+            [
+                'form' => $form->createView() ,
+                'posts' => $posts ,
             ]
         );
     }

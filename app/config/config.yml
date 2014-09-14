@@ -114,6 +114,19 @@ liip_imagine:
             quality: 75
             filters:
                 thumbnail: { size: [300, 275], mode: outbound }
+        logo:
+            quality: 75
+            filters:
+                thumbnail: { size: [220, 322], mode: outbound }
+
+        product_preview:
+            quality: 75
+            filters:
+                thumbnail: { size: [422, 480], mode: outbound }
+        product_origin:
+            quality: 75
+            filters:
+                thumbnail: { size: [614, 540], mode: outbound }
         banner:
             quality: 75
             filters:

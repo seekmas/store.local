@@ -1,0 +1,15 @@
+{% extends "StoreFrontendBundle::layouts.html.twig" %}
+
+{% block title %}StoreFrontendBundle:Home:index{% endblock %}
+
+
+ {% block blockName %}
+     <img src="{{ store.logo | imagine_filter('banner') }}" />
+     <label>{{ store.name }}</label>
+ {% endblock %}
+
+{% block body %}
+
+    {% include "StoreFrontendBundle:Home:shipment/index_content.html.twig" %}
+
+{% endblock %}

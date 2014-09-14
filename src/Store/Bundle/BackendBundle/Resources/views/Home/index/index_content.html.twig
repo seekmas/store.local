@@ -28,7 +28,7 @@
 
         <div class="panel panel-default widget-photoday">
             <div class="panel-body">
-                <a href="#" class="photoday"><img src="{{ asset( store.logo ) }}" height="230px"></a>
+                <p class=" text-center"><a href="#" class="photoday"><img src="{{ asset( store.logo ) | imagine_filter('logo')}}"></a></p>
                 <div class="photo-details">
                     <h3 class="photo-title">{{ store.name }}</h3>
                     <h3><small class="text-muted"><i class="fa fa-map-marker"></i> {{ store.address }}</small></h3>

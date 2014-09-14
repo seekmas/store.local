@@ -1,0 +1,69 @@
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs nav-justified nav-profile">
+    <li class="active"><a href="#activities" data-toggle="tab"><strong>介绍</strong></a></li>
+    <li><a href="#followers" data-toggle="tab"><strong>展示</strong></a></li>
+    <li><a href="#following" data-toggle="tab"><strong>评价</strong></a></li>
+    <li><a href="#events" data-toggle="tab"><strong>故事</strong></a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+<div class="tab-pane active" id="activities">
+    <div class="row">
+    <div class="col-md-6">
+        <h3>产品属性/参数</h3>
+
+        <ul class="profile-social-list">
+            {% for value in product.propertyValue %}
+
+                <li><span class="glyphicon glyphicon-plus"></span> {{ value.property.propertyName }} : {{ value.value }} </li>
+
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="col-md-6">
+        <h3>产品信息</h3>
+        {{ product.productDesc | raw}}
+    </div>
+    </div>
+
+</div>
+<div class="tab-pane" id="followers">
+
+    <div id="gallery-photo" class="owl-carousel owl-theme" align="center">
+        {% for key,gallery in product.productBasket.photo %}
+        <div class="item">
+
+            <h3>第{{ key+1 }}页 / 共{{ product.productBasket.photo|length }}页</h3>
+
+            <img src="{{ asset( gallery.photo) | imagine_filter('gallery') }}" alt="{{ product.productName }}" />
+
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+<div class="tab-pane" id="following">
+
+    这里是评论
+
+</div>
+<div class="tab-pane" id="events">
+    <div class="events">
+        <h5 class="subtitle">Upcoming Events</h5>
+        <div class="row">
+
+        </div>
+
+        <br />
+
+        <h5 class="subtitle">Past Events</h5>
+        <div class="row">
+
+        </div>
+
+    </div><!-- events -->
+</div>
+</div><!-- tab-content -->

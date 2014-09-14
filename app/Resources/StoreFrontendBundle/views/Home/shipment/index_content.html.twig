@@ -1,0 +1,53 @@
+<h4 class="panel-title">已经购买的商品:</h4>
+
+
+        <div class="row">
+        {% for key , order in orders %}
+
+        <div class="twelve columns alpha">
+            <div class="row">
+                        <h4>#{{ key+1 }} 订单号: {{ order.orderId }}</h4>
+                        {% for item in order.cart.cartItem if item.removedAt == NULL %}
+
+                            <div class="six columns alpha">
+                                <a href="{{ url('find_product_by_id' , {'id' : item.productBasket.product.id} ) }}" class="pull-left">
+                                    <img alt="" src="{{ item.productBasket.product.photo | imagine_filter('small') }}" />
+                                </a>
+                            </div>
+
+                            <div class="six columns alpha">
+                                <div class="media-body">
+                                    <h4 class="filename text-primary">
+                                        <a href="{{ url('find_product_by_id' , {'id' : item.productBasket.product.id} ) }}">{{ item.productBasket.product.productName }}</a>
+                                    </h4>
+
+                                    <p class="text-muted">价格: {{ item.singlePrice }}</p>
+                                    <p class="text-muted">数量: {{ item.sum }}</p>
+                                </div>
+                            </div>
+
+                            <hr/>
+
+                        {% endfor %}
+
+                    <h5><strong>快递单号: {% if order.trackingNumber %}{{ order.trackingNumber }}{% else %}{% endif %}</strong></h5>
+
+                    {% if order.isLocked %}
+                        <h5>付款金额: {{ order.totalCost + order.shipment.shipmentPrice | currency | raw }}</h5>
+                        <h5>付款日期: {{ order.cart.expiredAt | date('Y/m/d H:i:s') }}</h5>
+                    {% else %}
+                        <h5>还未付款</h5>
+                    {% endif %}
+
+                    {% if order.paymentStatus == 106 %}
+                        <div class="alert alert-success">交易完成</div>
+                    {% elseif order.paymentStatus == 105 %}
+                    <p><a class="btn btn-primary" href="{{ url('tracking_confirm',{'id' : order.id}) }}">确认收货</a></p>
+                    {% endif %}
+            </div>
+        </div>
+
+
+
+        {% endfor %}
+        </div>

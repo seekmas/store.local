@@ -23,6 +23,10 @@ class User extends BaseUser
      */
     protected $address;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Cart" , mappedBy="user")
+     */
+    protected $cart;
 
     public function __construct()
     {
@@ -43,6 +47,22 @@ class User extends BaseUser
     public function getAddress()
     {
         return $this->address;
+    }
+
+    /**
+     * @param mixed $cart
+     */
+    public function setCart($cart)
+    {
+        $this->cart = $cart;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCart()
+    {
+        return $this->cart;
     }
 
 

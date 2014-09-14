@@ -1,0 +1,19 @@
+<div id="main" class="twelve columns offset-by-one">
+    <div id="page-content">
+
+        {% for post in posts %}
+        <div class="columns six alpha">
+            <img src="{{ post.photo }}" />
+        </div>
+        <div class="columns six omega">
+            <h1>{{ post.title }}</h1>
+            <div class="wysiwyg">
+                {{ post.content | raw }}
+            </div>
+        </div>
+
+        {% endfor %}
+        <br class="clear">
+    </div>
+    {{ knp_pagination_render(posts) }}
+</div>

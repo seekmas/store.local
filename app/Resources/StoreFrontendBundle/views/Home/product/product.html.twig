@@ -1,0 +1,191 @@
+{% extends "StoreFrontendBundle::layouts.html.twig" %}
+
+{% block title %}StoreFrontendBundle:Home:index{% endblock %}
+
+{% block description %}{{ product.productDesc | striptags | truncate(218) }}{% endblock %}
+
+{% block keywords %}{% endblock %}
+
+{% block list %}
+    {% for c in store.category if c.isEnabled %}
+        <li><a href="{{ url('index_by_category' , {'categoryId':c.id} ) }}"> - {{ c.name }}</a></li>
+    {% endfor %}
+{% endblock %}
+
+{% block society_network %}
+
+    {% for society in store.society %}
+        <a href="{{ society.url }}">
+            <img src="{{ society.icon }}" />
+        </a>
+    {% endfor %}
+
+{% endblock %}
+
+{% block body %}
+
+
+    <div id="main" class="twelve columns offset-by-one">
+        <div id="page-content">
+
+            <!--START PRODUCT-->
+            <div class="twelve columns alpha omega">
+                <!-- START PRODUCT IMAGES-->
+                <section id="images" class="seven columns alpha">
+                    <!-- START ZOOM IMAGE-->
+
+                    <div style="height:614px;width:540px;" class="zoomWrapper">
+                    <img style="position: absolute;" id="feature-image" class="desktop" src="{{ asset(product.photo) | imagine_filter('product_origin') }}" alt="{{ product.productAlias }}" data-zoom-image="{{ asset(product.photo) }}"></div>
+                    <img class="mobile" src="{{ asset(product.photo) | imagine_filter('medium') }}" alt="Mad Bucket Hat">
+                    <!-- END ZOOM IMAGE-->
+
+                </section>
+                <!-- END PRODUCT IMAGES-->
+                <!--START BUY-->
+                <section id="buy" class="five columns omega">
+                    <form action="/cart/add" method="post" id="product-form" class="quickAdd" enctype="multipart/form-data">
+                        <h1>{{ product.productName }}</h1>
+                        <!--START PRODUCT INFO-->
+                        <section id="product-info" class="right">
+
+                            <div class="wysiwyg no-tabs">
+                                <ul class="profile-social-list">
+                                    {% for value in product.propertyValue %}
+
+                                        <li><span class="glyphicon glyphicon-plus"></span> {{ value.property.propertyName }} : {{ value.value }} </li>
+
+                                    {% endfor %}
+                                </ul>
+
+                                {{ product.productDesc | raw }}
+
+                            </div>
+
+                        </section>
+                        <!--END PRODUCT INFO-->
+                        <h2 id="product-price"><span class="product-price">价格: {{ product.productPrice | currency | raw }}</span></h2>
+
+                        {% if product.isAvailable %}
+
+                            <input onclick="javascript:window.location.href='{{ url('add_to_cart_and_checkout' , {'productId':product.id}) }}'" type="button" class="btn btn-default dropdown-toggle" value="放入购物车" />
+
+                        {% else %}
+
+                            <input style="opacity: 0.5;" disabled="disabled" value="已经售完" id="add" class="btn add-to-cart disabled" type="submit">
+
+                        {% endif %}
+
+
+                    <!-- START SHARE-->
+                    <section id="share" class="clearfix">
+                        {#<div class="facebook">#}
+                            {#<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>#}
+                        {#</div>#}
+                        {#<div class="twitter">#}
+                            {#<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>#}
+                            {#<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>#}
+                        {#</div>#}
+                    </section>
+                    <!-- END SHARE-->
+                </section>
+                <!--END BUY-->
+                <br class="clear">
+
+
+                <div id="gallery-photo" class="owl-carousel owl-theme" align="center">
+                    {% for key,gallery in product.productBasket.photo %}
+                        <div class="item">
+
+                            <h3>第{{ key+1 }}页 / 共{{ product.productBasket.photo|length }}页</h3>
+
+                            <img src="{{ asset( gallery.photo) | imagine_filter('gallery') }}" alt="{{ product.productName }}" />
+
+                        </div>
+                    {% endfor %}
+                </div>
+
+
+                <!--START PRODUCT GRID-->
+                <section id="related-products" class="product-grid twelve columns alpha omega">
+                    <h2>Peep This!</h2>
+
+                    {% set category = product.productBasket.category %}
+
+                    {% if category == NULL %}
+
+                        没有找到相似的产品
+
+                    {% else %}
+
+                    {% for key , same in category.productBasket if key < 3  %}
+                        <div class="three columns alpha">
+                            <a href="{{ url('find_product_by_id' , {'id':same.product.id}) }}" id="product-{{ product.id }}">
+
+                                <img src="{{ same.product.photo }}" alt="{{ same.product.productAlias }}" class="product">
+                                <h3>{{ same.product.productName }}</h3>
+                                <h4>{{ same.product.productPrice | currency | raw }}</h4>
+                            </a>
+                        </div>
+                    {% endfor %}
+                    {% endif %}
+
+
+                </section>
+                <!--END PRODUCT GRID-->
+                <br class="clear">
+
+
+            </div>
+
+
+            <br class="clear">
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('owl/owl-carousel/owl.carousel.css') }}">
+    <link href="{{ asset('owl/owl-carousel/owl.theme.css') }}" rel="stylesheet">
+    <style>
+        #gallery-photo .item img{
+            display: block;
+            height: auto;
+        }
+    </style>
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}
+
+    <script src="{{ asset('owl/owl-carousel/owl.carousel.js') }}"></script>
+    <script>
+
+
+        $(document).ready(function() {
+
+            $("#gallery-photo").owlCarousel({
+
+                navigation : true, // Show next and prev buttons
+                slideSpeed : 200,
+                paginationSpeed : 400,
+                singleItem:true
+
+                // "singleItem:true" is a shortcut for:
+                // items : 1,
+                // itemsDesktop : false,
+                // itemsDesktopSmall : false,
+                // itemsTablet: false,
+                // itemsMobile : false
+
+            });
+
+        });
+
+
+    </script>
+{% endblock %}

@@ -56,7 +56,14 @@ class HomeController extends Controller
 
     public function productAction( Request $request , $id)
     {
+        $store = $this->get('store.repo')->findAll();
 
+        if( $store == NULL)
+        {
+            return $this->render('StoreFrontendBundle:Home:under_construction.html.twig');
+        }
+
+        $store = $store[0];
         $product = $this->get('product.repo')->find( $id);
 
         if( $product == NULL)
@@ -64,8 +71,11 @@ class HomeController extends Controller
             throw new EntityNotFoundException();
         }
 
+
+
         return $this->render('StoreFrontendBundle:Home:product/product.html.twig' ,
                [
+                   'store'  => $store ,
                    'product' => $product
                ]
         );

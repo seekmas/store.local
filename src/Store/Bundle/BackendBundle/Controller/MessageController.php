@@ -109,6 +109,8 @@ class MessageController extends CoreController
                              ->getQuery()
                              ->getResult();
 
+        $subscribers = $this->get('subscriber.repo')->findAll();
+
         foreach( $mailTemplate as $template)
         {
             $list = [];
@@ -116,6 +118,13 @@ class MessageController extends CoreController
             {
                 $list[] = $user->getEmail();
             }
+
+            foreach($subscribers as $subscriber)
+            {
+                $list[] = $subscriber->getEmail();
+            }
+
+            $list= array_unique($list);
 
             $mailer = $this->get('mailer.send');
             $mailer->setConfig( $template->getFromEmail() , $template->getFromName() );
@@ -125,9 +134,6 @@ class MessageController extends CoreController
             $template->setIsSent(true);
             $em->flush();
         }
-
-
-
         return new Response('发送任务完成');
     }
 }

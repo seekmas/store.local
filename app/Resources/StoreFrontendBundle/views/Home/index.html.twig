@@ -1,0 +1,66 @@
+{% extends "StoreFrontendBundle::layouts.html.twig" %}
+
+{% block title %}StoreFrontendBundle:Home:index{% endblock %}
+
+{% block hero %}
+    <img src="{{ store.logo | imagine_filter('logo') }}" alt="{{ store.name }}" />
+{% endblock %}
+
+{% block list %}
+    {% for c in store.category if c.isEnabled %}
+        <li><a href="{{ url('index_by_category' , {'categoryId':c.id} ) }}"> - {{ c.name }}</a></li>
+    {% endfor %}
+{% endblock %}
+
+{% block society_network %}
+
+    {% for society in store.society %}
+    <a href="{{ society.url }}">
+        <img src="{{ society.icon }}" />
+    </a>
+    {% endfor %}
+
+{% endblock %}
+
+
+{% block main %}
+
+
+    <img src="//cdn.shopify.com/s/files/1/0044/8732/t/2/assets/hero.jpg?1504">
+    <p> Tell 'em why u mad </p>
+
+{% endblock %}
+
+{% block body %}
+
+
+    <section class="product-grid twelve columns alpha omega">
+
+
+        {% for productBasket in products if productBasket.product.isAvailable %}
+
+
+            <div class="three columns alpha product-prew">
+                <a href="{{ url('find_product_by_id' , {'id' : productBasket.product.id} ) }}" id="product-{{ productBasket.product.id }}" class="animated fadeInUpBig">
+
+                    <img src="{{ productBasket.product.photo | imagine_filter('product_preview') }}" alt="{{ productBasket.product.productAlias }}" class="product">
+                    <h3>{{ productBasket.product.productName | truncate(64) }}</h3>
+                    <h4>{{ productBasket.product.productPrice | currency | raw }} </h4>
+                </a>
+            </div>
+
+
+        {% endfor %}
+
+
+
+    <br class="clear">
+
+
+        {{ knp_pagination_render(products) }}
+
+    </section>
+
+
+
+{% endblock %}

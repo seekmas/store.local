@@ -1,0 +1,21 @@
+
+{{ knp_pagination_render(subscribers) }}
+
+<div class="row">
+
+<div class="col-md-3">
+    <div class="panel"><div class="panel-body">
+    {% for key , subscriber in subscribers %}
+        <p>#{{ subscriber.id }} . {{ subscriber.email }} </p>
+
+        {% if (key+1) % 25 == 0 %}
+        </div></div></div>
+
+        <div class="col-md-3">
+        <div class="panel"><div class="panel-body">
+        {% endif %}
+
+    {% endfor %}
+</div></div></div>
+
+</div>

@@ -1,0 +1,130 @@
+{% form_theme form 'StoreFrontendBundle:form_theme:form_div_theme.html.twig' %}
+        <div class="row">
+            <h4>创建新的地址</h4>
+
+            {{ form_start(form) }}
+                <div class="three columns alpha">
+                    {{ form_row(form.name) }}
+                </div>
+                <div class="three columns alpha">
+                    {{ form_row(form.phone) }}
+                </div>
+                <div class="three columns alpha">
+                    {{ form_row(form.street) }}
+                </div>
+                <div class="three columns alpha">
+                    {{ form_row(form.submit) }}
+                </div>
+            {{ form_end(form) }}
+
+
+            <hr/>
+
+            <div class="twelve columns alpha"><h4>选择送货的地址</h4></div>
+
+                {% for address in user.address %}
+
+                    <div class="two columns alpha">
+
+                        {% if address.isDefault %}
+                            <i class="fa fa-check-circle-o"></i> 当前寄送地址
+                        {% else %}
+                            <a href="{{ url('set_default_address' , {'id':address.id}) }}"><i class="fa fa-circle-o"></i> 设为收货地址</a>
+                        {% endif %}
+
+                    </div>
+                    <div class="two columns alpha"><abbr title="Name">联系人: {{ address.name }}</abbr></div>
+                    <div class="two columns alpha"><abbr title="Phone">手机号: {{ address.phone }}</abbr></div>
+                    <div class="six columns alpha"><abbr title="street">收货地址: {{ address.street }}</abbr></div>
+
+                {% endfor %}
+
+        </div><!-- row -->
+
+        <hr/>
+        <div class="twelve columns alpha"><h4>当前购物车</h4></div>
+
+        <div class="row">
+            <div class="four columns alpha"><strong>商品</strong></div>
+            <div class="one columns alpha"><strong>数量</strong></div>
+            <div class="two columns alpha"><strong>单价</strong></div>
+            <div class="two columns alpha"><strong>合计</strong></div>
+            <div class="three columns alpha">操作</div>
+
+
+                {% for item in cart.cartItem if item.removedAt == NULL %}
+                <div class="row">
+                    <div class="four columns alpha">
+                            <img class="img-thumbnail" src="{{ asset(item.productBasket.product.photo | imagine_filter('tiny')) }}">
+                            <strong>{{ item.productBasket.product.productName }}</strong>
+                    </div>
+
+                    <div class="one columns alpha">{{ item.sum }}</div>
+                    <div class="two columns alpha">{{ item.singlePrice | currency | raw }}</div>
+                    <div class="two columns alpha">{{ item.totalPrice | currency | raw }}</div>
+                    <div class="three columns alpha"><a href="{{ url('remove_from_cart' , {'id':item.id}) }}">移除商品</a></div>
+                </div>
+                {% endfor %}
+
+
+            <section class="twelve columns alpha omega">
+                <div class="two columns alpha"><strong>所有商品合计 :</strong></div>
+                <div class="four columns alpha">{{ totalCost | currency | raw }}</div>
+
+                {% if user.address.offsetExists(0) == NULL %}
+
+                    <div class="alert alert-danger" role="alert">
+                        目前无法支付:请先添加一个默认送货地址 再继续支付
+                    </div>
+
+                {% else %}
+
+                    <div class="six columns alpha">
+                        <a href="{{ url('cart_to_payment' , {'cartId':cart.id}) }}" class="btn"><i class="fa fa-dollar mr5"></i> 在线付款</a>
+                    </div>
+
+                {% endif %}
+            </section>
+
+            <section class="twelve columns alpha omega">
+                <div class="six columns alpha omega">
+                    <hr/>
+                    <h3>地址信息确认:</h3>
+                    {% if defaultAddress != NULL %}
+                        <p>以上商品将会在付款后被寄送到 "<strong>{{ defaultAddress.street }}</strong>"</p>
+                        <p>收件人为 {{ defaultAddress.name }}</p>
+                        <p>联系人手机号 {{ defaultAddress.phone }}</p>
+                    {% endif %}
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

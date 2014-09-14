@@ -60,6 +60,7 @@ class CategoryController extends Controller
 
     public function editAction( Request $request , $id)
     {
+        $em = $this->getDoctrine()->getManager();
         $user = $this->get('security.context')->getToken()->getUser();
         $store = $this->get('store.repo')->findOneBy(['userId' => $user->getId()]);
 
@@ -69,12 +70,15 @@ class CategoryController extends Controller
         {
             throw new EntityNotFoundException();
         }
-
+        $em->persist($category);
         $form = $this->createNewForm( $request , new CategoryType() , $category);
 
         if( $form->isValid())
         {
-            $data = $form->getData();
+            //$data = $form->getData();
+            $em->flush();
+            $this->addFlashMessage('success' , '更新成功');
+            return $this->redirect($this->generateUrl('product_category_edit',['id'=>$id]));
         }
 
         $unclassified = $this->get('basket.repo')->findBy(['categoryId' => NULL , 'storeId' => $store->getId()]);

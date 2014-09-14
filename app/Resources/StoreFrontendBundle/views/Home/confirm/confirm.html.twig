@@ -1,0 +1,26 @@
+{% extends "StoreFrontendBundle::layouts.html.twig" %}
+
+{% block title %}StoreFrontendBundle:Home:index{% endblock %}
+
+
+ {% block blockName %}
+     <img src="{{ store.logo | imagine_filter('banner') }}" />
+     <label>{{ store.name }}</label>
+ {% endblock %}
+
+{% block body %}
+
+    <div class="lockedpanel">
+        <div class="locked">
+            <i class="fa fa-thumbs-o-up"></i>
+        </div>
+        <div class="logged">
+            <h4>确定收货吗</h4>
+        </div>
+        <div class="logged">
+            <a href="{{ url('tracking_confirm_ok' , {'id':orderId}) }}" class="btn btn-primary">确定 我已经收到</a>
+            <a href="{{ url('shipment_dashboard') }}" class="btn btn-success">不确定 取消</a>
+        </div>
+    </div><!-- lockedpanel -->
+
+{% endblock %}

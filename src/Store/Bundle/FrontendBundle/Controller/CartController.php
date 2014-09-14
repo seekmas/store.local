@@ -36,7 +36,7 @@ class CartController extends Controller
         $form = $this->createNewForm($request,new AddressType(),$address);
         if( $form->isValid())
         {
-            $address->setIsDefault(true);
+            $address->setIsDefault(false);
             $address->setCreatedAt( new \Datetime());
             $em->flush();
 
@@ -137,6 +137,29 @@ class CartController extends Controller
         }
 
         return $this->redirect($this->generateUrl('checkout_dashboard'));
+    }
+
+    public function changeNumberAction($itemId , $number)
+    {
+        $user = $this->getUser();
+        $em = $this->getDoctrine()->getManager();
+        $item = $this->get('cart_item.repo')->find($itemId);
+        $cart = $item->getCart();
+        if( $user->getId() == $cart->getUserId() )
+        {
+            $item->setSum($number);
+
+            $single_price = $item->getProductBasket()->getProduct()->getproductPrice();
+            $total_price = $single_price * $number;
+
+            $item->setSinglePrice($single_price);
+            $item->setTotalPrice($total_price);
+
+            $em->persist($item);
+            $em->flush();
+        }
+
+        return new Response();
     }
 
     protected function createNewForm(Request $request,AbstractType $type , $entity)

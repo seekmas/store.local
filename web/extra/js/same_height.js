@@ -1,15 +1,14 @@
 $(function(){
 
-    if( $("div.same_height").length > 0 )
+    if( $("div.product-prew").length > 0 )
     {
         var maxHeight = 0;
-        $("div.same_height").each(function(){
+        $("div.product-prew").each(function(){
             if ($(this).height() > maxHeight) {
                 maxHeight = $(this).height();
-                //console.log(maxHeight);
+                console.log(maxHeight);
             }
         });
-
-        $("div.same_height").height(maxHeight);
+        $("div.product-prew").height(maxHeight);
     }
 });

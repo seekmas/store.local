@@ -1,0 +1,33 @@
+{% extends "StoreFrontendBundle::layouts.html.twig" %}
+
+{% block title %}StoreFrontendBundle:Home:index{% endblock %}
+
+
+ {% block blockName %}
+     <img src="{{ store.logo | imagine_filter('banner') }}" />
+     <label>{{ store.name }}</label>
+ {% endblock %}
+
+{% block body %}
+
+    <div class="lockedpanel">
+        <div class="locked">
+            <i class="fa fa-thumbs-o-up"></i>
+        </div>
+        <div class="logged">
+            <h4>支付成功成功!</h4>
+            <div>
+                你可以在已经购买的列表里看到如下商品:
+                {% for item in order.cart.cartItem %}
+
+                    <p>{{ item.productBasket.product.productName }}</p>
+
+                {% endfor %}
+            </div>
+        </div>
+        <div class="logged">
+            <a href="{{ url('index') }}" class="btn btn-success">继续购物</a>
+        </div>
+    </div><!-- lockedpanel -->
+
+{% endblock %}

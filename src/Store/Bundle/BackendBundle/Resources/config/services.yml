@@ -131,6 +131,23 @@ services:
         factory_method: getRepository
         arguments: [ Store\Bundle\BackendBundle\Entity\MailTemplate ]
 
+    aboutus.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\AboutUs ]
+
+    society.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\SocietyNetwork ]
+
+    subscriber.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\Subscriber ]
 #entity paginator
     user.paginator:
         class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory
@@ -152,6 +169,13 @@ services:
         class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory
         arguments: [@request_stack,@knp_paginator,@mail.repo]
 
+    posts.paginator:
+        class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory
+        arguments: [@request_stack,@knp_paginator,@aboutus.repo]
+
+    sucscriber.paginator:
+        class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory
+        arguments: [@request_stack,@knp_paginator,@subscriber.repo]
 #service
     store.cart:
         class: Store\Bundle\BackendBundle\Cart\Cart

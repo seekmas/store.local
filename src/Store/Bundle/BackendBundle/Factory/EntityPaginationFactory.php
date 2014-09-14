@@ -13,7 +13,7 @@ class EntityPaginationFactory
     protected $_condition;
     protected $order_by = 'id';
 
-    public function __construct( $request , $paginator , $repository , $perPage = 12)
+    public function __construct( $request , $paginator , $repository , $perPage = 28)
     {
         $this->_request = $request;
         $this->_paginator = $paginator;

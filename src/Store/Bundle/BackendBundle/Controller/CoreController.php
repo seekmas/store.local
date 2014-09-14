@@ -22,6 +22,12 @@ class CoreController extends Controller
         $request->getSession()->getFlashBag()->add($type,$message);
     }
 
+    protected function getStore()
+    {
+        $user = $this->get('security.context')->getToken()->getUser();
+        $store = $this->get('store.repo')->findOneBy(['userId' => $user->getId() ]);
+        return $store;
+    }
 
     public function __call($func,$arguments){}
     public function __toString(){ return 'controller';}

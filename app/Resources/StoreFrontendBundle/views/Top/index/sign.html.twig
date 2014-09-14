@@ -1,0 +1,58 @@
+<div class="headerbar">
+
+
+    <div class="header-right">
+        <ul class="headermenu">
+
+            <li>
+                <div class="btn-group">
+                    <button class="btn btn-default dropdown-toggle tp-icon" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-shopping-cart"></i>
+                        <span class="badge"></span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-head pull-right">
+
+                        {% if cart %}
+                        <h5 class="title">当前购物车里:</h5>
+                        <ul class="dropdown-list gen-list">
+
+                            {% for key,item in cart.cartItem if item.removedAt == NULL and key < 5  %}
+                            <li class="new">
+                                <a href="{{ url('find_product_by_id' , {'id':item.productBasket.product.id} ) }}">
+                                    <span class="thumb"><img src="{{ item.productBasket.product.photo | imagine_filter('small') }}" alt=""></span>
+                                    <span class="desc">
+                                      <span class="name">{{ item.productBasket.product.productName }} <span class="badge badge-success">{{ item.singlePrice | currency | raw }}</span></span>
+
+                                    </span>
+                                </a>
+                            </li>
+                            {% endfor %}
+
+                            <li class="new"><a href="{{ url('checkout_dashboard') }}">前往我的购物车</a></li>
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        {{ app.user.username }}
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                        <li><a href="{{ url('checkout_dashboard') }}"><i class="glyphicon glyphicon-user"></i> 购物车</a></li>
+                        <li><a href="{{ url('shipment_dashboard') }}"><i class="glyphicon glyphicon-user"></i> 已经购买的商品</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-cog"></i> 账户设置</a></li>
+                        <li><a href="{{ url('fos_user_security_logout') }}"><i class="glyphicon glyphicon-log-out"></i> 注销</a></li>
+                    </ul>
+                </div>
+            </li>
+            {% if is_granted('ROLE_ADMIN') %}
+
+                <li><button onclick="javascript:window.location.href='{{ url('store') }}'" type="button" class="btn btn-default dropdown-toggle">后台管理</button></li>
+
+            {% endif %}
+        </ul>
+    </div><!-- header-right -->
+</div>

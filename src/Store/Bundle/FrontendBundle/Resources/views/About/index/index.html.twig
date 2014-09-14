@@ -1,0 +1,22 @@
+{% extends "StoreFrontendBundle::layouts.html.twig" %}
+
+{% block title %}StoreFrontendBundle:Home:index{% endblock %}
+
+{% block main %}{% endblock %}
+
+{% block list %}
+
+    {% for c in store.category if c.isEnabled %}
+
+        <li><a href="{{ url('index_by_category' , {'categoryId':c.id} ) }}"> - {{ c.name }}</a></li>
+
+    {% endfor %}
+
+{% endblock %}
+
+
+{% block body %}
+
+    {% include "StoreFrontendBundle:About:index/index_content.html.twig" %}
+
+{% endblock %}

@@ -104,7 +104,9 @@ order_manage:
 order_update:
     path: /{orderId}/order_update
     defaults: { _controller: StoreBackendBundle:Order:update }
-
+sibscriber_list:
+    path: /subscriber_list
+    defaults: { _controller: StoreBackendBundle:Subscriber:index }
 
 mail:
     path: /mail
@@ -125,3 +127,16 @@ prew_mail:
 send_mail:
     path: /{id}/execute_mail
     defaults: { _controller: StoreBackendBundle:Message:execute }
+
+create_about_us:
+    path: /create_about_us
+    defaults: { _controller: StoreBackendBundle:Home:aboutus }
+
+society:
+    path: /society
+    defaults: { _controller: StoreBackendBundle:Society:index }
+
+remove_society:
+    path: /{id}/remove_society
+    defaults: { _controller: StoreBackendBundle:Society:remove }
+

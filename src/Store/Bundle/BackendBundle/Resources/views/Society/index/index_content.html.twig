@@ -1,0 +1,40 @@
+<div class="col-md-7">
+
+    <div class="panel">
+        <div class="panel-body">
+            <table class="table mb30">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>社交图标</th>
+                    <th>社交主页</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for society in societies %}
+                    <tr>
+                        <td>#{{ society.id }}</td>
+                        <td><img src="{{ society.icon }}" /></td>
+                        <td>{{ society.url }}</td>
+                        <td class="table-action">
+                            <a href="{{ url('remove_society' , {'id':society.id}) }}" class="delete-row"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<div class="col-md-5">
+
+    <div class="panel">
+        <div class="panel-body">
+            {{ form(form) }}
+        </div>
+    </div>
+
+</div>

@@ -123,6 +123,11 @@ class Store
     private $smtpPort;
 
     /**
+     * @ORM\OneToMany(targetEntity="SocietyNetwork" , mappedBy="store")
+     */
+    private $society;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -446,5 +451,19 @@ class Store
         return $this->smtpPort;
     }
 
+    /**
+     * @param mixed $society
+     */
+    public function setSociety($society)
+    {
+        $this->society = $society;
+    }
 
+    /**
+     * @return mixed
+     */
+    public function getSociety()
+    {
+        return $this->society;
+    }
 }

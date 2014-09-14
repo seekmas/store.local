@@ -71,3 +71,15 @@ tracking_confirm:
 tracking_confirm_ok:
     path: /{id}/confirmed_shipment
     defaults: { _controller: StoreFrontendBundle:Home:confirmed }
+
+about_us:
+    path: /about_us
+    defaults: { _controller: StoreFrontendBundle:About:index }
+
+subscribe:
+    path: /subscribe
+    defaults: { _controller: StoreFrontendBundle:Subscriber:index }
+
+change_item_number:
+    path: /{itemId}/{number}/change
+    defaults: { _controller: StoreFrontendBundle:Cart:changeNumber }
