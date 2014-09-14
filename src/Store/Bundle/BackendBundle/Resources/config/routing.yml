@@ -132,6 +132,14 @@ create_about_us:
     path: /create_about_us
     defaults: { _controller: StoreBackendBundle:Home:aboutus }
 
+edit_about_us:
+    path: /{id}/edit_about_us
+    defaults: { _controller: StoreBackendBundle:Home:aboutus }
+
+remove_about_us:
+    path: /{id}/remove_about_us
+    defaults: { _controller: StoreBackendBundle:Home:removeAbout }
+
 society:
     path: /society
     defaults: { _controller: StoreBackendBundle:Society:index }

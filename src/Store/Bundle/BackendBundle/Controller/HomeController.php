@@ -88,7 +88,7 @@ class HomeController extends Controller
         );
     }
 
-    public function aboutusAction(Request $request)
+    public function aboutusAction(Request $request , $id = 0)
     {
         $em = $this->getDoctrine()->getManager();
         $user = $this->get('security.context')->getToken()->getUser();
@@ -96,21 +96,47 @@ class HomeController extends Controller
 
         $posts = $this->get('aboutus.repo')->findBy(['storeId' => $store->getId()]);
 
-        $aboutus = new AboutUs();
+        if( $id == 0)
+        {
+            $aboutus = new AboutUs();
+
+        }else
+        {
+            $aboutus = $this->get('aboutus.repo')->findOneBy( ['id'=>$id,'storeId'=>$store]);
+        }
+
+        $tmp_photo = $aboutus->getPhoto();
+        $aboutus->setPhoto(NULL);
+
         $em->persist($aboutus);
         $aboutus->setStore($store);
         $form = $this->createNewForm($request,new AboutUsType(),$aboutus);
         if( $form->isValid())
         {
+
+
             $data = $form->getData();
             $photo = $data->getPhoto();
-            $photo = $this->get('file.save')->save($photo , 'storePost');
+
+            if($photo)
+            {
+                $photo = $this->get('file.save')->save($photo , 'storePost');
+                if( $tmp_photo )
+                {
+                    $photo = $this->get('file.save')->remove($tmp_photo);
+                }
+            }else
+            {
+                $photo = $tmp_photo;
+            }
+
+
             $aboutus->setPhoto($photo);
             $aboutus->setCreatedAt(new \Datetime());
             $aboutus->setEnabled(true);
 
             $em->flush();
-            $this->addFlashMessage('success' , '新的Post添加成功');
+            $this->addFlashMessage('success' , 'Post添加/更新成功');
             return $this->redirect($this->generateUrl('create_about_us'));
         }
 
@@ -120,5 +146,24 @@ class HomeController extends Controller
                 'posts' => $posts ,
             ]
         );
+    }
+
+    public function removeAboutAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->get('security.context')->getToken()->getUser();
+        $store = $this->get('store.repo')->findOneBy(['userId' => $user->getId() ]);
+        $aboutus = $this->get('aboutus.repo')->findOneBy( ['id'=>$id,'storeId'=>$store]);
+
+        if( $aboutus->getPhoto())
+        {
+            $this->get('file.save')->remove($aboutus->getPhoto());
+        }
+
+        $em->remove($aboutus);
+        $em->flush();
+        $this->addFlashMessage('success' , 'Post删除成功');
+        return $this->redirect($this->generateUrl('create_about_us'));
+
     }
 }

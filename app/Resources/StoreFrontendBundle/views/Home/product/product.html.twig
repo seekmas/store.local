@@ -121,7 +121,7 @@
                         <div class="three columns alpha">
                             <a href="{{ url('find_product_by_id' , {'id':same.product.id}) }}" id="product-{{ product.id }}">
 
-                                <img src="{{ same.product.photo }}" alt="{{ same.product.productAlias }}" class="product">
+                                <img src="{{ asset(same.product.photo) | imagine_filter('normal') }}" alt="{{ same.product.productAlias }}" class="product">
                                 <h3>{{ same.product.productName }}</h3>
                                 <h4>{{ same.product.productPrice | currency | raw }}</h4>
                             </a>

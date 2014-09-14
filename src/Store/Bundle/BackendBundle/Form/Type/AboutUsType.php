@@ -16,7 +16,7 @@ class AboutUsType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('photo' , 'file')
+            ->add('photo' , 'file' , ['required' => false ])
             ->add('content')
             ->add('enabled')
         ;

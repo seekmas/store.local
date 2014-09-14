@@ -24,8 +24,8 @@
                         <td>{{ post.enabled }}</td>
                         <td>{{ post.createdAt | date('Y-m-d H:i:s') }}</td>
                         <td class="table-action">
-                            <a href="#"><i class="fa fa-pencil"></i></a>
-                            <a href="#" class="delete-row"><i class="fa fa-trash-o"></i></a>
+                            <a href="{{ url('edit_about_us' , {'id':post.id}) }}"><i class="fa fa-pencil"></i></a>
+                            <a href="{{ url('remove_about_us' , {'id':post.id}) }}" class="delete-row"><i class="fa fa-trash-o"></i></a>
                         </td>
                     </tr>
 
