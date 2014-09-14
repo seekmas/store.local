@@ -6,7 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be6b6598-5851-4d56-aae2-effbda3e778d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/layouts.html.twig" afterPath="$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/layouts.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/Home/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/Home/index.html.twig" />
     </list>
     <ignored path="store.local.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layouts.html.twig" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/layouts.html.twig">
+      <file leaf-file-name="index.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/Home/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="144" column="16" selection-start="5846" selection-end="5846" vertical-scroll-proportion="0.609358" vertical-offset="1744" max-vertical-offset="4384">
+            <state line="45" column="85" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.5745375" vertical-offset="192" max-vertical-offset="1136">
               <folding />
             </state>
           </provider>
@@ -91,7 +91,6 @@
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Subscriber/index/index_content.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/Home/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/Home/product/product.html.twig" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/views/menu/knp_menu_base.html.twig" />
@@ -102,6 +101,7 @@
         <option value="$PROJECT_DIR$/src/Store/Bundle/BackendBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/layouts.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/Home/index.html.twig" />
       </list>
     </option>
   </component>
@@ -337,70 +337,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FrontendBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontendBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store.local" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="BackendBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -524,6 +460,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StoreFrontendBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store.local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -849,13 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="22" selection-start="3483" selection-end="3497" vertical-scroll-proportion="0.40677965" vertical-offset="1616" max-vertical-offset="2912">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Top/index/anonymous.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="944">
@@ -880,13 +857,6 @@
     <entry file="file://$PROJECT_DIR$/src/Store/Bundle/FrontendBundle/Resources/views/Home/product/product.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="58" column="0" selection-start="1734" selection-end="1912" vertical-scroll-proportion="0.64417845" vertical-offset="336" max-vertical-offset="6704">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/Home/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="639" selection-end="639" vertical-scroll-proportion="0.47007617" vertical-offset="0" max-vertical-offset="1136">
           <folding />
         </state>
       </provider>
@@ -999,6 +969,20 @@
     <entry file="file://$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/layouts.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="144" column="16" selection-start="5846" selection-end="5846" vertical-scroll-proportion="0.609358" vertical-offset="1744" max-vertical-offset="4384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="14" selection-start="3100" selection-end="3106" vertical-scroll-proportion="0.18644068" vertical-offset="1616" max-vertical-offset="2912">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/StoreFrontendBundle/views/Home/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="85" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.5745375" vertical-offset="192" max-vertical-offset="1136">
           <folding />
         </state>
       </provider>

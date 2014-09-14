@@ -43,7 +43,7 @@
             <div class="three columns alpha product-prew">
                 <a href="{{ url('find_product_by_id' , {'id' : productBasket.product.id} ) }}" id="product-{{ productBasket.product.id }}" class="animated fadeInUpBig">
 
-                    <img src="{{ productBasket.product.photo | imagine_filter('product_preview') }}" alt="{{ productBasket.product.productAlias }}" class="product">
+                    <img src="{{ productBasket.product.photo | imagine_filter('normal') }}" alt="{{ productBasket.product.productAlias }}" class="product">
                     <h3>{{ productBasket.product.productName | truncate(64) }}</h3>
                     <h4>{{ productBasket.product.productPrice | currency | raw }} </h4>
                 </a>
