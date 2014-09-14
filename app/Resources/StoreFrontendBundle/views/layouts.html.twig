@@ -39,6 +39,7 @@
 <div id="drawer">
     <div class="container">
 
+        {% if is_granted('ROLE_USER') %}
             {% set carts = app.user.cart %}
             {% set number = 0 %}
             {% for cart in carts if cart.expiredAt == NULL %}
@@ -124,6 +125,7 @@
 
         });
         </script>
+        {% endif %}
     </div>
 </div>
 <!--END DRAWER-->
