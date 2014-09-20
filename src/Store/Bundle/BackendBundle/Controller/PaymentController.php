@@ -3,6 +3,8 @@
 namespace Store\Bundle\BackendBundle\Controller;
 
 use Store\Bundle\BackendBundle\Entity\Alipay;
+use Store\Bundle\BackendBundle\Entity\Remittance;
+use Store\Bundle\BackendBundle\Form\RemittanceType;
 use Store\Bundle\BackendBundle\Form\Type\AlipayType;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -97,7 +99,6 @@ class PaymentController extends CoreController
 
             return $this->redirect($this->generateUrl('payment_manage'));
         }
-
-
     }
+
 }

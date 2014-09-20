@@ -99,6 +99,7 @@ class Order implements OrderInterface
         $order->setPaymentStatus(OrderStatus::OrderCreated);
         $em->persist($order);
         $em->flush();
+        return $order;
     }
 
     //This method creates a payment link

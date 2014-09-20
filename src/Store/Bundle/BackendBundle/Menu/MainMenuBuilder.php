@@ -37,7 +37,9 @@ class MainMenuBuilder extends ContainerAware
 
         // configuration menu
         $menu->addChild('configuration',['attributes' =>['icon' => 'fa fa-cog'],'label' => '设置' ,'route' => '']);
-        $menu['configuration']->addChild('society' , ['attributes' =>['icon' => 'fa fa-society'],'label' => '社交信息' ,'route' => 'society']);
+
+        $menu['configuration']->addChild('bankinfo' , ['attributes' =>['icon' => 'fa fa-caret-right'],'label' => '汇款账户' ,'route' => 'bankinfo']);
+        $menu['configuration']->addChild('society' , ['attributes' =>['icon' => 'fa fa-caret-right'],'label' => '社交信息' ,'route' => 'society']);
         $menu['configuration']->addChild('shipment' , ['attributes' =>['icon' => 'fa fa-caret-right'],'label' => '快递方式' ,'route' => 'shipment']);
         $menu['configuration']->addChild('product_property' , ['attributes' =>['icon' => 'fa fa-caret-right'],'label' => '商品属性' ,'route' => 'product_property']);
         $menu['configuration']->addChild('payment_manage' , ['attributes' =>['icon' => 'fa fa-caret-right'],'label' => '支付设置' ,'route' => 'payment_manage']);

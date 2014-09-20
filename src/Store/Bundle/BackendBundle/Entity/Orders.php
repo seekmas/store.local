@@ -125,7 +125,10 @@ class Orders
      */
     private $isLocked;
 
-
+    /**
+     * @ORM\OneToOne(targetEntity="Remittance" , mappedBy="orders")
+     */
+    private $remittance;
     /**
      * Get id
      *
@@ -455,5 +458,19 @@ class Orders
         return $this->user;
     }
 
+    /**
+     * @param mixed $remittance
+     */
+    public function setRemittance($remittance)
+    {
+        $this->remittance = $remittance;
+    }
 
+    /**
+     * @return mixed
+     */
+    public function getRemittance()
+    {
+        return $this->remittance;
+    }
 }

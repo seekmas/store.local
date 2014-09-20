@@ -1,0 +1,88 @@
+{% extends "StoreFrontendBundle::layouts.html.twig" %}
+
+{% block title %}StoreFrontendBundle:Home:index{% endblock %}
+
+{% block blockName %}
+    <img src="{{ store.logo | imagine_filter('banner') }}" />
+    <label>{{ store.name }}</label>
+{% endblock %}
+
+
+
+{% block body %}
+
+
+    {% if orders.shipment == NULL %}
+
+        <h2>你还没有选择快递</h2>
+
+        <div class="row">
+        {% for key , shipment in shipments if shipment.removedAt == NULL %}
+
+            <div class="four columns alpha">
+                <a class="btn" href="{{ url('cart_to_shipment_before_pay' , {'cartId' : orders.cart.id , 'shipmentId':shipment.id} ) }}">
+                    {{ shipment.shipmentName }} 价格 {{ shipment.shipmentPrice }}
+                </a>
+            </div>
+
+            {% if ( key+1 ) % 4 == 0 %}
+                </div>
+                <div class="row">
+            {% endif %}
+        {% endfor %}
+        </div>
+
+
+    {% endif %}
+
+    <hr/>
+    <section class="twelve columns alpha omega">
+
+    <div class="six columns alpha product-prew">
+        {% if orders.shipment %}
+
+            {% set cost = orders.totalCost + orders.shipment.shipmentPrice %}
+            <h2>你只需要汇款 {{ cost | currency | raw }} 到 <br/>{{ bankinfo.account }} ( {{ bankinfo.bankname }} ) 收款人: {{ bankinfo.name }}</h2>
+            <hr/>
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="person-name">当前订单详情</h4>
+                    {% if orders.shipment %}
+                        {% set total = orders.totalCost + orders.shipment.shipmentPrice %}
+                        <div class="text-muted">合计: {{ total | currency | raw }}
+                            ( 商品: {{ orders.totalCost | currency | raw }} + {{ orders.shipment.shipmentName }}: {{ orders.shipment.shipmentPrice | currency | raw }})
+                        </div>
+                        <div class="text-muted">快递方式: {{ orders.shipment.shipmentName }}</div>
+                        <div class="text-muted">快递费: {{ orders.shipment.shipmentPrice }}</div>
+
+                    {% else %}
+
+                        <div class="text-muted">合计: {{ order.totalCost | currency | raw }}</div>
+
+                    {% endif %}
+
+                    <div class="text-muted">收件地址: {{ orders.address.street }}</div>
+                    <div class="text-muted">收件人: {{ orders.address.name }}</div>
+                    <div class="text-muted">联系方式: {{ orders.address.phone }}</div>
+                    <div class="text-muted">描述信息: <br/>{{ orders.description | raw}}</div>
+
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+
+    <div class="six columns alpha">
+
+        <h2>当前正在修改汇款信息</h2>
+
+        {{ form(form) }}
+
+    </div>
+
+    <br class="clear">
+
+    </section>
+
+
+{% endblock %}

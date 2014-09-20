@@ -23,11 +23,14 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+
+
             new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
 
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
+
 
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
 

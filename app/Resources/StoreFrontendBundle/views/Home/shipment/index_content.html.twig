@@ -36,7 +36,11 @@
                         <h5>付款金额: {{ order.totalCost + order.shipment.shipmentPrice | currency | raw }}</h5>
                         <h5>付款日期: {{ order.cart.expiredAt | date('Y/m/d H:i:s') }}</h5>
                     {% else %}
+
                         <h5>还未付款</h5>
+
+                        <a href="{{ url('create_remittance' , {'cartId' : order.cart.id}) }}">修改我的汇款信息</a>
+
                     {% endif %}
 
                     {% if order.paymentStatus == 106 %}

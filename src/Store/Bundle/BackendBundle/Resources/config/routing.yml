@@ -148,3 +148,6 @@ remove_society:
     path: /{id}/remove_society
     defaults: { _controller: StoreBackendBundle:Society:remove }
 
+bankinfo:
+    path: /bankinfo
+    defaults: { _controller: StoreBackendBundle:Bank:index }

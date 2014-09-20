@@ -52,9 +52,18 @@ cart_to_shipment:
     path: /{cartId}/{shipmentId}/set_shipment
     defaults: { _controller: StoreFrontendBundle:Payment:selectShipment }
 
+cart_to_shipment_before_pay:
+    path: /{cartId}/{shipmentId}/set_shipment_before_pay
+    defaults: { _controller: StoreFrontendBundle:Payment:selectShipmentBeforePay }
+
+
 create_payment:
     path: /{cartId}/create_payment
     defaults: { _controller: StoreFrontendBundle:Payment:createPayment }
+
+create_remittance:
+    path: /{cartId}/remittance
+    defaults: { _controller: StoreFrontendBundle:Payment:remittance }
 
 alipay_notify:
     path: /notify.php

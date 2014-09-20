@@ -148,6 +148,12 @@ services:
         factory_service: doctrine
         factory_method: getRepository
         arguments: [ Store\Bundle\BackendBundle\Entity\Subscriber ]
+
+    bank.repo:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments: [ Store\Bundle\BackendBundle\Entity\BankInfo ]
 #entity paginator
     user.paginator:
         class: Store\Bundle\BackendBundle\Factory\EntityPaginationFactory

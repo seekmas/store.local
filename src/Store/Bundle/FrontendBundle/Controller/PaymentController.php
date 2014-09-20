@@ -3,13 +3,16 @@
 namespace Store\Bundle\FrontendBundle\Controller;
 
 use Store\Bundle\BackendBundle\Cart\OrderStatus;
+use Store\Bundle\BackendBundle\Controller\CoreController;
+use Store\Bundle\BackendBundle\Entity\Remittance;
 use Store\Bundle\BackendBundle\Event\CommonEvent;
+use Store\Bundle\BackendBundle\Form\RemittanceType;
 use Store\Bundle\BackendBundle\PaymentEvents;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
-class PaymentController extends Controller
+class PaymentController extends CoreController
 {
     public function indexAction(Request $request , $cartId)
     {
@@ -56,6 +59,74 @@ class PaymentController extends Controller
         return new Response( $this->get('order.manager')->createPayment($order->getId(),$store->getId()) );
     }
 
+    public function remittanceAction(Request $request , $cartId)
+    {
+        $store = $this->getStore();
+        $user = $this->getUser();
+        $cart = $this->get('cart.repo')->findOneBy( ['id'=>$cartId,'userId'=>$user->getId()]);
+        $orders = $this->get('order.manager')->createOrder($cart);
+
+        $remittance = $orders->getRemittance();
+
+        if( $remittance == NULL)
+        {
+            $remittance = new Remittance();
+            $remittance->setOrders($orders);
+        }
+
+        $type = new RemittanceType();
+        $form = $this->createNewForm($request,$type,$remittance);
+
+        if($form->isValid())
+        {
+            $this->get('order.manager')->updateOrderStatus($orders,OrderStatus::OrderPrePayment);
+            $remittance->setCreatedAt(new \Datetime());
+            $em = $this->getDoctrine()->getManager();
+
+            $cart->setExpiredAt( new \Datetime());
+            $em->persist($orders);
+            $em->persist($remittance);
+            $em->flush();
+            $this->addFlashMessage('success' , '恭喜你 汇款信息更新成功 商品将在本店收到汇款后发货');
+            return $this->redirect($this->generateUrl('create_remittance' , ['cartId'=>$cartId]));
+        }
+
+        $shipments = $this->get('shipment.repo')->findAll();
+
+        $bankinfo = $this->get('bank.repo')->findAll();
+
+
+        return $this->render('StoreFrontendBundle:Payment:remittance.html.twig',
+            [
+                'form'=>$form->createView() ,
+                'store'=>$store ,
+                'orders' => $orders ,
+                'shipments' => $shipments ,
+                'bankinfo' => $bankinfo[0] ,
+
+            ]
+        );
+    }
+
+    public function selectShipmentBeforePayAction(Request $request , $cartId , $shipmentId)
+    {
+        $shipment = $this->get('shipment.repo')->find($shipmentId);
+
+        if( $shipment == NULL)
+        {
+            return $this->redirect($this->generateUrl('cart_to_payment' , ['cartId'=>$cartId]));
+        }
+
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $cart = $this->get('cart.repo')->findOneBy( ['id'=>$cartId,'userId'=>$user->getId()]);
+        $order = $this->get('order.manager')->createOrder($cart);
+        $em->persist($order);
+        $order->setShipment($shipment);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('create_remittance' , ['cartId'=>$cartId]));
+    }
 
     public function selectShipmentAction(Request $request , $cartId , $shipmentId)
     {

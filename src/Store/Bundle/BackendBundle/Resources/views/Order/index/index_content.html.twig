@@ -9,6 +9,7 @@
             <th>订单状态</th>
             <th>创建日期</th>
             <th>已经付款?</th>
+            <th>汇款信息</th>
             <th>是否发货</th>
             <th></th>
         </tr>
@@ -32,7 +33,15 @@
                     <span class="label label-default">未付款</span>
                 {% endif %}
             </td>
-            <th>
+            <td>
+
+                {% if order.remittance %}
+                    <p>姓名: {{ order.remittance.name }}</p>
+                    <p>卡号: {{ order.remittance.account }} ( {{ order.remittance.bank }} )</p>
+                {% endif %}
+
+            </td>
+            <td>
                 {% if order.isLocked %}
 
                     {% if order.trackingNumber == NULL %}
@@ -43,7 +52,7 @@
                     {% endif %}
 
                 {% endif %}
-            </th>
+            </td>
             <td class="table-action">
                 <a href="{{ url('order_update' , {'orderId':order.orderId}) }}"><i class="fa fa-pencil"></i></a>
                 <a href="#" class="delete-row"><i class="fa fa-trash-o"></i></a>

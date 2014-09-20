@@ -15,10 +15,10 @@ class OrdersType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('trackingNumber')
+            ->add('trackingNumber' , 'text' , ['label'=>'快递单号'])
         ;
 
-        $builder->add('submit' , 'submit');
+        $builder->add('submit' , 'submit' , ['label'=>'修改快递单号']);
     }
     
     /**

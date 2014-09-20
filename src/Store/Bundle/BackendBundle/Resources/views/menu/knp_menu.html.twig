@@ -74,6 +74,13 @@
         {# displaying the item #}
         {% import _self as knp_menu %}
 
+        {%- if matcher.isCurrent(item) %}
+
+            {% set parent = item.parent %}
+            {% set bool = parent.setAttribute('class' , 'nav-parent nav-active active') %}
+
+        {% endif %}
+
         <li {% if item.hasChildren %}class="nav-parent"{% endif %}{%- if matcher.isCurrent(item) %}class="active"{% endif %}>
 
             {%- if item.uri is not empty and (not matcher.isCurrent(item) or options.currentAsLink) %}

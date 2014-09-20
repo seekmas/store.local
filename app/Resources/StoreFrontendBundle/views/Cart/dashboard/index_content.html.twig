@@ -80,7 +80,13 @@
                 {% else %}
 
                     <div class="six columns alpha">
+
+                        {% if false %}
                         <a href="{{ url('cart_to_payment' , {'cartId':cart.id}) }}" class="btn"><i class="fa fa-dollar mr5"></i> 在线付款</a>
+                        {% endif %}
+
+                        <a  class="btn"href="{{ url('create_remittance' , {'cartId':cart.id}) }}"><i class="fa fa-dollar mr5"></i> 银行汇款支付</a>
+
                     </div>
 
                 {% endif %}
